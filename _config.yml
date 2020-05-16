@@ -1,13 +1,13 @@
 title:              My Blog
 email:              fbelinchon@gmail.com
-description:        A Blog Theme by Start Bootstrap
-author:             Start Bootstrap
+description:        Este es mi blog
+author:             Francisco Belinchón
 baseurl:            "/blogs"
 url:                "https://fbelinchon.github.io"
 
 # Social Profiles
-twitter_username:   SBootstrap
-github_username:    BlackrockDigital
+twitter_username:   fbelinchon
+github_username:    fbelinchon
 facebook_username:  StartBootstrap
 linkedin_username:
 
