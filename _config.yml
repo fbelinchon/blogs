@@ -16,7 +16,7 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
 markdown:           kramdown
-paginate:           5
+paginate:           3
 paginate_path:      "/_posts/page:num/"
 plugins:
   - jekyll-feed
