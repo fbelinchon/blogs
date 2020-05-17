@@ -15,14 +15,11 @@ linkedin_username:
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
-gems:
-  - jekyll-paginate
+
 markdown:           kramdown
 paginate:           3
 paginate_path:      "/_posts/page:num/"
-safe: false
-whitelist:
-  - jekyll-paginate
+
 plugins:
   - jekyll-feed
   - jekyll-paginate
