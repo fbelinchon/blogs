@@ -18,6 +18,8 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 markdown:           kramdown
 paginate:           3
 paginate_path:      "/_posts/page:num/"
+whitelist:
+  - jekyll-paginate
 plugins:
   - jekyll-feed
   - jekyll-paginate
