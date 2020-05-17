@@ -15,6 +15,7 @@ linkedin_username:
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
+lang: es
 
 markdown:           kramdown
 paginate:           5
