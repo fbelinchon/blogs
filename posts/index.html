@@ -4,8 +4,8 @@ title: Posts
 background: '/img/bg-post.jpg'
 ---
 <h1>hola</h1>
-{% assign pag1.posts = paginator.posts | where:"category","AI" %}
-{% for post in pag1.posts %}
+{% assign pag1 = paginator.posts | where:"category","AI" %}
+{% for post in pag1 %}
 
 <article class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
