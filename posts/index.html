@@ -4,8 +4,9 @@ title: Posts
 background: '/img/bg-post.jpg'
 ---
 <h1>hola</h1>
-{% for post in paginator.posts %}
-{% if post.category == "AI" %}
+{% assign posts = paginator.posts | where:"category","AI" %}
+{% for post in posts %}
+
 <article class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
     <h2 class="post-title">{{ post.title }}</h2>
@@ -26,7 +27,7 @@ background: '/img/bg-post.jpg'
 </article>
 
 <hr>
-{% endif %}
+
 {% endfor %}
 
 <!-- Pager -->
