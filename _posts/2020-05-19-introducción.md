@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Enfoque"
+subtitle: "Optimizar si enfocas fggg vgvgvgfgf."
+date: 2020-05-15 23:45:13 -0400
+category: "AI"
+background: '/img/posts/01.jpg'
+---
+
 ¿Cómo sabemos en que dirección tenemos que modificar nuestros parámetros para mejorar la predicción?
 
 El objetivo es minimizar nuestro error, es decir, nuestra función de coste. Tenemos que saber en que dirección modificar nuestros parámetros para que esto ocurra. 
