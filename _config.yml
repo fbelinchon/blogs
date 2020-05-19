@@ -17,6 +17,7 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 # Build settings
 lang: es
 use_math: true
+theme: minima
 
 markdown:           kramdown
 kramdown:
