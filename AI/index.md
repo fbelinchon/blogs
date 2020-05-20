@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Posts
+title: AI
 background: '/img/bg-post.jpg'
 pagination: 
   enabled: true
+  category: ai
 ---
-<h1>Posts</h1>
+<h1>AI</h1>
 
 {% for post in paginator.posts %}
 

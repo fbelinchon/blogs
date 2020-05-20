@@ -17,12 +17,20 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 # Build settings
 lang: es
 
-markdown:           kramdown
-paginate:           5
-paginate_path:      "/posts/page:num/"
+markdown: kramdown
+
+
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 4
+  permalink: '/page/:num/'
+  title: ':title :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 
 plugins:
+  - jekyll-paginate-v2
   - jekyll-feed
-  - jekyll-paginate
-  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
-
