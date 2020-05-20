@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Jekyll Deploy
+name: jekyll-cd
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -22,8 +22,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@master
     - name: Build & Deploy to GitHub Pages
-      env: 
-        GITHUB_TOKEN: ${{ secrets.GIT_SECRET }}
-        GITHUB_REPOSITORY: "fbelinchon/blogs"
-        GITHUB_ACTOR: fbelinchon
-      uses: fbelinchon/blogs/build@master
+      with:
+        fetch-depth: 1
+    - name: 🧪 Build and deploy
+      uses: victoriadrake/jekyll-cd@master
