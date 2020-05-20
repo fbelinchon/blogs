@@ -2,13 +2,14 @@
 layout: post
 title: "Introducción a Redes Neuronales"
 subtitle: "Entrenamiento y validación de modelos de Deep Learning"
-date: 2020-05-20 10:45:13 -0400
+date: 2020-05-19 10:45:13 -0400
 background: '/img/posts/06.jpg'
 categories: ai
 ---
 # Redes Neuronales, introducción 
 
 ## la Inteligencia artificial
+
 
 La Inteligencia Artificial se suele relacionar con robots que se comportan como humanos. Una definición más formal es la siguiente.
 
@@ -120,12 +121,12 @@ En este caso no conocemos los coeficientes concretos que tenemos que utilizar nu
 
 Un ejemplo sencillo. Si tenemos la siguiente función
 
-$f(x) = a·x + b$
+$$f(x) = a·x + b$$
 
 No sabemos el valor de [a] ni [b] que mejor se ajustan a la función que buscamos.
 
-Si nos dicen  $f(2)=5$ nos serviría $a=2$ y $b=1$ pero también $a=1$ y $b=3$ o $a=0$ y $b=5$
-Si la información es $f(2)=5$ y $f(3) = 7$ solamente tenemos una solución  $a=2$ y $b=1$
+Si nos dicen  $$f(2)=5$$ nos serviría $$a=2$$ y $$b=1$$ pero también $$a=1$$ y $$b=3$$ o $$a=0$$ y $$b=5$$
+Si la información es $$f(2)=5$$ y $$f(3) = 7$$ solamente tenemos una solución  $$a=2$$ y $$b=1$$
 
 En los casos reales las funciones son mucho más complejas y no existe una solución exacta. Tendremos que encontrar la solución que mejor se adapte a los datos de ejemplo que tenemos.
 
@@ -135,8 +136,8 @@ Como veremos en el siguiente apartado realmente las operaciones básicas de nues
 
 Si representamos nuestro modelo con una fórmula matemática simple sería.
 
-Si nuestro modelo es $f(x)=W∗x+b$     ($x$ es nuestro ejemplo de entrada)
-La salida de nuestro modelo sería $\hat{y}=W∗x+b$
+Si nuestro modelo es $$f(x)=W∗x+b$$     ($$x$$ es nuestro ejemplo de entrada)
+La salida de nuestro modelo sería $$\hat{y}=W∗x+b$$
 
 Los valores W y b son los parámetros de nuestro sistema y precisamente son los valores que nuestro modelo tiene que ir actualizar para mejorar sus predicciones. Más concretamente se definen como
 - W: pesos (weight)  son los valores por los que multiplicamos nuestra entrada.
@@ -148,7 +149,7 @@ El proceso de multiplicar la entrada por un valor y sumarle un segundo valor es 
 
 Hemos comentado que x es la entrada a nuestro modelo (los ejemplos de imágenes) y que la variable y es el valor real. Si estamos diseñando un modelo para predecir un valor numérico es fácil de deducir que el error cometido es:
 
-$error=(y − \hat{y})$ la diferencia entre el valor predicho por nuestro modelo y el valor real.
+$$error=(y − \hat{y})$$ la diferencia entre el valor predicho por nuestro modelo y el valor real.
 
 Esta es precisamente la definición de la función de error *loss function* o *cost function*. Bueno, normalmente se toma el valor absoluto o la diferencia al cuadrado. Tenemos que calcular el error medio cometido en todos nuestros ejemplos.
 Para evitar que los errores positivos y negativos se compensen se suele utiliza el valor absoluto o la diferencia al cuadrado de cada error.
@@ -156,9 +157,9 @@ Para evitar que los errores positivos y negativos se compensen se suele utiliza 
 Típicas definiciones de funciones de error o de coste serían.
 
 
-- MAE (mean absolute error):$\displaystyle \frac{\sum_{i=1}^{n}\|y − \hat{y}\|}{n}$, sumatorio del valor absoluto de cada uno de los errores dividido por el número de pruebas (n).
+- MAE (mean absolute error):$$\displaystyle \frac{\sum_{i=1}^{n}\|y − \hat{y}\|}{n}$$, sumatorio del valor absoluto de cada uno de los errores dividido por el número de pruebas (n).
 
-- RMSE (root mean square error):$\displaystyle \sqrt{\frac{\sum_{i=1}^{n}(y-\hat{y})^2}{n}}$, sumatorio del cuadrado de los errores dividido por el numero de ejemplos que tenemos (n). Finalmente obtiene la raiz cuadrada del número calculado.
+- RMSE (root mean square error):$$\displaystyle \sqrt{\frac{\sum_{i=1}^{n}(y-\hat{y})^2}{n}}$$, sumatorio del cuadrado de los errores dividido por el numero de ejemplos que tenemos (n). Finalmente obtiene la raiz cuadrada del número calculado.
 
 La función de coste nos indica el error medio cometido por nuestro modelo al intentar predecir el valor real. Veremos que está función va a desempeñar un papel primordial a la hora de entranar el modelo.
 
