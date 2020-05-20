@@ -40,3 +40,5 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-sitemap
+
+theme: jekyll-theme-leap-day
