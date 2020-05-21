@@ -37,6 +37,8 @@ jobs:
         run: bundle exec jekyll build -d docs
       - name: deploy
         run: |
+          git config --global user.email "fbelinchon@gmail.com"
+          git config --global user.name "fbelinchon"
           git add docs/.
           git commit -m "master"
           git push
