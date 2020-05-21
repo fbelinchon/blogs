@@ -7,6 +7,9 @@ name: jekyll-cd
 on:
   push:
     branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -39,6 +42,6 @@ jobs:
           git config user.name "fbelinchon"
           git config user.email "fbelinchon@users.noreply.github.com"
           git add .
-          git commit -am "🧪 Deploy with ${GITHUB_WORKFLOW}"
-          git push --all -f https://${{ secrets.GIT_SECRET }}@github.com/fbelinchon/blogs.git/gh-pages
+          git commit -m "master"
+          git push
         
