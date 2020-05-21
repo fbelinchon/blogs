@@ -19,7 +19,7 @@ lang: es
 
 markdown: kramdown
 
-
+destination: docs
 
 # Pagination Settings
 pagination:
