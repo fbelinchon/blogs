@@ -117,7 +117,9 @@ conectan de forma encadenada hasta producir el resultado final.</p>
 
 <p>Este modelo lo podemos representar matemáticamente como:</p>
 
-<script type="math/tex; mode=display">\hat{y}=W*x + b</script>
+<div class="kdmath">$$
+\hat{y}=W*x + b
+$$</div>
 
 <p><img src="/blogs/img/perceptron.png" alt="perceptron" /></p>
 <blockquote>
@@ -132,46 +134,60 @@ conectan de forma encadenada hasta producir el resultado final.</p>
 
 <p>El ejemplo del perceptron se define matemáticamente como una multiplicación de vectores. Al multiplicar el vector entrada $\vec{x}$ por el vector $\vec{w}$ de los pesos tenemos las operaciones de multiplicación que hemos definido.</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\left[\begin{array}{ccc}x_1& x_2 & x_3\end{array}\right] \left[\begin{array}{ccc}w_1 \\ w_2 \\ w_3\end{array}\right] = x_1*w_1+x_2*w_2+x_3*w_3 %]]></script>
+<div class="kdmath">$$
+\left[\begin{array}{ccc}x_1&amp; x_2 &amp; x_3\end{array}\right] \left[\begin{array}{ccc}w_1 \\ w_2 \\ w_3\end{array}\right] = x_1*w_1+x_2*w_2+x_3*w_3
+$$</div>
 
 <p>Si queremos añadir más neuronas a nuestro modelo necesitamos tratar con multiplicaciones de matrices. Imaginemos que se añade una nueva neurona. Tendrá el mismo número de entradas pero tendremos dos resultados de nuestro modelo, uno por cada neurona. Cada nueva columna de nuestra matriz de pesos representa una neurona con sus correspondietnes pesos que se aplican a cada entrada. Si lo expresamos como operaciones de matrices trandríamos lo siguiente.</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\left[\begin{array}{ccc}x_1& x_2 & x_3\end{array}\right] \left[\begin{array}{ccc}w_{1n1}&w_{1n2} \\ w_{2n1} & w_{2n2}\\ w_{3n1} & w_{3n2}\end{array}\right] = \begin{cases} x_1*w_{1n1}+x_{2}*w_{2n1}+x_3*w_{3n1} \\ x_1*w_{1n2}+x_{2}*w_{2n2}+x_3*w_{3n2}\end{cases} %]]></script>
+<div class="kdmath">$$
+\left[\begin{array}{ccc}x_1&amp; x_2 &amp; x_3\end{array}\right] \left[\begin{array}{ccc}w_{1n1}&amp;w_{1n2} \\ w_{2n1} &amp; w_{2n2}\\ w_{3n1} &amp; w_{3n2}\end{array}\right] = \begin{cases} x_1*w_{1n1}+x_{2}*w_{2n1}+x_3*w_{3n1} \\ x_1*w_{1n2}+x_{2}*w_{2n2}+x_3*w_{3n2}\end{cases}
+$$</div>
 
-<p>Hemos numerado los índices de los pesos de forma que el primer elemento es el orden del peso y el segundo la neurona. Por ejemplo $w_{3n2}$ sería el peso que se aplica a la tercera entrada perteneciente a la segunda neurona. Normalmente en matrices se habla de filas y columnas (en ese orden). A partir de ahora utilizaremos esa nomenclatura donde el primer valor (fila) es el orden del peso y el segundo (columna) es la neurona, <script type="math/tex">w_{32}</script> (es el tercer parámetro de la segunda neurona)</p>
+<p>Hemos numerado los índices de los pesos de forma que el primer elemento es el orden del peso y el segundo la neurona. Por ejemplo $w_{3n2}$ sería el peso que se aplica a la tercera entrada perteneciente a la segunda neurona. Normalmente en matrices se habla de filas y columnas (en ese orden). A partir de ahora utilizaremos esa nomenclatura donde el primer valor (fila) es el orden del peso y el segundo (columna) es la neurona, <span class="kdmath">$w_{32}$</span> (es el tercer parámetro de la segunda neurona)</p>
 
 <p>Es importante tener claro unos conceptos básicos de multiplicación de matrices.</p>
 <ul>
   <li>Para multiplicar dos matrices necesitamos que el número de columnas de la primera matriz sea igual al número de filas de la segunda matriz. Tiene sentido porque el número de parámetros de entrada tiene que ser igual al número de pesos que tiene cada neurona.</li>
-  <li>La matriz resultado tendrá el mismo número de filas que la primera matriz y el mismo número de columnas de la segunda. También concuerda con lo que hemos explicado. Si tenemos como entrada un vector <script type="math/tex">% <![CDATA[
-\vec{x} = \left[\begin{array}{ccc}x_1& x_2 & x_3\end{array}\right] %]]></script> (1 fila y 3 columnas) y nuestro modelo tiene dos neuronas (3 filas y 2 columnas) el resultado tendría una fila y dos columnas, una columnas para el resultado de cada neurona. Simplificando, el resultado de nuestro modelo sería igual al número de registros de entrada (en nuestro ejemplo uno) y tantas columnas como neuronas tenemos <script type="math/tex">X(1,3) * W(3,2) = R(1,2)</script></li>
+  <li>La matriz resultado tendrá el mismo número de filas que la primera matriz y el mismo número de columnas de la segunda. También concuerda con lo que hemos explicado. Si tenemos como entrada un vector <span class="kdmath">$\vec{x} = \left[\begin{array}{ccc}x_1&amp; x_2 &amp; x_3\end{array}\right]$</span> (1 fila y 3 columnas) y nuestro modelo tiene dos neuronas (3 filas y 2 columnas) el resultado tendría una fila y dos columnas, una columnas para el resultado de cada neurona. Simplificando, el resultado de nuestro modelo sería igual al número de registros de entrada (en nuestro ejemplo uno) y tantas columnas como neuronas tenemos <span class="kdmath">$X(1,3) * W(3,2) = R(1,2)$</span></li>
   <li>
-    <p>El orden de la multiplicación afecta al resultado. No es lo mismo multiplicar <script type="math/tex">A*B$ que $B*A</script>.</p>
+    <p>El orden de la multiplicación afecta al resultado. No es lo mismo multiplicar <span class="kdmath">$A*B$ que $B*A$</span>.</p>
 
     <blockquote>
-      <p>Nota: Si <script type="math/tex">A*B = R</script> entonces <script type="math/tex">B^T*A^T =R^T</script>. Eso quiere decir que si cambiamos el orden de los factores de la multiplicación tenemos que utilizar las matrices traspuestas de cada uno de ellos y el resultado será la traspuesta de $A*B$. La traspuesta de una matriz se obtiene cambiando filas por columnas.</p>
+      <p>Nota: Si <span class="kdmath">$A*B = R$</span> entonces <span class="kdmath">$B^T*A^T =R^T$</span>. Eso quiere decir que si cambiamos el orden de los factores de la multiplicación tenemos que utilizar las matrices traspuestas de cada uno de ellos y el resultado será la traspuesta de $A*B$. La traspuesta de una matriz se obtiene cambiando filas por columnas.</p>
     </blockquote>
   </li>
 </ul>
 
-<p>Para aclarar un poco más el tema podemos poner un ejemplo donde como entrada tenemos dos registros y nuestro modelo tiene 3 neuronas. <script type="math/tex">X(2,3) * W(3,3) = R(2,3)</script></p>
+<p>Para aclarar un poco más el tema podemos poner un ejemplo donde como entrada tenemos dos registros y nuestro modelo tiene 3 neuronas. <span class="kdmath">$X(2,3) * W(3,3) = R(2,3)$</span></p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\left[\begin{array}{ccc}x_{11}& x_{12} & x_{13} \\ x_{21}& x_{22} & x_{23}\end{array}\right] * \left[\begin{array}{ccc}w_{11}&w_{12} & w_{13} \\ w_{21} & w_{22} & w_{23}\\ w_{31} & w_{32}& w_{33}\end{array}\right] = \left[\begin{array}{ccc} r_{11}  & r_{12} & r_{13}\\ r_{21}  & r_{22} & r_{23}\end{array}\right] %]]></script>
+<div class="kdmath">$$
+\left[\begin{array}{ccc}x_{11}&amp; x_{12} &amp; x_{13} \\ x_{21}&amp; x_{22} &amp; x_{23}\end{array}\right] * \left[\begin{array}{ccc}w_{11}&amp;w_{12} &amp; w_{13} \\ w_{21} &amp; w_{22} &amp; w_{23}\\ w_{31} &amp; w_{32}&amp; w_{33}\end{array}\right] = \left[\begin{array}{ccc} r_{11}  &amp; r_{12} &amp; r_{13}\\ r_{21}  &amp; r_{22} &amp; r_{23}\end{array}\right]
+$$</div>
 
-<script type="math/tex; mode=display">r_{11} = x_{11}*w_{11} + x_{12}*w_{21} + x_{13}*w_{31}</script>
+<div class="kdmath">$$
+r_{11} = x_{11}*w_{11} + x_{12}*w_{21} + x_{13}*w_{31}
+$$</div>
 
-<script type="math/tex; mode=display">r_{12} = x_{11}*w_{12} + x_{12}*w_{22} + x_{13}*w_{32}</script>
+<div class="kdmath">$$
+r_{12} = x_{11}*w_{12} + x_{12}*w_{22} + x_{13}*w_{32}
+$$</div>
 
-<script type="math/tex; mode=display">r_{13} = x_{11}*w_{13} + x_{12}*w_{23} + x_{13}*w_{33}</script>
+<div class="kdmath">$$
+r_{13} = x_{11}*w_{13} + x_{12}*w_{23} + x_{13}*w_{33}
+$$</div>
 
-<script type="math/tex; mode=display">r_{21} = x_{21}*w_{11} + x_{22}*w_{22} + x_{23}*w_{31}</script>
+<div class="kdmath">$$
+r_{21} = x_{21}*w_{11} + x_{22}*w_{22} + x_{23}*w_{31}
+$$</div>
 
-<script type="math/tex; mode=display">r_{22} = x_{21}*w_{12} + x_{22}*w_{22} + x_{23}*w_{32}</script>
+<div class="kdmath">$$
+r_{22} = x_{21}*w_{12} + x_{22}*w_{22} + x_{23}*w_{32}
+$$</div>
 
-<script type="math/tex; mode=display">r_{23} = x_{21}*w_{13} + x_{22}*w_{23} + x_{23}*w_{33}</script>
+<div class="kdmath">$$
+r_{23} = x_{21}*w_{13} + x_{22}*w_{23} + x_{23}*w_{33}
+$$</div>
 
 <p>La primera fila del resultado es el valor de cada una de las tres neuronas para el primer registro de entrada. La segunda fila corresponde a los valores de cada neurona para el segundo registro.</p>
 
@@ -189,12 +205,14 @@ conectan de forma encadenada hasta producir el resultado final.</p>
 
 <p>Desde un punto de vista más matemático añadir una nueva capa representa una composición de funciones. Una composiciñon de funciones significa que la salida de una función es la entrada de la siguiente lo que encaja perfectamente con lo descripto en la parte de arquitectura de nuestro modelo.</p>
 
-<p>Supongamos que tenemos dos funciones <script type="math/tex">f(x) = W_1*x + b_1</script> y una función <script type="math/tex">g(x)=W_2*x + b_2</script>. El resultado final de la composición de estas dos funciones sería:
-<script type="math/tex">m(x)=g(f(x))</script>. Esto quiere decir que la variable <script type="math/tex">x</script> de la función <script type="math/tex">g(x)</script> se sustituye por la propia función <script type="math/tex">f(x)</script>.</p>
+<p>Supongamos que tenemos dos funciones <span class="kdmath">$f(x) = W_1*x + b_1$</span> y una función <span class="kdmath">$g(x)=W_2*x + b_2$</span>. El resultado final de la composición de estas dos funciones sería:
+<span class="kdmath">$m(x)=g(f(x))$</span>. Esto quiere decir que la variable <span class="kdmath">$x$</span> de la función <span class="kdmath">$g(x)$</span> se sustituye por la propia función <span class="kdmath">$f(x)$</span>.</p>
 
-<script type="math/tex; mode=display">m(x)=g(f(x))=g(W_1*x + b_1)= W_2*(W_1*x + b_1) + b_2</script>
+<div class="kdmath">$$
+m(x)=g(f(x))=g(W_1*x + b_1)= W_2*(W_1*x + b_1) + b_2
+$$</div>
 
-<p>Si <script type="math/tex">m(x)</script> es nuestro modelo, los datos de entrada serían la <script type="math/tex">x</script>. Vemos que en la función desarrollada aparecen los pesos de nuestras dos capas y sus correspondientes terminos bias. Nuestro modelo tendrá que ajustar los pesos de las matrices <script type="math/tex">W_1</script> y <script type="math/tex">W_2</script> y los términos <script type="math/tex">b_1</script> y <script type="math/tex">b_2</script> para que el error cometido por nuestro modelo con respecto al valor real de losnuestros datos de entrenamiento sea el menor posible.</p>
+<p>Si <span class="kdmath">$m(x)$</span> es nuestro modelo, los datos de entrada serían la <span class="kdmath">$x$</span>. Vemos que en la función desarrollada aparecen los pesos de nuestras dos capas y sus correspondientes terminos bias. Nuestro modelo tendrá que ajustar los pesos de las matrices <span class="kdmath">$W_1$</span> y <span class="kdmath">$W_2$</span> y los términos <span class="kdmath">$b_1$</span> y <span class="kdmath">$b_2$</span> para que el error cometido por nuestro modelo con respecto al valor real de losnuestros datos de entrenamiento sea el menor posible.</p>
 
 <h3 id="funciones-de-activación">Funciones de activación.</h3>
 
@@ -202,10 +220,12 @@ conectan de forma encadenada hasta producir el resultado final.</p>
 
 <p>Sin entrar en mucho detalle desarrollamos la función anterior.</p>
 
-<script type="math/tex; mode=display">m(x)=g(f(x))=g(W_1*x + b_1)= W_2*(W_1*x + b_1) + b_2 = W_2*W_1*x + W_2*b_1 + b_2 = W*x + b</script>
+<div class="kdmath">$$
+m(x)=g(f(x))=g(W_1*x + b_1)= W_2*(W_1*x + b_1) + b_2 = W_2*W_1*x + W_2*b_1 + b_2 = W*x + b
+$$</div>
 
 <blockquote>
-  <p>Si aplicamos las reglas del cálculo de matrices podrías comprobar <script type="math/tex">W_2*W_1</script> sería una matriz de pesos similar la capa uno y que <script type="math/tex">W_2*b_1</script> sería un vector de las mismas dimensiones que <script type="math/tex">b_2</script> y al sumarlo se comportaría como un nuevo termino bias (sesgo).</p>
+  <p>Si aplicamos las reglas del cálculo de matrices podrías comprobar <span class="kdmath">$W_2*W_1$</span> sería una matriz de pesos similar la capa uno y que <span class="kdmath">$W_2*b_1$</span> sería un vector de las mismas dimensiones que <span class="kdmath">$b_2$</span> y al sumarlo se comportaría como un nuevo termino bias (sesgo).</p>
 </blockquote>
 
 <p>Para evitar este problema se aplica una función no linear al final de cada capa. De esta forma se rompe la linearidad y podemos añadir más capas de forma efectiva. Cada nueva capa significa nuevos pesos y nuevos terminos bias (sesgos) que el modelo tiene que ajustar. De esta forma aumentamos la capacidad de aprendizaje del modelo al añadir nuevas capas.</p>
@@ -214,19 +234,19 @@ conectan de forma encadenada hasta producir el resultado final.</p>
 
 <p>Las funciones de activación más comunes son:</p>
 <ul>
-  <li>Logistic (sigmoid): <script type="math/tex">{\displaystyle S(x)={\frac {1}{1+e^{-x}}}={\frac {e^{x}}{e^{x}+1}}}</script></li>
+  <li>Logistic (sigmoid): <span class="kdmath">${\displaystyle S(x)={\frac {1}{1+e^{-x}}}={\frac {e^{x}}{e^{x}+1}}}$</span></li>
 </ul>
 
 <p><img src="/blogs/img/sigmoid.png" alt="logistic" /></p>
 
 <ul>
-  <li>tangente hiperbolica: <script type="math/tex">{\displaystyle \tanh x={\cfrac {e^{x}-e^{-x}}{e^{x}+e^{-x}}}}</script></li>
+  <li>tangente hiperbolica: <span class="kdmath">${\displaystyle \tanh x={\cfrac {e^{x}-e^{-x}}{e^{x}+e^{-x}}}}$</span></li>
 </ul>
 
 <p><img src="/blogs/img/tanh.png" alt="tanh" /></p>
 
 <ul>
-  <li>Relu: <script type="math/tex">\displaystyle f(x) =\max(0,x)</script></li>
+  <li>Relu: <span class="kdmath">$\displaystyle f(x) =\max(0,x)$</span></li>
 </ul>
 
 <p><img src="/blogs/img/relu.png" alt="Relu" /></p>
@@ -263,24 +283,24 @@ conectan de forma encadenada hasta producir el resultado final.</p>
     <p>Primera capa oculta (hidden layer 1): Esta es una capa propiamente dicha de nuestro modelo por lo que tenemos una matriz de pesos y un vector de terminos bias. La matriz de entrada se multiplica por la matriz de pesos y se le suma el término bias. Tanto la matriz de pesos como el vector bias de suma son parámetros de esta capa. Tenemos 9200 parámetros</p>
 
     <ul>
-      <li>Matriz de pesos: <script type="math/tex">W_1(45,200) = 9000</script> parámetros</li>
-      <li>Bias: <script type="math/tex">b_1(200) = 200</script> parámetros</li>
+      <li>Matriz de pesos: <span class="kdmath">$W_1(45,200) = 9000$</span> parámetros</li>
+      <li>Bias: <span class="kdmath">$b_1(200) = 200$</span> parámetros</li>
     </ul>
   </li>
   <li>
     <p>Segunda capa oculta (hidden layer 2): Toma como entrada la salida de la capa anterior. El número de filas corresponde al número de neuronas de la capa anterior. Las columnas corresponden al número de neuronas escogido para esta capa. Tenemos 20100 parámetros</p>
 
     <ul>
-      <li>Matriz de pesos: <script type="math/tex">W_1(200,100) = 20000</script> parámetros</li>
-      <li>Bias: <script type="math/tex">b_1(100) = 100</script> parámetros</li>
+      <li>Matriz de pesos: <span class="kdmath">$W_1(200,100) = 20000$</span> parámetros</li>
+      <li>Bias: <span class="kdmath">$b_1(100) = 100$</span> parámetros</li>
     </ul>
   </li>
   <li>
     <p>Capa de salida (output layer): Toma como entrada la salida de la capa anterior. El número de filas corresponde al número de neuronas de la capa anterior. Las columnas corresponden al número de nueronas decidio para esta capa, en este caso una única columna. Tenemos 101 parámetros</p>
 
     <ul>
-      <li>Matriz de pesos: <script type="math/tex">W_1(100,1) = 100</script> parámetros</li>
-      <li>Bias: <script type="math/tex">b_1(1) = 1</script> parámetros</li>
+      <li>Matriz de pesos: <span class="kdmath">$W_1(100,1) = 100$</span> parámetros</li>
+      <li>Bias: <span class="kdmath">$b_1(1) = 1$</span> parámetros</li>
     </ul>
   </li>
 </ul>
@@ -295,7 +315,7 @@ conectan de forma encadenada hasta producir el resultado final.</p>
 
 <p>Un modelo de red neuronal se compone de varias capas que constituyen la arquitectura del modelo. Cada capa consiste en una función lineal más una función de activación.</p>
 
-<p>La función lineal es del tipo <script type="math/tex">f(x) = W*x +b</script> y consiste en la matriz de pesos <script type="math/tex">W</script> y el término de sesgo o bias <script type="math/tex">b</script>. La matriz de pesos y el término bias representan los parámetros de la capa que el modelo tiene que ajustar en la fase de entrenamiento.</p>
+<p>La función lineal es del tipo <span class="kdmath">$f(x) = W*x +b$</span> y consiste en la matriz de pesos <span class="kdmath">$W$</span> y el término de sesgo o bias <span class="kdmath">$b$</span>. La matriz de pesos y el término bias representan los parámetros de la capa que el modelo tiene que ajustar en la fase de entrenamiento.</p>
 
 <p>La función de activación cumple la misión de evitar la linearidad al componer varias capas. No afecta ni a las dimensiones de la salida de la capa ni tampoco genera nuevos parámetros. Simplemente es una función que se aplica a la salida de la función lineal. Relu es una de las funciones de activación más utilizada. Simplemente devuelve un cero si el valor es negativo y el propio valor si es positivo.</p>
 
@@ -309,7 +329,7 @@ conectan de forma encadenada hasta producir el resultado final.</p>
         <div class="clearfix">
 
           
-          <a class="btn btn-primary float-left" href="/blogs/ai/2020/05/19/Introduccion.html" data-toggle="tooltip" data-placement="top" title="Introducción a Redes Neuronales">&larr; Anteriores<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-left" href="/blogs/2020/05/20/introducci%C3%B3n.html" data-toggle="tooltip" data-placement="top" title="hola Enfoque">&larr; Anteriores<span class="d-none d-md-inline">
               Post</span></a>
           
           
