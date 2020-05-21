@@ -11,7 +11,10 @@
     Introducción a Redes Neuronales - My Blog
     
   </title>
-
+  <!-- Mathjax Support -->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
   <meta name="description" content="Redes Neuronales, introducción">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -22,7 +25,7 @@
   <link rel="stylesheet" href="/blogs/assets/vendor/fontawesome-free/css/all.min.css">
 
   <link rel="stylesheet" href="/blogs/assets/main.css">
-  <link rel="canonical" href="https://fbelinchon.github.io/blogs/ai/2020/05/20/Introduccion.html">
+  <link rel="canonical" href="https://fbelinchon.github.io/blogs/ai/2020/05/19/Introduccion.html">
   <link rel="alternate" type="application/rss+xml" title="My Blog" href="/blogs/feed.xml">
 
 </head>
@@ -50,7 +53,7 @@
           <a class="nav-link" href="/blogs/posts">Posts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/blogs/ai">AI</a>
+          <a class="nav-link" href="/blogs/AI">AI</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/blogs/contact">Contact</a>
@@ -68,7 +71,7 @@
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-12 col-md-14 mx-auto">
           <div class="post-heading">
             <h1>Introducción a Redes Neuronales</h1>
             
@@ -76,9 +79,9 @@
             
             <span class="meta">Posted by
               <a href="#">Francisco Belinchón</a>
-              on May 20, 2020 &middot; <span class="reading-time" title="Estimated read time">
+              on May 19, 2020 &middot; <span class="reading-time" title="Estimated read time">
   
-   18 mins  read </span>
+   19 mins  read </span>
 
             </span>
           </div>
@@ -89,7 +92,7 @@
 
 <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-12 col-md-14 mx-auto">
 
         <h1 id="redes-neuronales-introducción">Redes Neuronales, introducción</h1>
 
@@ -208,12 +211,14 @@ En el caso de calcular el precio de una vivienda nuestro valor real es el precio
 
 <p>Un ejemplo sencillo. Si tenemos la siguiente función</p>
 
-<p>$f(x) = a·x + b$</p>
+<div class="kdmath">$$
+f(x) = a·x + b
+$$</div>
 
 <p>No sabemos el valor de [a] ni [b] que mejor se ajustan a la función que buscamos.</p>
 
-<p>Si nos dicen  $f(2)=5$ nos serviría $a=2$ y $b=1$ pero también $a=1$ y $b=3$ o $a=0$ y $b=5$
-Si la información es $f(2)=5$ y $f(3) = 7$ solamente tenemos una solución  $a=2$ y $b=1$</p>
+<p>Si nos dicen  <span class="kdmath">$f(2)=5$</span> nos serviría <span class="kdmath">$a=2$</span> y <span class="kdmath">$b=1$</span> pero también <span class="kdmath">$a=1$</span> y <span class="kdmath">$b=3$</span> o <span class="kdmath">$a=0$</span> y <span class="kdmath">$b=5$</span>
+Si la información es <span class="kdmath">$f(2)=5$</span> y <span class="kdmath">$f(3) = 7$</span> solamente tenemos una solución  <span class="kdmath">$a=2$</span> y <span class="kdmath">$b=1$</span></p>
 
 <p>En los casos reales las funciones son mucho más complejas y no existe una solución exacta. Tendremos que encontrar la solución que mejor se adapte a los datos de ejemplo que tenemos.</p>
 
@@ -223,8 +228,8 @@ Si la información es $f(2)=5$ y $f(3) = 7$ solamente tenemos una solución  $a=
 
 <p>Si representamos nuestro modelo con una fórmula matemática simple sería.</p>
 
-<p>Si nuestro modelo es $f(x)=W∗x+b$     ($x$ es nuestro ejemplo de entrada)
-La salida de nuestro modelo sería $\hat{y}=W∗x+b$</p>
+<p>Si nuestro modelo es <span class="kdmath">$f(x)=W∗x+b$</span>     (<span class="kdmath">$x$</span> es nuestro ejemplo de entrada)
+La salida de nuestro modelo sería <span class="kdmath">$\hat{y}=W∗x+b$</span></p>
 
 <p>Los valores W y b son los parámetros de nuestro sistema y precisamente son los valores que nuestro modelo tiene que ir actualizar para mejorar sus predicciones. Más concretamente se definen como</p>
 <ul>
@@ -238,7 +243,7 @@ La salida de nuestro modelo sería $\hat{y}=W∗x+b$</p>
 
 <p>Hemos comentado que x es la entrada a nuestro modelo (los ejemplos de imágenes) y que la variable y es el valor real. Si estamos diseñando un modelo para predecir un valor numérico es fácil de deducir que el error cometido es:</p>
 
-<p>$error=(y − \hat{y})$ la diferencia entre el valor predicho por nuestro modelo y el valor real.</p>
+<p><span class="kdmath">$error=(y − \hat{y})$</span> la diferencia entre el valor predicho por nuestro modelo y el valor real.</p>
 
 <p>Esta es precisamente la definición de la función de error <em>loss function</em> o <em>cost function</em>. Bueno, normalmente se toma el valor absoluto o la diferencia al cuadrado. Tenemos que calcular el error medio cometido en todos nuestros ejemplos.
 Para evitar que los errores positivos y negativos se compensen se suele utiliza el valor absoluto o la diferencia al cuadrado de cada error.</p>
@@ -247,10 +252,10 @@ Para evitar que los errores positivos y negativos se compensen se suele utiliza 
 
 <ul>
   <li>
-    <p>MAE (mean absolute error):$\displaystyle \frac{\sum_{i=1}^{n}|y − \hat{y}|}{n}$, sumatorio del valor absoluto de cada uno de los errores dividido por el número de pruebas (n).</p>
+    <p>MAE (mean absolute error):<span class="kdmath">$\displaystyle \frac{\sum_{i=1}^{n}\|y − \hat{y}\|}{n}$</span>, sumatorio del valor absoluto de cada uno de los errores dividido por el número de pruebas (n).</p>
   </li>
   <li>
-    <p>RMSE (root mean square error):$\displaystyle \sqrt{\frac{\sum_{i=1}^{n}(y-\hat{y})^2}{n}}$, sumatorio del cuadrado de los errores dividido por el numero de ejemplos que tenemos (n). Finalmente obtiene la raiz cuadrada del número calculado.</p>
+    <p>RMSE (root mean square error):<span class="kdmath">$\displaystyle \sqrt{\frac{\sum_{i=1}^{n}(y-\hat{y})^2}{n}}$</span>, sumatorio del cuadrado de los errores dividido por el numero de ejemplos que tenemos (n). Finalmente obtiene la raiz cuadrada del número calculado.</p>
   </li>
 </ul>
 
@@ -302,9 +307,12 @@ Para evitar que los errores positivos y negativos se compensen se suele utiliza 
         <div class="clearfix">
 
           
-          <a class="btn btn-primary float-left" href="/blogs/2020/05/20/introducci%C3%B3n.html" data-toggle="tooltip" data-placement="top" title="hola Enfoque">&larr; Anteriores<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-left" href="/blogs/2019/10/31/focus.html" data-toggle="tooltip" data-placement="top" title="AI 2Man must explore, and this is exploration at its greatest">&larr; Anteriores<span class="d-none d-md-inline">
               Post</span></a>
           
+          
+          <a class="btn btn-primary float-right" href="/blogs/2020/05/20/introducci%C3%B3n.html" data-toggle="tooltip" data-placement="top" title="hola Enfoque">Posteriores<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
           
 
         </div>
