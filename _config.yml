@@ -20,7 +20,8 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 use_math: true
 destination: docs
 
-markdown:           kramdown
+
+markdown: kramdown
 kramdown:
   math_engine: katex
   input: GFM

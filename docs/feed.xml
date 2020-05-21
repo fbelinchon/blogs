@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-05-21T12:13:07+02:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">My Blog</title><subtitle>Este es mi blog</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">Modelos simples a Redes Neuronales</title><link href="https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html" rel="alternate" type="text/html" title="Modelos simples a Redes Neuronales" /><published>2020-05-20T16:45:13+02:00</published><updated>2020-05-20T16:45:13+02:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html">&lt;h1 id=&quot;modelo-simple&quot;&gt;Modelo simple&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blogs/" rel="alternate" type="text/html" /><updated>2020-05-21T16:09:57+02:00</updated><id>http://localhost:4000/blogs/feed.xml</id><title type="html">My Blog</title><subtitle>Este es mi blog</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">Modelos simples a Redes Neuronales</title><link href="http://localhost:4000/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html" rel="alternate" type="text/html" title="Modelos simples a Redes Neuronales" /><published>2020-05-20T16:45:13+02:00</published><updated>2020-05-20T16:45:13+02:00</updated><id>http://localhost:4000/blogs/ai/2020/05/20/Modelo-Red-Neuronal</id><content type="html" xml:base="http://localhost:4000/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h1 id=&quot;modelo-simple&quot;&gt;Modelo simple&lt;/h1&gt;
 
 &lt;h2 id=&quot;objetivo&quot;&gt;Objetivo.&lt;/h2&gt;
 &lt;p&gt;El objetivo del artículo es entender como se define un modelo de apredizaje. Nos centraremos 
@@ -25,7 +28,8 @@ conectan de forma encadenada hasta producir el resultado final.&lt;/p&gt;
 \hat{y}=W*x + b
 $$&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blogs/img/perceptron.png&quot; alt=&quot;perceptron&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blogs/img/perceptron.png&quot; alt=&quot;perceptron&quot; title=&quot;perceptron&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;Imagen perceptrón con cinco entradas tomada de Wikipedia&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -36,7 +40,7 @@ $$&lt;/div&gt;
 
 &lt;h3 id=&quot;multiplicación-de-matrices&quot;&gt;Multiplicación de matrices&lt;/h3&gt;
 
-&lt;p&gt;El ejemplo del perceptron se define matemáticamente como una multiplicación de vectores. Al multiplicar el vector entrada $\vec{x}$ por el vector $\vec{w}$ de los pesos tenemos las operaciones de multiplicación que hemos definido.&lt;/p&gt;
+&lt;p&gt;El ejemplo del perceptron se define matemáticamente como una multiplicación de vectores. Al multiplicar el vector entrada &lt;span class=&quot;kdmath&quot;&gt;$\vec{x}$&lt;/span&gt; por el vector &lt;span class=&quot;kdmath&quot;&gt;$\vec{w}$&lt;/span&gt; de los pesos tenemos las operaciones de multiplicación que hemos definido.&lt;/p&gt;
 
 &lt;div class=&quot;kdmath&quot;&gt;$$
 \left[\begin{array}{ccc}x_1&amp; x_2 &amp; x_3\end{array}\right] \left[\begin{array}{ccc}w_1 \\ w_2 \\ w_3\end{array}\right] = x_1*w_1+x_2*w_2+x_3*w_3
@@ -48,14 +52,14 @@ $$&lt;/div&gt;
 \left[\begin{array}{ccc}x_1&amp; x_2 &amp; x_3\end{array}\right] \left[\begin{array}{ccc}w_{1n1}&amp;w_{1n2} \\ w_{2n1} &amp; w_{2n2}\\ w_{3n1} &amp; w_{3n2}\end{array}\right] = \begin{cases} x_1*w_{1n1}+x_{2}*w_{2n1}+x_3*w_{3n1} \\ x_1*w_{1n2}+x_{2}*w_{2n2}+x_3*w_{3n2}\end{cases}
 $$&lt;/div&gt;
 
-&lt;p&gt;Hemos numerado los índices de los pesos de forma que el primer elemento es el orden del peso y el segundo la neurona. Por ejemplo $w_{3n2}$ sería el peso que se aplica a la tercera entrada perteneciente a la segunda neurona. Normalmente en matrices se habla de filas y columnas (en ese orden). A partir de ahora utilizaremos esa nomenclatura donde el primer valor (fila) es el orden del peso y el segundo (columna) es la neurona, &lt;span class=&quot;kdmath&quot;&gt;$w_{32}$&lt;/span&gt; (es el tercer parámetro de la segunda neurona)&lt;/p&gt;
+&lt;p&gt;Hemos numerado los índices de los pesos de forma que el primer elemento es el orden del peso y el segundo la neurona. Por ejemplo &lt;span class=&quot;kdmath&quot;&gt;$w_{3n2}$&lt;/span&gt; sería el peso que se aplica a la tercera entrada perteneciente a la segunda neurona. Normalmente en matrices se habla de filas y columnas (en ese orden). A partir de ahora utilizaremos esa nomenclatura donde el primer valor (fila) es el orden del peso y el segundo (columna) es la neurona, &lt;span class=&quot;kdmath&quot;&gt;$w_{32}$&lt;/span&gt; (es el tercer parámetro de la segunda neurona)&lt;/p&gt;
 
 &lt;p&gt;Es importante tener claro unos conceptos básicos de multiplicación de matrices.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Para multiplicar dos matrices necesitamos que el número de columnas de la primera matriz sea igual al número de filas de la segunda matriz. Tiene sentido porque el número de parámetros de entrada tiene que ser igual al número de pesos que tiene cada neurona.&lt;/li&gt;
   &lt;li&gt;La matriz resultado tendrá el mismo número de filas que la primera matriz y el mismo número de columnas de la segunda. También concuerda con lo que hemos explicado. Si tenemos como entrada un vector &lt;span class=&quot;kdmath&quot;&gt;$\vec{x} = \left[\begin{array}{ccc}x_1&amp; x_2 &amp; x_3\end{array}\right]$&lt;/span&gt; (1 fila y 3 columnas) y nuestro modelo tiene dos neuronas (3 filas y 2 columnas) el resultado tendría una fila y dos columnas, una columnas para el resultado de cada neurona. Simplificando, el resultado de nuestro modelo sería igual al número de registros de entrada (en nuestro ejemplo uno) y tantas columnas como neuronas tenemos &lt;span class=&quot;kdmath&quot;&gt;$X(1,3) * W(3,2) = R(1,2)$&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;El orden de la multiplicación afecta al resultado. No es lo mismo multiplicar &lt;span class=&quot;kdmath&quot;&gt;$A*B$ que $B*A$&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;El orden de la multiplicación afecta al resultado. No es lo mismo multiplicar &lt;span class=&quot;kdmath&quot;&gt;$A*B$ que$&lt;/span&gt;B*A$$.&lt;/p&gt;
 
     &lt;blockquote&gt;
       &lt;p&gt;Nota: Si &lt;span class=&quot;kdmath&quot;&gt;$A*B = R$&lt;/span&gt; entonces &lt;span class=&quot;kdmath&quot;&gt;$B^T*A^T =R^T$&lt;/span&gt;. Eso quiere decir que si cambiamos el orden de los factores de la multiplicación tenemos que utilizar las matrices traspuestas de cada uno de ellos y el resultado será la traspuesta de $A*B$. La traspuesta de una matriz se obtiene cambiando filas por columnas.&lt;/p&gt;
@@ -157,7 +161,7 @@ $$&lt;/div&gt;
 
 &lt;p&gt;Inicialmente la función logistic se utilizaba con mucha frecuencia como función de activación. Actualmente Relu es la función más utilizada principalmente con configuraciones de redes neuronales sencillas. En redes neuronales más complejas como redes convolucionales o recurrentes también se utiliza logistic y tanh.&lt;/p&gt;
 
-&lt;p&gt;### Modelo multicapa&lt;/p&gt;
+&lt;h3 id=&quot;modelo-multicapa&quot;&gt;Modelo multicapa&lt;/h3&gt;
 
 &lt;p&gt;Ahora que entendemos como podemos añadir nuevas capas a nuestro modelo vamos a definir más en detalle una arquitectura típica. Tenemos tres tipos de capas.&lt;/p&gt;
 &lt;ul&gt;
@@ -177,7 +181,7 @@ $$&lt;/div&gt;
 
 &lt;p&gt;El esquema de nuestra red neuronal sería de esta manera.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blogs/img/ejemplo_rn.jpg&quot; alt=&quot;red neuronal&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blogs/img/ejemplo_rn.jpg&quot; alt=&quot;red neuronal&quot; title=&quot;perceptron&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Vamos a analizar los parámetros y las dimensiones de las matrices en cada capa para conocer mejor el funcionamiento interno.&lt;/p&gt;
 
@@ -225,39 +229,7 @@ $$&lt;/div&gt;
 
 &lt;p&gt;El tipo de modelo que hemos explicado es el más sencillo y se denomina fully-connected neural network. Existen otros tipos de capas con configraciones más complejas pero todas comparten un patrón de capas encadenadas.&lt;/p&gt;
 
-&lt;p&gt;En el siguiente árticulo hablaremos del proceso de entrenamiento  y como conseguir modelos que nos pemitan predecir valores o inferir características a partir de datos nuevos (distintos a los utiilizados para entranar le modelo).&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Modelo simple</summary></entry><entry><title type="html">hola Enfoque</title><link href="https://fbelinchon.github.io/blogs/2020/05/20/introducci%C3%B3n.html" rel="alternate" type="text/html" title="hola Enfoque" /><published>2020-05-20T05:45:13+02:00</published><updated>2020-05-20T05:45:13+02:00</updated><id>https://fbelinchon.github.io/blogs/2020/05/20/introducci%C3%B3n</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2020/05/20/introducci%C3%B3n.html">&lt;p&gt;#¿Cómo sabemos en que dirección tenemos que modificar nuestros parámetros para mejorar la predicción?&lt;/p&gt;
-
-&lt;p&gt;El objetivo es minimizar nuestro error, es decir, nuestra función de coste. Tenemos que saber en que dirección modificar nuestros parámetros para que esto ocurra.&lt;/p&gt;
-
-&lt;p&gt;Imaginemos que estamos en lo alto de una montaña y queremos llegar al valle. La forma más rápida es seguir el camino que tenga una mayor pendiente. Cuanto mayor sea la pendiente, más rápido nos acercamos al valle. Nuestro problema es similar, tenemos que buscar cual es la pendiente que nos acerca al mínimo de nuestra función. Recordando algo de cálculo.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;La derivada de una función en un punto puede interpretarse geométricamente, ya que se corresponde con la pendiente de la recta tangente a la gráfica de la función en dicho punto.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Esto quiere decir que si obtenemos la derivada parcial (derivada de un parámetros manteniendo constante el resto) sabremos si tenemos que aumentar o disminuir el valor de ese parámetros para disminuir el valor de la función. La derivada parcial es nuestro camino de mayor pendiente al valle.&lt;/p&gt;
-
-&lt;p&gt;En realidad se utiliza el gradiente en un punto, que es algo similar a la derivada parcial pero más sencillo de calcular. El método más popular es SGD (Stochastic Gradient Descent).&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;SGD: método iterativo de optimización como una aproximación a Gradiente Descent mediante el cáculo del gradiente sobre un subconjunto de los datos seleccionados de forma aleatoria.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Cuando la cantidad de datos es muy elevada el cáculo del gradiente se sustituye por una aproximación utilizando un subconjunto de los datos de forma iterativa. Dicho de otro modo, en lugar de calcular el gradiente de todo el conjunto de los datos se desarrolla un proceso iterativo sobre un subconjunto pequeño de datos seleccionados de forma aleatoria.&lt;/p&gt;
-
-&lt;p&gt;El proceso iterativo es el siguiente&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Se selecciona un subconjunto pequeño de datos&lt;/li&gt;
-  &lt;li&gt;Se calcula el gradiente de este conjunto&lt;/li&gt;
-  &lt;li&gt;Modificamos nuestros parámetros según el gradiente calculado en el paso anterior.&lt;/li&gt;
-  &lt;li&gt;Seleccionamos un conjunto diferente de datos de forma aleatoria volviendo al primer paso.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Al final se utiliza todo el conjunto de datos pero calculando el gradiente de grupos pequeños hasta que utilizamos todos los datos. Lo normal es repetir todo este proceso seleccionando varias veces todo el conjunto de datos para ir optimizando nuestro modelo.&lt;/p&gt;
-
-&lt;p&gt;Otro elemento clave es este proceso de optimización es el coeficiente de aprendizaje o &lt;strong&gt;learning rate&lt;/strong&gt;. El valor de nuestra pendiente puede ser elevado y corremos el riesgo de estar dando saltos entre aumentar o disminuir el valor de un parámetro. Para controlar este proceso multiplicamos el valor de nuestro gradiente por este coeficiente.&lt;/p&gt;
-
-&lt;p&gt;La selección del valor óptimo de &lt;strong&gt;learning rate&lt;/strong&gt; que nos permita obtener la mejor optimización de nuestra función de coste es clave para el aprendizaje de nuestro modelo. Valores de &lt;strong&gt;learning rate&lt;/strong&gt; muy altos provocaran que nuestro modelo no consiga llegar a un mínimo porque estará dando saltos muy grandes en torno a este punto. Si el &lt;strong&gt;learning rate&lt;/strong&gt; es muy pequeño tardaremos mucho tiempo en llegar al mínimo.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">#¿Cómo sabemos en que dirección tenemos que modificar nuestros parámetros para mejorar la predicción?</summary></entry><entry><title type="html">Introducción a Redes Neuronales</title><link href="https://fbelinchon.github.io/blogs/ai/2020/05/19/Introduccion.html" rel="alternate" type="text/html" title="Introducción a Redes Neuronales" /><published>2020-05-19T16:45:13+02:00</published><updated>2020-05-19T16:45:13+02:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/05/19/Introduccion</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/05/19/Introduccion.html">&lt;h1 id=&quot;redes-neuronales-introducción&quot;&gt;Redes Neuronales, introducción&lt;/h1&gt;
+&lt;p&gt;En el siguiente árticulo hablaremos del proceso de entrenamiento  y como conseguir modelos que nos pemitan predecir valores o inferir características a partir de datos nuevos (distintos a los utiilizados para entranar le modelo).&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Modelo simple</summary></entry><entry><title type="html">Introducción a Redes Neuronales</title><link href="http://localhost:4000/blogs/ai/2020/05/19/Introduccion.html" rel="alternate" type="text/html" title="Introducción a Redes Neuronales" /><published>2020-05-19T16:45:13+02:00</published><updated>2020-05-19T16:45:13+02:00</updated><id>http://localhost:4000/blogs/ai/2020/05/19/Introduccion</id><content type="html" xml:base="http://localhost:4000/blogs/ai/2020/05/19/Introduccion.html">&lt;h1 id=&quot;redes-neuronales-introducción&quot;&gt;Redes Neuronales, introducción&lt;/h1&gt;
 
 &lt;h2 id=&quot;la-inteligencia-artificial&quot;&gt;la Inteligencia artificial&lt;/h2&gt;
 
@@ -318,7 +290,7 @@ No es un problema tan trivial porque cada uno tiene su propia forma de escribir 
 
 &lt;p&gt;A continuación os pongo algunos ejemplos de extraidos de MNIST.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/mnist2.jpg&quot; alt=&quot;mnist&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blogs/img/mnist2.jpg&quot; alt=&quot;mnist&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://yann.lecun.com/exdb/mnist/&quot;&gt;mnist:&lt;/a&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;base de datos de imágenes con 60.000 ejemplo de números manuscritos de tamaño 28x28 pixels. Se utiliza como base de entranamiento en explicaciones sencilla de tratamiento de imagenes.&lt;/code&gt;&lt;/p&gt;
@@ -462,203 +434,4 @@ Para evitar que los errores positivos y negativos se compensen se suele utiliza 
 
 &lt;p&gt;Otro elemento clave es este proceso de optimización es el coeficiente de aprendizaje o &lt;strong&gt;learning rate&lt;/strong&gt;. El valor de nuestra pendiente puede ser elevado y corremos el riesgo de estar dando saltos entre aumentar o disminuir el valor de un parámetro. Para controlar este proceso multiplicamos el valor de nuestro gradiente por este coeficiente.&lt;/p&gt;
 
-&lt;p&gt;La selección del valor óptimo de &lt;strong&gt;learning rate&lt;/strong&gt; que nos permita obtener la mejor optimización de nuestra función de coste es clave para el aprendizaje de nuestro modelo. Valores de &lt;strong&gt;learning rate&lt;/strong&gt; muy altos provocaran que nuestro modelo no consiga llegar a un mínimo porque estará dando saltos muy grandes en torno a este punto. Si el &lt;strong&gt;learning rate&lt;/strong&gt; es muy pequeño tardaremos mucho tiempo en llegar al mínimo.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Redes Neuronales, introducción</summary></entry><entry><title type="html">AI 2Man must explore, and this is exploration at its greatest</title><link href="https://fbelinchon.github.io/blogs/2019/10/31/focus.html" rel="alternate" type="text/html" title="AI 2Man must explore, and this is exploration at its greatest" /><published>2019-10-31T15:45:13+01:00</published><updated>2019-10-31T15:45:13+01:00</updated><id>https://fbelinchon.github.io/blogs/2019/10/31/focus</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2019/10/31/focus.html">&lt;h1 id=&quot;prueba&quot;&gt;prueba&lt;/h1&gt;
-&lt;h2 id=&quot;otro&quot;&gt;Otro&lt;/h2&gt;
-
-&lt;p&gt;hola como vas fghgfh&lt;/p&gt;
-
-&lt;p&gt;$ a=b $&lt;/p&gt;
-
-&lt;p&gt;hola como vas&lt;/p&gt;
-
-&lt;div class=&quot;kdmath&quot;&gt;$$
-x=y
-$$&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;prueba&quot; /&gt;&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">prueba Otro</summary></entry><entry><title type="html">AI Man must explore, and this is exploration at its greatest</title><link href="https://fbelinchon.github.io/blogs/2017/10/31/man-must-explore.html" rel="alternate" type="text/html" title="AI Man must explore, and this is exploration at its greatest" /><published>2017-10-31T15:45:13+01:00</published><updated>2017-10-31T15:45:13+01:00</updated><id>https://fbelinchon.github.io/blogs/2017/10/31/man-must-explore</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2017/10/31/man-must-explore.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
- 
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote&quot;&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;img class=&quot;img-fluid&quot; src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;Demo Image&quot;&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory. Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</summary></entry><entry><title type="html">AI I believe every human has a finite number of heartbeats. I don’t intend to waste any of mine.</title><link href="https://fbelinchon.github.io/blogs/2017/10/31/heartbeats.html" rel="alternate" type="text/html" title="AI I believe every human has a finite number of heartbeats. I don't intend to waste any of mine." /><published>2017-10-31T04:45:13+01:00</published><updated>2017-10-31T04:45:13+01:00</updated><id>https://fbelinchon.github.io/blogs/2017/10/31/heartbeats</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2017/10/31/heartbeats.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote&quot;&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;img class=&quot;img-fluid&quot; src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;Demo Image&quot;&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">Science has not yet mastered prophecy</title><link href="https://fbelinchon.github.io/blogs/general/2017/10/30/prophecy.html" rel="alternate" type="text/html" title="Science has not yet mastered prophecy" /><published>2017-10-30T04:45:13+01:00</published><updated>2017-10-30T04:45:13+01:00</updated><id>https://fbelinchon.github.io/blogs/general/2017/10/30/prophecy</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/general/2017/10/30/prophecy.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote&quot;&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;img class=&quot;img-fluid&quot; src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;Demo Image&quot;&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">Failure is not an option</title><link href="https://fbelinchon.github.io/blogs/2017/10/29/exploration.html" rel="alternate" type="text/html" title="Failure is not an option" /><published>2017-10-29T04:45:13+01:00</published><updated>2017-10-29T04:45:13+01:00</updated><id>https://fbelinchon.github.io/blogs/2017/10/29/exploration</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2017/10/29/exploration.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote&quot;&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;img class=&quot;img-fluid&quot; src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;Demo Image&quot;&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">The dreams of yesterday are the hopes of today and the reality of tomorrow.</title><link href="https://fbelinchon.github.io/blogs/2017/10/28/dreams.html" rel="alternate" type="text/html" title="The dreams of yesterday are the hopes of today and the reality of tomorrow." /><published>2017-10-28T05:45:13+02:00</published><updated>2017-10-28T05:45:13+02:00</updated><id>https://fbelinchon.github.io/blogs/2017/10/28/dreams</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2017/10/28/dreams.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote&quot;&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;img class=&quot;img-fluid&quot; src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;Demo Image&quot;&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">2 Dinosaurs are extinct today</title><link href="https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs-copy.html" rel="alternate" type="text/html" title="2 Dinosaurs are extinct today" /><published>2017-10-27T05:45:13+02:00</published><updated>2017-10-27T05:45:13+02:00</updated><id>https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs%20copy</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs-copy.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote&quot;&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;img class=&quot;img-fluid&quot; src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;Demo Image&quot;&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry></feed>
+&lt;p&gt;La selección del valor óptimo de &lt;strong&gt;learning rate&lt;/strong&gt; que nos permita obtener la mejor optimización de nuestra función de coste es clave para el aprendizaje de nuestro modelo. Valores de &lt;strong&gt;learning rate&lt;/strong&gt; muy altos provocaran que nuestro modelo no consiga llegar a un mínimo porque estará dando saltos muy grandes en torno a este punto. Si el &lt;strong&gt;learning rate&lt;/strong&gt; es muy pequeño tardaremos mucho tiempo en llegar al mínimo.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Redes Neuronales, introducción</summary></entry></feed>

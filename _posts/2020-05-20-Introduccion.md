@@ -4,7 +4,7 @@ title: "Introducción a Redes Neuronales"
 subtitle: "Entrenamiento y validación de modelos de Deep Learning"
 date: 2020-05-19 10:45:13 -0400
 background: '/img/posts/06.jpg'
-categories: ai
+categories: AI
 ---
 # Redes Neuronales, introducción 
 
@@ -67,7 +67,7 @@ Si lo analizamos un poco, no es fácil desarrollar un algoritmo que nos permita 
 
 A continuación os pongo algunos ejemplos de extraidos de MNIST.
 
-![mnist](/images/mnist2.jpg)
+![mnist](/blogs/img/mnist2.jpg)
 
 [mnist:](http://yann.lecun.com/exdb/mnist/)
 `base de datos de imágenes con 60.000 ejemplo de números manuscritos de tamaño 28x28 pixels. Se utiliza como base de entranamiento en explicaciones sencilla de tratamiento de imagenes.`

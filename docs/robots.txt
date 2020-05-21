@@ -1,1 +1,1 @@
-Sitemap: https://fbelinchon.github.io/blogs/sitemap.xml
+Sitemap: http://localhost:4000/blogs/sitemap.xml

@@ -3,10 +3,13 @@ layout: post
 title: "Modelos simples a Redes Neuronales"
 subtitle: "Entendiendo modelos simples de Redes Neuronales"
 date: 2020-05-20 10:45:13 -0400
-background: '/blogs/img/posts/06.jpg'
-categories: ai
+background: '/img/posts/06.jpg'
+categories: AI
+mathjax: true
 ---
-
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 # Modelo simple
 
 ## Objetivo.
@@ -28,18 +31,26 @@ El modelo más básico de red neuronal es el perceptrón. Está definido por una
 
 Este modelo lo podemos representar matemáticamente como:
 
+
+
 $$\hat{y}=W*x + b$$
 
-![perceptron](/blogs/img/perceptron.png)
+<img src="/blogs/img/perceptron.png" alt="perceptron"
+	title="perceptron" width="80%" />
+
+
 > Imagen perceptrón con cinco entradas tomada de Wikipedia
 
 Para ajustar la salida de un perceptrón que sería de 0 o 1 podemos indicar que el valor será un 1 si el resultado es positivo y cero en caso contrario.
 
 El perceptrón es un modelo muy simple donde solamente tenemos una neurona y una sola capa. Como veremos más adelante las redes neuronales constan de cientos de neuronas en cada capa y de varias capas que se encadenan unas a otras. Es decir, la salida de una capa es la entrada a la siguiente.
 
+
+
 ### Multiplicación de matrices
 
-El ejemplo del perceptron se define matemáticamente como una multiplicación de vectores. Al multiplicar el vector entrada $\vec{x}$ por el vector $\vec{w}$ de los pesos tenemos las operaciones de multiplicación que hemos definido.
+El ejemplo del perceptron se define matemáticamente como una multiplicación de vectores. Al multiplicar el vector entrada $$ \vec{x} $$ por el vector $$ \vec{w} $$ de los pesos tenemos las operaciones de multiplicación que hemos definido.
+
 
 $$
 \left[\begin{array}{ccc}x_1& x_2 & x_3\end{array}\right] \left[\begin{array}{ccc}w_1 \\ w_2 \\ w_3\end{array}\right] = x_1*w_1+x_2*w_2+x_3*w_3
@@ -52,12 +63,12 @@ $$
 \left[\begin{array}{ccc}x_1& x_2 & x_3\end{array}\right] \left[\begin{array}{ccc}w_{1n1}&w_{1n2} \\ w_{2n1} & w_{2n2}\\ w_{3n1} & w_{3n2}\end{array}\right] = \begin{cases} x_1*w_{1n1}+x_{2}*w_{2n1}+x_3*w_{3n1} \\ x_1*w_{1n2}+x_{2}*w_{2n2}+x_3*w_{3n2}\end{cases}
 $$
 
-Hemos numerado los índices de los pesos de forma que el primer elemento es el orden del peso y el segundo la neurona. Por ejemplo $w_{3n2}$ sería el peso que se aplica a la tercera entrada perteneciente a la segunda neurona. Normalmente en matrices se habla de filas y columnas (en ese orden). A partir de ahora utilizaremos esa nomenclatura donde el primer valor (fila) es el orden del peso y el segundo (columna) es la neurona, $$w_{32}$$ (es el tercer parámetro de la segunda neurona)
+Hemos numerado los índices de los pesos de forma que el primer elemento es el orden del peso y el segundo la neurona. Por ejemplo $$ w_{3n2} $$ sería el peso que se aplica a la tercera entrada perteneciente a la segunda neurona. Normalmente en matrices se habla de filas y columnas (en ese orden). A partir de ahora utilizaremos esa nomenclatura donde el primer valor (fila) es el orden del peso y el segundo (columna) es la neurona, $$w_{32}$$ (es el tercer parámetro de la segunda neurona)
 
 Es importante tener claro unos conceptos básicos de multiplicación de matrices.
 - Para multiplicar dos matrices necesitamos que el número de columnas de la primera matriz sea igual al número de filas de la segunda matriz. Tiene sentido porque el número de parámetros de entrada tiene que ser igual al número de pesos que tiene cada neurona.
 - La matriz resultado tendrá el mismo número de filas que la primera matriz y el mismo número de columnas de la segunda. También concuerda con lo que hemos explicado. Si tenemos como entrada un vector $$\vec{x} = \left[\begin{array}{ccc}x_1& x_2 & x_3\end{array}\right]$$ (1 fila y 3 columnas) y nuestro modelo tiene dos neuronas (3 filas y 2 columnas) el resultado tendría una fila y dos columnas, una columnas para el resultado de cada neurona. Simplificando, el resultado de nuestro modelo sería igual al número de registros de entrada (en nuestro ejemplo uno) y tantas columnas como neuronas tenemos $$X(1,3) * W(3,2) = R(1,2)$$
-- El orden de la multiplicación afecta al resultado. No es lo mismo multiplicar $$A*B$ que $B*A$$.
+- El orden de la multiplicación afecta al resultado. No es lo mismo multiplicar $$A*B$ que $$B*A$$.
   
   > Nota: Si $$A*B = R$$ entonces $$B^T*A^T =R^T$$. Eso quiere decir que si cambiamos el orden de los factores de la multiplicación tenemos que utilizar las matrices traspuestas de cada uno de ellos y el resultado será la traspuesta de $A*B$. La traspuesta de una matriz se obtiene cambiando filas por columnas.
   
@@ -146,7 +157,7 @@ Las funciones de activación más comunes son:
 
 Inicialmente la función logistic se utilizaba con mucha frecuencia como función de activación. Actualmente Relu es la función más utilizada principalmente con configuraciones de redes neuronales sencillas. En redes neuronales más complejas como redes convolucionales o recurrentes también se utiliza logistic y tanh.
 
- ### Modelo multicapa
+### Modelo multicapa
 
  Ahora que entendemos como podemos añadir nuevas capas a nuestro modelo vamos a definir más en detalle una arquitectura típica. Tenemos tres tipos de capas.
  - Capa de entrada (input layer): no es una capa en si, sino la entrada al modelo. Esta capa representa la información de entrenamiento. Las columnas representan cada una de las características de nuestra información y las filas el número de ejemplos que vamos a pasar al modelo.
@@ -163,7 +174,9 @@ Tomamos la decisión de crear un modelo de red neuronal con cuatro capas. La pri
 
 El esquema de nuestra red neuronal sería de esta manera.
 
-![red neuronal](/blogs/img/ejemplo_rn.jpg)
+<img src="/blogs/img/ejemplo_rn.jpg" alt="red neuronal"
+	title="perceptron" width="100%" />
+
 
 Vamos a analizar los parámetros y las dimensiones de las matrices en cada capa para conocer mejor el funcionamiento interno.
 
