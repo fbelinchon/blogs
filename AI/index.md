@@ -4,10 +4,7 @@ title: AI
 background: '/img/bg-post.jpg'
 pagination: 
   enabled: true
-<<<<<<< HEAD
   category: ai
-=======
->>>>>>> fed8e720e1fb6d614133126c2e1fa4d7803ef1cf
 ---
 <h1>AI</h1>
 
