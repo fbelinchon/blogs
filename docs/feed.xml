@@ -1,4 +1,263 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-05-21T08:46:52+00:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">My Blog</title><subtitle>Este es mi blog</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">Introducción a Redes Neuronales</title><link href="https://fbelinchon.github.io/blogs/ai/2020/05/20/Introduccion.html" rel="alternate" type="text/html" title="Introducción a Redes Neuronales" /><published>2020-05-20T14:45:13+00:00</published><updated>2020-05-20T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/05/20/Introduccion</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/05/20/Introduccion.html">&lt;h1 id=&quot;redes-neuronales-introducción&quot;&gt;Redes Neuronales, introducción&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-05-21T12:13:07+02:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">My Blog</title><subtitle>Este es mi blog</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">Modelos simples a Redes Neuronales</title><link href="https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html" rel="alternate" type="text/html" title="Modelos simples a Redes Neuronales" /><published>2020-05-20T16:45:13+02:00</published><updated>2020-05-20T16:45:13+02:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html">&lt;h1 id=&quot;modelo-simple&quot;&gt;Modelo simple&lt;/h1&gt;
+
+&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo.&lt;/h2&gt;
+&lt;p&gt;El objetivo del artículo es entender como se define un modelo de apredizaje. Nos centraremos 
+en la definición de modelos de redes neuronales sencillas para entender los mecanismos básicos.
+Las redes neuronales se denominan &lt;strong&gt;deep learning&lt;/strong&gt; porque se basan en arquitecturas de varios niveles que se
+conectan de forma encadenada hasta producir el resultado final.&lt;/p&gt;
+
+&lt;h2 id=&quot;configuración-simple-red-neuronal-de-una-sola-capa&quot;&gt;Configuración simple: red neuronal de una sola capa&lt;/h2&gt;
+
+&lt;h3 id=&quot;perceptron&quot;&gt;Perceptron&lt;/h3&gt;
+&lt;p&gt;El modelo más básico de red neuronal es el perceptrón. Está definido por una neurona que acepta una entrada con varios parámetros y produce una salida. Idealmente la salida es 0 o 1. Para calcular el resultado final se multiplica cada entrada por un peso que nos indica el aporte de esa entrada al resultado final.&lt;/p&gt;
+
+&lt;p&gt;Al sumatorio de todas esas operaciones se le compara con un valor constante para devolver un 1 si el sumatorio es mayor que ese valor o un 0  en caso contrario. Si nos damos cuenta tenemos los mismo elementos que describimos en el árticulo anterior.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Una entrada de datos.&lt;/li&gt;
+  &lt;li&gt;Una matriz (en este caso un vector) de pesos.&lt;/li&gt;
+  &lt;li&gt;Un parámetro de ajuste para indicar el umbral del cero que denominamos bias y que se añade a la multiplicación de ,los valores anteriores.&lt;/li&gt;
+  &lt;li&gt;El resultado de nuestro modelo. En este caso concreto sería 0 o 1.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Este modelo lo podemos representar matemáticamente como:&lt;/p&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+\hat{y}=W*x + b
+$$&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blogs/img/perceptron.png&quot; alt=&quot;perceptron&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Imagen perceptrón con cinco entradas tomada de Wikipedia&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Para ajustar la salida de un perceptrón que sería de 0 o 1 podemos indicar que el valor será un 1 si el resultado es positivo y cero en caso contrario.&lt;/p&gt;
+
+&lt;p&gt;El perceptrón es un modelo muy simple donde solamente tenemos una neurona y una sola capa. Como veremos más adelante las redes neuronales constan de cientos de neuronas en cada capa y de varias capas que se encadenan unas a otras. Es decir, la salida de una capa es la entrada a la siguiente.&lt;/p&gt;
+
+&lt;h3 id=&quot;multiplicación-de-matrices&quot;&gt;Multiplicación de matrices&lt;/h3&gt;
+
+&lt;p&gt;El ejemplo del perceptron se define matemáticamente como una multiplicación de vectores. Al multiplicar el vector entrada $\vec{x}$ por el vector $\vec{w}$ de los pesos tenemos las operaciones de multiplicación que hemos definido.&lt;/p&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+\left[\begin{array}{ccc}x_1&amp; x_2 &amp; x_3\end{array}\right] \left[\begin{array}{ccc}w_1 \\ w_2 \\ w_3\end{array}\right] = x_1*w_1+x_2*w_2+x_3*w_3
+$$&lt;/div&gt;
+
+&lt;p&gt;Si queremos añadir más neuronas a nuestro modelo necesitamos tratar con multiplicaciones de matrices. Imaginemos que se añade una nueva neurona. Tendrá el mismo número de entradas pero tendremos dos resultados de nuestro modelo, uno por cada neurona. Cada nueva columna de nuestra matriz de pesos representa una neurona con sus correspondietnes pesos que se aplican a cada entrada. Si lo expresamos como operaciones de matrices trandríamos lo siguiente.&lt;/p&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+\left[\begin{array}{ccc}x_1&amp; x_2 &amp; x_3\end{array}\right] \left[\begin{array}{ccc}w_{1n1}&amp;w_{1n2} \\ w_{2n1} &amp; w_{2n2}\\ w_{3n1} &amp; w_{3n2}\end{array}\right] = \begin{cases} x_1*w_{1n1}+x_{2}*w_{2n1}+x_3*w_{3n1} \\ x_1*w_{1n2}+x_{2}*w_{2n2}+x_3*w_{3n2}\end{cases}
+$$&lt;/div&gt;
+
+&lt;p&gt;Hemos numerado los índices de los pesos de forma que el primer elemento es el orden del peso y el segundo la neurona. Por ejemplo $w_{3n2}$ sería el peso que se aplica a la tercera entrada perteneciente a la segunda neurona. Normalmente en matrices se habla de filas y columnas (en ese orden). A partir de ahora utilizaremos esa nomenclatura donde el primer valor (fila) es el orden del peso y el segundo (columna) es la neurona, &lt;span class=&quot;kdmath&quot;&gt;$w_{32}$&lt;/span&gt; (es el tercer parámetro de la segunda neurona)&lt;/p&gt;
+
+&lt;p&gt;Es importante tener claro unos conceptos básicos de multiplicación de matrices.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Para multiplicar dos matrices necesitamos que el número de columnas de la primera matriz sea igual al número de filas de la segunda matriz. Tiene sentido porque el número de parámetros de entrada tiene que ser igual al número de pesos que tiene cada neurona.&lt;/li&gt;
+  &lt;li&gt;La matriz resultado tendrá el mismo número de filas que la primera matriz y el mismo número de columnas de la segunda. También concuerda con lo que hemos explicado. Si tenemos como entrada un vector &lt;span class=&quot;kdmath&quot;&gt;$\vec{x} = \left[\begin{array}{ccc}x_1&amp; x_2 &amp; x_3\end{array}\right]$&lt;/span&gt; (1 fila y 3 columnas) y nuestro modelo tiene dos neuronas (3 filas y 2 columnas) el resultado tendría una fila y dos columnas, una columnas para el resultado de cada neurona. Simplificando, el resultado de nuestro modelo sería igual al número de registros de entrada (en nuestro ejemplo uno) y tantas columnas como neuronas tenemos &lt;span class=&quot;kdmath&quot;&gt;$X(1,3) * W(3,2) = R(1,2)$&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;El orden de la multiplicación afecta al resultado. No es lo mismo multiplicar &lt;span class=&quot;kdmath&quot;&gt;$A*B$ que $B*A$&lt;/span&gt;.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;Nota: Si &lt;span class=&quot;kdmath&quot;&gt;$A*B = R$&lt;/span&gt; entonces &lt;span class=&quot;kdmath&quot;&gt;$B^T*A^T =R^T$&lt;/span&gt;. Eso quiere decir que si cambiamos el orden de los factores de la multiplicación tenemos que utilizar las matrices traspuestas de cada uno de ellos y el resultado será la traspuesta de $A*B$. La traspuesta de una matriz se obtiene cambiando filas por columnas.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para aclarar un poco más el tema podemos poner un ejemplo donde como entrada tenemos dos registros y nuestro modelo tiene 3 neuronas. &lt;span class=&quot;kdmath&quot;&gt;$X(2,3) * W(3,3) = R(2,3)$&lt;/span&gt;&lt;/p&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+\left[\begin{array}{ccc}x_{11}&amp; x_{12} &amp; x_{13} \\ x_{21}&amp; x_{22} &amp; x_{23}\end{array}\right] * \left[\begin{array}{ccc}w_{11}&amp;w_{12} &amp; w_{13} \\ w_{21} &amp; w_{22} &amp; w_{23}\\ w_{31} &amp; w_{32}&amp; w_{33}\end{array}\right] = \left[\begin{array}{ccc} r_{11}  &amp; r_{12} &amp; r_{13}\\ r_{21}  &amp; r_{22} &amp; r_{23}\end{array}\right]
+$$&lt;/div&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+r_{11} = x_{11}*w_{11} + x_{12}*w_{21} + x_{13}*w_{31}
+$$&lt;/div&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+r_{12} = x_{11}*w_{12} + x_{12}*w_{22} + x_{13}*w_{32}
+$$&lt;/div&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+r_{13} = x_{11}*w_{13} + x_{12}*w_{23} + x_{13}*w_{33}
+$$&lt;/div&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+r_{21} = x_{21}*w_{11} + x_{22}*w_{22} + x_{23}*w_{31}
+$$&lt;/div&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+r_{22} = x_{21}*w_{12} + x_{22}*w_{22} + x_{23}*w_{32}
+$$&lt;/div&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+r_{23} = x_{21}*w_{13} + x_{22}*w_{23} + x_{23}*w_{33}
+$$&lt;/div&gt;
+
+&lt;p&gt;La primera fila del resultado es el valor de cada una de las tres neuronas para el primer registro de entrada. La segunda fila corresponde a los valores de cada neurona para el segundo registro.&lt;/p&gt;
+
+&lt;p&gt;Conocer las dimensiones de la salida de nuestro modelo es esencial para poder incorporar más niveles a nuestro modelo.&lt;/p&gt;
+
+&lt;h2 id=&quot;red-neuronal-modelo-multicapa&quot;&gt;Red neuronal: modelo multicapa&lt;/h2&gt;
+
+&lt;h3 id=&quot;añadimos-nueva-capa&quot;&gt;Añadimos nueva capa&lt;/h3&gt;
+
+&lt;p&gt;Las redes neuronales con una sola capa tienen limitada su capacidad de predicción. El objetivo es convertir nuestro perceptron en una red neuronal con multiples capas. Esto es lo que conocemos como Deep Learning.&lt;/p&gt;
+
+&lt;p&gt;Desde el punto de vista de arquitectura para añadir nueva capa simplemente tomamos la salida de la primera capa como entrada de la segunda. Se trata de encadenar varias capas para generar un modelo más complejo que permita más capacidad de análisis de patrones y relaciones.&lt;/p&gt;
+
+&lt;p&gt;Cada capa es básicamente una matriz de pesos más el temino bias que se suma posteriormente. La dimensión de la matriz para nuestra segunda capa depende del número de neuronas de la capa anterior (ya definida) y el número de neuronas que queremos en la segunda capa. Sabemos que para multiplicar matrices las columnas de la primera capa tienen que ser iguales a las filas de la segunda. Para añadir una nueva capa tenemos que definir la matrix de pesos que tendrá como número de filas el número de neuronas de la capa anterior y el número de columnas igual al número de neuronas de la nueva capa.&lt;/p&gt;
+
+&lt;p&gt;Desde un punto de vista más matemático añadir una nueva capa representa una composición de funciones. Una composiciñon de funciones significa que la salida de una función es la entrada de la siguiente lo que encaja perfectamente con lo descripto en la parte de arquitectura de nuestro modelo.&lt;/p&gt;
+
+&lt;p&gt;Supongamos que tenemos dos funciones &lt;span class=&quot;kdmath&quot;&gt;$f(x) = W_1*x + b_1$&lt;/span&gt; y una función &lt;span class=&quot;kdmath&quot;&gt;$g(x)=W_2*x + b_2$&lt;/span&gt;. El resultado final de la composición de estas dos funciones sería:
+&lt;span class=&quot;kdmath&quot;&gt;$m(x)=g(f(x))$&lt;/span&gt;. Esto quiere decir que la variable &lt;span class=&quot;kdmath&quot;&gt;$x$&lt;/span&gt; de la función &lt;span class=&quot;kdmath&quot;&gt;$g(x)$&lt;/span&gt; se sustituye por la propia función &lt;span class=&quot;kdmath&quot;&gt;$f(x)$&lt;/span&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+m(x)=g(f(x))=g(W_1*x + b_1)= W_2*(W_1*x + b_1) + b_2
+$$&lt;/div&gt;
+
+&lt;p&gt;Si &lt;span class=&quot;kdmath&quot;&gt;$m(x)$&lt;/span&gt; es nuestro modelo, los datos de entrada serían la &lt;span class=&quot;kdmath&quot;&gt;$x$&lt;/span&gt;. Vemos que en la función desarrollada aparecen los pesos de nuestras dos capas y sus correspondientes terminos bias. Nuestro modelo tendrá que ajustar los pesos de las matrices &lt;span class=&quot;kdmath&quot;&gt;$W_1$&lt;/span&gt; y &lt;span class=&quot;kdmath&quot;&gt;$W_2$&lt;/span&gt; y los términos &lt;span class=&quot;kdmath&quot;&gt;$b_1$&lt;/span&gt; y &lt;span class=&quot;kdmath&quot;&gt;$b_2$&lt;/span&gt; para que el error cometido por nuestro modelo con respecto al valor real de losnuestros datos de entrenamiento sea el menor posible.&lt;/p&gt;
+
+&lt;h3 id=&quot;funciones-de-activación&quot;&gt;Funciones de activación.&lt;/h3&gt;
+
+&lt;p&gt;Lo primero que tenemos que decir es que el modelo descrito anteriomente no funciona. Una composición de dos funciones lineales es otra función linear. Eso significa que nuestro modelo con dos capas se comporta exactamente igual que un modelo de una sola capa. No aumentamos la capacidad de aprendizaje al añadir nuevas capas&lt;/p&gt;
+
+&lt;p&gt;Sin entrar en mucho detalle desarrollamos la función anterior.&lt;/p&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+m(x)=g(f(x))=g(W_1*x + b_1)= W_2*(W_1*x + b_1) + b_2 = W_2*W_1*x + W_2*b_1 + b_2 = W*x + b
+$$&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Si aplicamos las reglas del cálculo de matrices podrías comprobar &lt;span class=&quot;kdmath&quot;&gt;$W_2*W_1$&lt;/span&gt; sería una matriz de pesos similar la capa uno y que &lt;span class=&quot;kdmath&quot;&gt;$W_2*b_1$&lt;/span&gt; sería un vector de las mismas dimensiones que &lt;span class=&quot;kdmath&quot;&gt;$b_2$&lt;/span&gt; y al sumarlo se comportaría como un nuevo termino bias (sesgo).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Para evitar este problema se aplica una función no linear al final de cada capa. De esta forma se rompe la linearidad y podemos añadir más capas de forma efectiva. Cada nueva capa significa nuevos pesos y nuevos terminos bias (sesgos) que el modelo tiene que ajustar. De esta forma aumentamos la capacidad de aprendizaje del modelo al añadir nuevas capas.&lt;/p&gt;
+
+&lt;p&gt;Es importante tener en cuenta que al aplicar una función de activación no modificamos ni la dimensión de la matriz resultante ni añadimos más parámetros al modelo.&lt;/p&gt;
+
+&lt;p&gt;Las funciones de activación más comunes son:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Logistic (sigmoid): &lt;span class=&quot;kdmath&quot;&gt;${\displaystyle S(x)={\frac {1}{1+e^{-x}}}={\frac {e^{x}}{e^{x}+1}}}$&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blogs/img/sigmoid.png&quot; alt=&quot;logistic&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;tangente hiperbolica: &lt;span class=&quot;kdmath&quot;&gt;${\displaystyle \tanh x={\cfrac {e^{x}-e^{-x}}{e^{x}+e^{-x}}}}$&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blogs/img/tanh.png&quot; alt=&quot;tanh&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Relu: &lt;span class=&quot;kdmath&quot;&gt;$\displaystyle f(x) =\max(0,x)$&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blogs/img/relu.png&quot; alt=&quot;Relu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Inicialmente la función logistic se utilizaba con mucha frecuencia como función de activación. Actualmente Relu es la función más utilizada principalmente con configuraciones de redes neuronales sencillas. En redes neuronales más complejas como redes convolucionales o recurrentes también se utiliza logistic y tanh.&lt;/p&gt;
+
+&lt;p&gt;### Modelo multicapa&lt;/p&gt;
+
+&lt;p&gt;Ahora que entendemos como podemos añadir nuevas capas a nuestro modelo vamos a definir más en detalle una arquitectura típica. Tenemos tres tipos de capas.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Capa de entrada (input layer): no es una capa en si, sino la entrada al modelo. Esta capa representa la información de entrenamiento. Las columnas representan cada una de las características de nuestra información y las filas el número de ejemplos que vamos a pasar al modelo.&lt;/li&gt;
+  &lt;li&gt;Capa de salida (output layer): capa final que devuelve el resultado del modelo. El número de neuronas depende del tipo de problema que estamos abordando. Si el modelo predice un valor único tendremos una sola neurona con una salida para cada registro de entrada. Si estamos realizando una clasificación tendremos tantas salidas como categorías de clasificación, lo que supondría una matriz de resultados.&lt;/li&gt;
+  &lt;li&gt;Capa oculta (hidden layer): capas intermedias con la configuración que hemos descrito en el apartado anterior. Se componen de una función lineal seguido de una función de activación. La definición de la matriz de estas capas depende del número de neuronas de la capa anterior y del número de neuronas que queremos en la actual.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ejemplo-práctico&quot;&gt;Ejemplo Práctico&lt;/h3&gt;
+
+&lt;p&gt;Vamos a ver un ejemplo sencillo.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Somos una inmoviliaría que queremos informar a nuestros clientes del precio estimado de venta de su vivienda de forma inmediata. De operaciones anteriores tenemos información de 2.000 viviendas con sus características y sus precios reales de venta. De cada vivienda tenemos 45 caracterísitcas que nos definen el inmueble (planta, metros cuadrados, número de habitaciones, localidad, barrio etc).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Tomamos la decisión de crear un modelo de red neuronal con cuatro capas. La primera capa representa la entrada y decidimos pasar la información de entrenamiento a nuestro modelo en paquetes de 32 viviendas. añadimos dos capas ocultas donde la primera capa tendrá 200 neuronas y la segunda 100. Como queremos predecir un valor único que será el precio estimado de venta la capa de salida tendrá una única neurona.&lt;/p&gt;
+
+&lt;p&gt;El esquema de nuestra red neuronal sería de esta manera.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blogs/img/ejemplo_rn.jpg&quot; alt=&quot;red neuronal&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vamos a analizar los parámetros y las dimensiones de las matrices en cada capa para conocer mejor el funcionamiento interno.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Capa de entrada (input layer): es la más sencilla de analizar. Si cada vivienda tiene 45 características y al modelo le pasamos 32 viviendas la entrada al modelo es una matriz input(32,45). Tenemos 32 filas y 45 columnas.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Primera capa oculta (hidden layer 1): Esta es una capa propiamente dicha de nuestro modelo por lo que tenemos una matriz de pesos y un vector de terminos bias. La matriz de entrada se multiplica por la matriz de pesos y se le suma el término bias. Tanto la matriz de pesos como el vector bias de suma son parámetros de esta capa. Tenemos 9200 parámetros&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Matriz de pesos: &lt;span class=&quot;kdmath&quot;&gt;$W_1(45,200) = 9000$&lt;/span&gt; parámetros&lt;/li&gt;
+      &lt;li&gt;Bias: &lt;span class=&quot;kdmath&quot;&gt;$b_1(200) = 200$&lt;/span&gt; parámetros&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Segunda capa oculta (hidden layer 2): Toma como entrada la salida de la capa anterior. El número de filas corresponde al número de neuronas de la capa anterior. Las columnas corresponden al número de neuronas escogido para esta capa. Tenemos 20100 parámetros&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Matriz de pesos: &lt;span class=&quot;kdmath&quot;&gt;$W_1(200,100) = 20000$&lt;/span&gt; parámetros&lt;/li&gt;
+      &lt;li&gt;Bias: &lt;span class=&quot;kdmath&quot;&gt;$b_1(100) = 100$&lt;/span&gt; parámetros&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Capa de salida (output layer): Toma como entrada la salida de la capa anterior. El número de filas corresponde al número de neuronas de la capa anterior. Las columnas corresponden al número de nueronas decidio para esta capa, en este caso una única columna. Tenemos 101 parámetros&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Matriz de pesos: &lt;span class=&quot;kdmath&quot;&gt;$W_1(100,1) = 100$&lt;/span&gt; parámetros&lt;/li&gt;
+      &lt;li&gt;Bias: &lt;span class=&quot;kdmath&quot;&gt;$b_1(1) = 1$&lt;/span&gt; parámetros&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En total el modelo tiene x parámetros que tiene que ajustar en la fase de entrenamiento. Una vez entrenado nuestro modelo podemos utilizarlo para predecir el coste estimado de venta de nuestra vivienda. Un modelo ya entrenado y listo para su uso se compone de dos partes.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Arquitectura: descripción de las diferentes capas de nuestro modelo.&lt;/li&gt;
+  &lt;li&gt;Parámetros: los valores que se han ajustado en la fase de entrenamiento.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;conclusión&quot;&gt;Conclusión&lt;/h1&gt;
+
+&lt;p&gt;Un modelo de red neuronal se compone de varias capas que constituyen la arquitectura del modelo. Cada capa consiste en una función lineal más una función de activación.&lt;/p&gt;
+
+&lt;p&gt;La función lineal es del tipo &lt;span class=&quot;kdmath&quot;&gt;$f(x) = W*x +b$&lt;/span&gt; y consiste en la matriz de pesos &lt;span class=&quot;kdmath&quot;&gt;$W$&lt;/span&gt; y el término de sesgo o bias &lt;span class=&quot;kdmath&quot;&gt;$b$&lt;/span&gt;. La matriz de pesos y el término bias representan los parámetros de la capa que el modelo tiene que ajustar en la fase de entrenamiento.&lt;/p&gt;
+
+&lt;p&gt;La función de activación cumple la misión de evitar la linearidad al componer varias capas. No afecta ni a las dimensiones de la salida de la capa ni tampoco genera nuevos parámetros. Simplemente es una función que se aplica a la salida de la función lineal. Relu es una de las funciones de activación más utilizada. Simplemente devuelve un cero si el valor es negativo y el propio valor si es positivo.&lt;/p&gt;
+
+&lt;p&gt;El tipo de modelo que hemos explicado es el más sencillo y se denomina fully-connected neural network. Existen otros tipos de capas con configraciones más complejas pero todas comparten un patrón de capas encadenadas.&lt;/p&gt;
+
+&lt;p&gt;En el siguiente árticulo hablaremos del proceso de entrenamiento  y como conseguir modelos que nos pemitan predecir valores o inferir características a partir de datos nuevos (distintos a los utiilizados para entranar le modelo).&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Modelo simple</summary></entry><entry><title type="html">hola Enfoque</title><link href="https://fbelinchon.github.io/blogs/2020/05/20/introducci%C3%B3n.html" rel="alternate" type="text/html" title="hola Enfoque" /><published>2020-05-20T05:45:13+02:00</published><updated>2020-05-20T05:45:13+02:00</updated><id>https://fbelinchon.github.io/blogs/2020/05/20/introducci%C3%B3n</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2020/05/20/introducci%C3%B3n.html">&lt;p&gt;#¿Cómo sabemos en que dirección tenemos que modificar nuestros parámetros para mejorar la predicción?&lt;/p&gt;
+
+&lt;p&gt;El objetivo es minimizar nuestro error, es decir, nuestra función de coste. Tenemos que saber en que dirección modificar nuestros parámetros para que esto ocurra.&lt;/p&gt;
+
+&lt;p&gt;Imaginemos que estamos en lo alto de una montaña y queremos llegar al valle. La forma más rápida es seguir el camino que tenga una mayor pendiente. Cuanto mayor sea la pendiente, más rápido nos acercamos al valle. Nuestro problema es similar, tenemos que buscar cual es la pendiente que nos acerca al mínimo de nuestra función. Recordando algo de cálculo.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;La derivada de una función en un punto puede interpretarse geométricamente, ya que se corresponde con la pendiente de la recta tangente a la gráfica de la función en dicho punto.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Esto quiere decir que si obtenemos la derivada parcial (derivada de un parámetros manteniendo constante el resto) sabremos si tenemos que aumentar o disminuir el valor de ese parámetros para disminuir el valor de la función. La derivada parcial es nuestro camino de mayor pendiente al valle.&lt;/p&gt;
+
+&lt;p&gt;En realidad se utiliza el gradiente en un punto, que es algo similar a la derivada parcial pero más sencillo de calcular. El método más popular es SGD (Stochastic Gradient Descent).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;SGD: método iterativo de optimización como una aproximación a Gradiente Descent mediante el cáculo del gradiente sobre un subconjunto de los datos seleccionados de forma aleatoria.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Cuando la cantidad de datos es muy elevada el cáculo del gradiente se sustituye por una aproximación utilizando un subconjunto de los datos de forma iterativa. Dicho de otro modo, en lugar de calcular el gradiente de todo el conjunto de los datos se desarrolla un proceso iterativo sobre un subconjunto pequeño de datos seleccionados de forma aleatoria.&lt;/p&gt;
+
+&lt;p&gt;El proceso iterativo es el siguiente&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Se selecciona un subconjunto pequeño de datos&lt;/li&gt;
+  &lt;li&gt;Se calcula el gradiente de este conjunto&lt;/li&gt;
+  &lt;li&gt;Modificamos nuestros parámetros según el gradiente calculado en el paso anterior.&lt;/li&gt;
+  &lt;li&gt;Seleccionamos un conjunto diferente de datos de forma aleatoria volviendo al primer paso.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Al final se utiliza todo el conjunto de datos pero calculando el gradiente de grupos pequeños hasta que utilizamos todos los datos. Lo normal es repetir todo este proceso seleccionando varias veces todo el conjunto de datos para ir optimizando nuestro modelo.&lt;/p&gt;
+
+&lt;p&gt;Otro elemento clave es este proceso de optimización es el coeficiente de aprendizaje o &lt;strong&gt;learning rate&lt;/strong&gt;. El valor de nuestra pendiente puede ser elevado y corremos el riesgo de estar dando saltos entre aumentar o disminuir el valor de un parámetro. Para controlar este proceso multiplicamos el valor de nuestro gradiente por este coeficiente.&lt;/p&gt;
+
+&lt;p&gt;La selección del valor óptimo de &lt;strong&gt;learning rate&lt;/strong&gt; que nos permita obtener la mejor optimización de nuestra función de coste es clave para el aprendizaje de nuestro modelo. Valores de &lt;strong&gt;learning rate&lt;/strong&gt; muy altos provocaran que nuestro modelo no consiga llegar a un mínimo porque estará dando saltos muy grandes en torno a este punto. Si el &lt;strong&gt;learning rate&lt;/strong&gt; es muy pequeño tardaremos mucho tiempo en llegar al mínimo.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">#¿Cómo sabemos en que dirección tenemos que modificar nuestros parámetros para mejorar la predicción?</summary></entry><entry><title type="html">Introducción a Redes Neuronales</title><link href="https://fbelinchon.github.io/blogs/ai/2020/05/19/Introduccion.html" rel="alternate" type="text/html" title="Introducción a Redes Neuronales" /><published>2020-05-19T16:45:13+02:00</published><updated>2020-05-19T16:45:13+02:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/05/19/Introduccion</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/05/19/Introduccion.html">&lt;h1 id=&quot;redes-neuronales-introducción&quot;&gt;Redes Neuronales, introducción&lt;/h1&gt;
 
 &lt;h2 id=&quot;la-inteligencia-artificial&quot;&gt;la Inteligencia artificial&lt;/h2&gt;
 
@@ -115,12 +374,14 @@ En el caso de calcular el precio de una vivienda nuestro valor real es el precio
 
 &lt;p&gt;Un ejemplo sencillo. Si tenemos la siguiente función&lt;/p&gt;
 
-&lt;p&gt;$f(x) = a·x + b$&lt;/p&gt;
+&lt;div class=&quot;kdmath&quot;&gt;$$
+f(x) = a·x + b
+$$&lt;/div&gt;
 
 &lt;p&gt;No sabemos el valor de [a] ni [b] que mejor se ajustan a la función que buscamos.&lt;/p&gt;
 
-&lt;p&gt;Si nos dicen  $f(2)=5$ nos serviría $a=2$ y $b=1$ pero también $a=1$ y $b=3$ o $a=0$ y $b=5$
-Si la información es $f(2)=5$ y $f(3) = 7$ solamente tenemos una solución  $a=2$ y $b=1$&lt;/p&gt;
+&lt;p&gt;Si nos dicen  &lt;span class=&quot;kdmath&quot;&gt;$f(2)=5$&lt;/span&gt; nos serviría &lt;span class=&quot;kdmath&quot;&gt;$a=2$&lt;/span&gt; y &lt;span class=&quot;kdmath&quot;&gt;$b=1$&lt;/span&gt; pero también &lt;span class=&quot;kdmath&quot;&gt;$a=1$&lt;/span&gt; y &lt;span class=&quot;kdmath&quot;&gt;$b=3$&lt;/span&gt; o &lt;span class=&quot;kdmath&quot;&gt;$a=0$&lt;/span&gt; y &lt;span class=&quot;kdmath&quot;&gt;$b=5$&lt;/span&gt;
+Si la información es &lt;span class=&quot;kdmath&quot;&gt;$f(2)=5$&lt;/span&gt; y &lt;span class=&quot;kdmath&quot;&gt;$f(3) = 7$&lt;/span&gt; solamente tenemos una solución  &lt;span class=&quot;kdmath&quot;&gt;$a=2$&lt;/span&gt; y &lt;span class=&quot;kdmath&quot;&gt;$b=1$&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;En los casos reales las funciones son mucho más complejas y no existe una solución exacta. Tendremos que encontrar la solución que mejor se adapte a los datos de ejemplo que tenemos.&lt;/p&gt;
 
@@ -130,8 +391,8 @@ Si la información es $f(2)=5$ y $f(3) = 7$ solamente tenemos una solución  $a=
 
 &lt;p&gt;Si representamos nuestro modelo con una fórmula matemática simple sería.&lt;/p&gt;
 
-&lt;p&gt;Si nuestro modelo es $f(x)=W∗x+b$     ($x$ es nuestro ejemplo de entrada)
-La salida de nuestro modelo sería $\hat{y}=W∗x+b$&lt;/p&gt;
+&lt;p&gt;Si nuestro modelo es &lt;span class=&quot;kdmath&quot;&gt;$f(x)=W∗x+b$&lt;/span&gt;     (&lt;span class=&quot;kdmath&quot;&gt;$x$&lt;/span&gt; es nuestro ejemplo de entrada)
+La salida de nuestro modelo sería &lt;span class=&quot;kdmath&quot;&gt;$\hat{y}=W∗x+b$&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;Los valores W y b son los parámetros de nuestro sistema y precisamente son los valores que nuestro modelo tiene que ir actualizar para mejorar sus predicciones. Más concretamente se definen como&lt;/p&gt;
 &lt;ul&gt;
@@ -145,7 +406,7 @@ La salida de nuestro modelo sería $\hat{y}=W∗x+b$&lt;/p&gt;
 
 &lt;p&gt;Hemos comentado que x es la entrada a nuestro modelo (los ejemplos de imágenes) y que la variable y es el valor real. Si estamos diseñando un modelo para predecir un valor numérico es fácil de deducir que el error cometido es:&lt;/p&gt;
 
-&lt;p&gt;$error=(y − \hat{y})$ la diferencia entre el valor predicho por nuestro modelo y el valor real.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;kdmath&quot;&gt;$error=(y − \hat{y})$&lt;/span&gt; la diferencia entre el valor predicho por nuestro modelo y el valor real.&lt;/p&gt;
 
 &lt;p&gt;Esta es precisamente la definición de la función de error &lt;em&gt;loss function&lt;/em&gt; o &lt;em&gt;cost function&lt;/em&gt;. Bueno, normalmente se toma el valor absoluto o la diferencia al cuadrado. Tenemos que calcular el error medio cometido en todos nuestros ejemplos.
 Para evitar que los errores positivos y negativos se compensen se suele utiliza el valor absoluto o la diferencia al cuadrado de cada error.&lt;/p&gt;
@@ -154,10 +415,10 @@ Para evitar que los errores positivos y negativos se compensen se suele utiliza 
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;MAE (mean absolute error):$\displaystyle \frac{\sum_{i=1}^{n}|y − \hat{y}|}{n}$, sumatorio del valor absoluto de cada uno de los errores dividido por el número de pruebas (n).&lt;/p&gt;
+    &lt;p&gt;MAE (mean absolute error):&lt;span class=&quot;kdmath&quot;&gt;$\displaystyle \frac{\sum_{i=1}^{n}\|y − \hat{y}\|}{n}$&lt;/span&gt;, sumatorio del valor absoluto de cada uno de los errores dividido por el número de pruebas (n).&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;RMSE (root mean square error):$\displaystyle \sqrt{\frac{\sum_{i=1}^{n}(y-\hat{y})^2}{n}}$, sumatorio del cuadrado de los errores dividido por el numero de ejemplos que tenemos (n). Finalmente obtiene la raiz cuadrada del número calculado.&lt;/p&gt;
+    &lt;p&gt;RMSE (root mean square error):&lt;span class=&quot;kdmath&quot;&gt;$\displaystyle \sqrt{\frac{\sum_{i=1}^{n}(y-\hat{y})^2}{n}}$&lt;/span&gt;, sumatorio del cuadrado de los errores dividido por el numero de ejemplos que tenemos (n). Finalmente obtiene la raiz cuadrada del número calculado.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -201,39 +462,7 @@ Para evitar que los errores positivos y negativos se compensen se suele utiliza 
 
 &lt;p&gt;Otro elemento clave es este proceso de optimización es el coeficiente de aprendizaje o &lt;strong&gt;learning rate&lt;/strong&gt;. El valor de nuestra pendiente puede ser elevado y corremos el riesgo de estar dando saltos entre aumentar o disminuir el valor de un parámetro. Para controlar este proceso multiplicamos el valor de nuestro gradiente por este coeficiente.&lt;/p&gt;
 
-&lt;p&gt;La selección del valor óptimo de &lt;strong&gt;learning rate&lt;/strong&gt; que nos permita obtener la mejor optimización de nuestra función de coste es clave para el aprendizaje de nuestro modelo. Valores de &lt;strong&gt;learning rate&lt;/strong&gt; muy altos provocaran que nuestro modelo no consiga llegar a un mínimo porque estará dando saltos muy grandes en torno a este punto. Si el &lt;strong&gt;learning rate&lt;/strong&gt; es muy pequeño tardaremos mucho tiempo en llegar al mínimo.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Redes Neuronales, introducción</summary></entry><entry><title type="html">hola Enfoque</title><link href="https://fbelinchon.github.io/blogs/2020/05/20/introducci%C3%B3n.html" rel="alternate" type="text/html" title="hola Enfoque" /><published>2020-05-20T03:45:13+00:00</published><updated>2020-05-20T03:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/2020/05/20/introducci%C3%B3n</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2020/05/20/introducci%C3%B3n.html">&lt;p&gt;#¿Cómo sabemos en que dirección tenemos que modificar nuestros parámetros para mejorar la predicción?&lt;/p&gt;
-
-&lt;p&gt;El objetivo es minimizar nuestro error, es decir, nuestra función de coste. Tenemos que saber en que dirección modificar nuestros parámetros para que esto ocurra.&lt;/p&gt;
-
-&lt;p&gt;Imaginemos que estamos en lo alto de una montaña y queremos llegar al valle. La forma más rápida es seguir el camino que tenga una mayor pendiente. Cuanto mayor sea la pendiente, más rápido nos acercamos al valle. Nuestro problema es similar, tenemos que buscar cual es la pendiente que nos acerca al mínimo de nuestra función. Recordando algo de cálculo.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;La derivada de una función en un punto puede interpretarse geométricamente, ya que se corresponde con la pendiente de la recta tangente a la gráfica de la función en dicho punto.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Esto quiere decir que si obtenemos la derivada parcial (derivada de un parámetros manteniendo constante el resto) sabremos si tenemos que aumentar o disminuir el valor de ese parámetros para disminuir el valor de la función. La derivada parcial es nuestro camino de mayor pendiente al valle.&lt;/p&gt;
-
-&lt;p&gt;En realidad se utiliza el gradiente en un punto, que es algo similar a la derivada parcial pero más sencillo de calcular. El método más popular es SGD (Stochastic Gradient Descent).&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;SGD: método iterativo de optimización como una aproximación a Gradiente Descent mediante el cáculo del gradiente sobre un subconjunto de los datos seleccionados de forma aleatoria.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Cuando la cantidad de datos es muy elevada el cáculo del gradiente se sustituye por una aproximación utilizando un subconjunto de los datos de forma iterativa. Dicho de otro modo, en lugar de calcular el gradiente de todo el conjunto de los datos se desarrolla un proceso iterativo sobre un subconjunto pequeño de datos seleccionados de forma aleatoria.&lt;/p&gt;
-
-&lt;p&gt;El proceso iterativo es el siguiente&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Se selecciona un subconjunto pequeño de datos&lt;/li&gt;
-  &lt;li&gt;Se calcula el gradiente de este conjunto&lt;/li&gt;
-  &lt;li&gt;Modificamos nuestros parámetros según el gradiente calculado en el paso anterior.&lt;/li&gt;
-  &lt;li&gt;Seleccionamos un conjunto diferente de datos de forma aleatoria volviendo al primer paso.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Al final se utiliza todo el conjunto de datos pero calculando el gradiente de grupos pequeños hasta que utilizamos todos los datos. Lo normal es repetir todo este proceso seleccionando varias veces todo el conjunto de datos para ir optimizando nuestro modelo.&lt;/p&gt;
-
-&lt;p&gt;Otro elemento clave es este proceso de optimización es el coeficiente de aprendizaje o &lt;strong&gt;learning rate&lt;/strong&gt;. El valor de nuestra pendiente puede ser elevado y corremos el riesgo de estar dando saltos entre aumentar o disminuir el valor de un parámetro. Para controlar este proceso multiplicamos el valor de nuestro gradiente por este coeficiente.&lt;/p&gt;
-
-&lt;p&gt;La selección del valor óptimo de &lt;strong&gt;learning rate&lt;/strong&gt; que nos permita obtener la mejor optimización de nuestra función de coste es clave para el aprendizaje de nuestro modelo. Valores de &lt;strong&gt;learning rate&lt;/strong&gt; muy altos provocaran que nuestro modelo no consiga llegar a un mínimo porque estará dando saltos muy grandes en torno a este punto. Si el &lt;strong&gt;learning rate&lt;/strong&gt; es muy pequeño tardaremos mucho tiempo en llegar al mínimo.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">#¿Cómo sabemos en que dirección tenemos que modificar nuestros parámetros para mejorar la predicción?</summary></entry><entry><title type="html">AI 2Man must explore, and this is exploration at its greatest</title><link href="https://fbelinchon.github.io/blogs/ai/2019/10/31/focus.html" rel="alternate" type="text/html" title="AI 2Man must explore, and this is exploration at its greatest" /><published>2019-10-31T14:45:13+00:00</published><updated>2019-10-31T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2019/10/31/focus</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2019/10/31/focus.html">&lt;h1 id=&quot;prueba&quot;&gt;prueba&lt;/h1&gt;
+&lt;p&gt;La selección del valor óptimo de &lt;strong&gt;learning rate&lt;/strong&gt; que nos permita obtener la mejor optimización de nuestra función de coste es clave para el aprendizaje de nuestro modelo. Valores de &lt;strong&gt;learning rate&lt;/strong&gt; muy altos provocaran que nuestro modelo no consiga llegar a un mínimo porque estará dando saltos muy grandes en torno a este punto. Si el &lt;strong&gt;learning rate&lt;/strong&gt; es muy pequeño tardaremos mucho tiempo en llegar al mínimo.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Redes Neuronales, introducción</summary></entry><entry><title type="html">AI 2Man must explore, and this is exploration at its greatest</title><link href="https://fbelinchon.github.io/blogs/2019/10/31/focus.html" rel="alternate" type="text/html" title="AI 2Man must explore, and this is exploration at its greatest" /><published>2019-10-31T15:45:13+01:00</published><updated>2019-10-31T15:45:13+01:00</updated><id>https://fbelinchon.github.io/blogs/2019/10/31/focus</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2019/10/31/focus.html">&lt;h1 id=&quot;prueba&quot;&gt;prueba&lt;/h1&gt;
 &lt;h2 id=&quot;otro&quot;&gt;Otro&lt;/h2&gt;
 
 &lt;p&gt;hola como vas fghgfh&lt;/p&gt;
@@ -246,7 +475,7 @@ Para evitar que los errores positivos y negativos se compensen se suele utiliza 
 x=y
 $$&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;prueba&quot; /&gt;&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">prueba Otro</summary></entry><entry><title type="html">AI Man must explore, and this is exploration at its greatest</title><link href="https://fbelinchon.github.io/blogs/ai/2017/10/31/man-must-explore.html" rel="alternate" type="text/html" title="AI Man must explore, and this is exploration at its greatest" /><published>2017-10-31T14:45:13+00:00</published><updated>2017-10-31T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2017/10/31/man-must-explore</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2017/10/31/man-must-explore.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;prueba&quot; /&gt;&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">prueba Otro</summary></entry><entry><title type="html">AI Man must explore, and this is exploration at its greatest</title><link href="https://fbelinchon.github.io/blogs/2017/10/31/man-must-explore.html" rel="alternate" type="text/html" title="AI Man must explore, and this is exploration at its greatest" /><published>2017-10-31T15:45:13+01:00</published><updated>2017-10-31T15:45:13+01:00</updated><id>https://fbelinchon.github.io/blogs/2017/10/31/man-must-explore</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2017/10/31/man-must-explore.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
  
 &lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
 
@@ -277,7 +506,7 @@ $$&lt;/div&gt;
 
 &lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
 
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory. Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</summary></entry><entry><title type="html">AI I believe every human has a finite number of heartbeats. I don’t intend to waste any of mine.</title><link href="https://fbelinchon.github.io/blogs/ai/2017/10/31/heartbeats.html" rel="alternate" type="text/html" title="AI I believe every human has a finite number of heartbeats. I don't intend to waste any of mine." /><published>2017-10-31T03:45:13+00:00</published><updated>2017-10-31T03:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2017/10/31/heartbeats</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2017/10/31/heartbeats.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
+&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory. Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</summary></entry><entry><title type="html">AI I believe every human has a finite number of heartbeats. I don’t intend to waste any of mine.</title><link href="https://fbelinchon.github.io/blogs/2017/10/31/heartbeats.html" rel="alternate" type="text/html" title="AI I believe every human has a finite number of heartbeats. I don't intend to waste any of mine." /><published>2017-10-31T04:45:13+01:00</published><updated>2017-10-31T04:45:13+01:00</updated><id>https://fbelinchon.github.io/blogs/2017/10/31/heartbeats</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2017/10/31/heartbeats.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
 
 &lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
 
@@ -308,7 +537,7 @@ $$&lt;/div&gt;
 
 &lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
 
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">Science has not yet mastered prophecy</title><link href="https://fbelinchon.github.io/blogs/general/2017/10/30/prophecy.html" rel="alternate" type="text/html" title="Science has not yet mastered prophecy" /><published>2017-10-30T03:45:13+00:00</published><updated>2017-10-30T03:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/general/2017/10/30/prophecy</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/general/2017/10/30/prophecy.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
+&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">Science has not yet mastered prophecy</title><link href="https://fbelinchon.github.io/blogs/general/2017/10/30/prophecy.html" rel="alternate" type="text/html" title="Science has not yet mastered prophecy" /><published>2017-10-30T04:45:13+01:00</published><updated>2017-10-30T04:45:13+01:00</updated><id>https://fbelinchon.github.io/blogs/general/2017/10/30/prophecy</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/general/2017/10/30/prophecy.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
 
 &lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
 
@@ -339,7 +568,7 @@ $$&lt;/div&gt;
 
 &lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
 
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">Failure is not an option</title><link href="https://fbelinchon.github.io/blogs/2017/10/29/exploration.html" rel="alternate" type="text/html" title="Failure is not an option" /><published>2017-10-29T03:45:13+00:00</published><updated>2017-10-29T03:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/2017/10/29/exploration</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2017/10/29/exploration.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
+&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">Failure is not an option</title><link href="https://fbelinchon.github.io/blogs/2017/10/29/exploration.html" rel="alternate" type="text/html" title="Failure is not an option" /><published>2017-10-29T04:45:13+01:00</published><updated>2017-10-29T04:45:13+01:00</updated><id>https://fbelinchon.github.io/blogs/2017/10/29/exploration</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2017/10/29/exploration.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
 
 &lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
 
@@ -370,7 +599,7 @@ $$&lt;/div&gt;
 
 &lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
 
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">The dreams of yesterday are the hopes of today and the reality of tomorrow.</title><link href="https://fbelinchon.github.io/blogs/2017/10/28/dreams.html" rel="alternate" type="text/html" title="The dreams of yesterday are the hopes of today and the reality of tomorrow." /><published>2017-10-28T03:45:13+00:00</published><updated>2017-10-28T03:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/2017/10/28/dreams</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2017/10/28/dreams.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
+&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">The dreams of yesterday are the hopes of today and the reality of tomorrow.</title><link href="https://fbelinchon.github.io/blogs/2017/10/28/dreams.html" rel="alternate" type="text/html" title="The dreams of yesterday are the hopes of today and the reality of tomorrow." /><published>2017-10-28T05:45:13+02:00</published><updated>2017-10-28T05:45:13+02:00</updated><id>https://fbelinchon.github.io/blogs/2017/10/28/dreams</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2017/10/28/dreams.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
 
 &lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
 
@@ -401,38 +630,7 @@ $$&lt;/div&gt;
 
 &lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
 
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">2 Dinosaurs are extinct today</title><link href="https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs-copy.html" rel="alternate" type="text/html" title="2 Dinosaurs are extinct today" /><published>2017-10-27T03:45:13+00:00</published><updated>2017-10-27T03:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs%20copy</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs-copy.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote&quot;&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;img class=&quot;img-fluid&quot; src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;Demo Image&quot;&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">Dinosaurs are extinct today</title><link href="https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs.html" rel="alternate" type="text/html" title="Dinosaurs are extinct today" /><published>2017-10-27T03:45:13+00:00</published><updated>2017-10-27T03:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
+&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">2 Dinosaurs are extinct today</title><link href="https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs-copy.html" rel="alternate" type="text/html" title="2 Dinosaurs are extinct today" /><published>2017-10-27T05:45:13+02:00</published><updated>2017-10-27T05:45:13+02:00</updated><id>https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs%20copy</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs-copy.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
 
 &lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
 

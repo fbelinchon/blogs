@@ -4,6 +4,7 @@ title: AI
 background: '/img/bg-post.jpg'
 pagination: 
   enabled: true
+  category: ai
 ---
 <h1>AI</h1>
 

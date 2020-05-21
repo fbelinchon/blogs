@@ -16,7 +16,9 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
 
+
 use_math: true
+destination: docs
 
 markdown:           kramdown
 kramdown:
@@ -26,6 +28,7 @@ kramdown:
   hard_wrap: false
   syntax_highlighter: rouge
   
+
 # Pagination Settings
 pagination:
   enabled: true
@@ -40,4 +43,3 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-sitemap
-
