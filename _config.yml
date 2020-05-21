@@ -1,0 +1,37 @@
+title:              My Blog
+email:              fbelinchon@gmail.com
+description:        Este es mi blog
+author:             Francisco Belinchón
+baseurl:            "/blogs"
+url:                "https://fbelinchon.github.io"
+
+# Social Profiles
+twitter_username:   fbelinchon
+github_username:    fbelinchon
+facebook_username:  StartBootstrap
+linkedin_username:
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+
+# Build settings
+lang: es
+
+markdown: kramdown
+
+destination: docs
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 4
+  permalink: '/page/:num/'
+  title: ':title :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-feed
+  - jekyll-sitemap
