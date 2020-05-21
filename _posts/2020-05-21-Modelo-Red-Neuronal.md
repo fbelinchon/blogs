@@ -163,7 +163,9 @@ Tomamos la decisión de crear un modelo de red neuronal con cuatro capas. La pri
 
 El esquema de nuestra red neuronal sería de esta manera.
 
-![red neuronal](/blogs/img/ejemplo_rn.jpg)
+<img src="/blogs/img/ejemplo_rn.jpg" alt="red neuronal"
+	title="perceptron" width="100%" />
+
 
 Vamos a analizar los parámetros y las dimensiones de las matrices en cada capa para conocer mejor el funcionamiento interno.
 
