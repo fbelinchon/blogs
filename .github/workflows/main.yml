@@ -43,5 +43,5 @@ jobs:
           git config user.email "fbelinchon@users.noreply.github.com"
           git add .
           git commit -m "master"
-          git push
+          git push 
         
