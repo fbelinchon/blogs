@@ -26,7 +26,6 @@ kramdown:
   hard_wrap: false
   syntax_highlighter: rouge
   
-destination: "./build" 
 # Pagination Settings
 pagination:
   enabled: true
@@ -42,4 +41,3 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-theme: jekyll-theme-leap-day
