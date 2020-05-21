@@ -6,10 +6,8 @@ name: jekyll-cd
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+    branches: [ update ]
+  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -22,7 +20,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
    
       - name: Build & Deploy to GitHub Pages
-        uses: actions/checkout@master
+        uses: actions/checkout@update
         with:
           fetch-depth: 1
       - name: 🧪 Build and deploy
