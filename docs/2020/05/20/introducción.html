@@ -8,18 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    2 Dinosaurs are extinct today - My Blog
+    hola Enfoque - My Blog
     
   </title>
-<<<<<<< HEAD
-  <!-- Mathjax Support -->
-  <script type="text/javascript" async
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
-=======
 
->>>>>>> fed8e720e1fb6d614133126c2e1fa4d7803ef1cf
-  <meta name="description" content="Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth...">
+  <meta name="description" content="#¿Cómo sabemos en que dirección tenemos que modificar nuestros parámetros para mejorar la predicción?">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -29,7 +22,7 @@
   <link rel="stylesheet" href="/blogs/assets/vendor/fontawesome-free/css/all.min.css">
 
   <link rel="stylesheet" href="/blogs/assets/main.css">
-  <link rel="canonical" href="https://fbelinchon.github.io/blogs/wikipedia/2017/10/27/dinosaurs-copy.html">
+  <link rel="canonical" href="https://fbelinchon.github.io/blogs/2020/05/20/introducci%C3%B3n.html">
   <link rel="alternate" type="application/rss+xml" title="My Blog" href="/blogs/feed.xml">
 
 </head>
@@ -75,21 +68,17 @@
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-<<<<<<< HEAD
-        <div class="col-lg-12 col-md-14 mx-auto">
-=======
         <div class="col-lg-8 col-md-10 mx-auto">
->>>>>>> fed8e720e1fb6d614133126c2e1fa4d7803ef1cf
           <div class="post-heading">
-            <h1>2 Dinosaurs are extinct today</h1>
+            <h1>hola Enfoque</h1>
             
-            <h2 class="subheading">because they lacked opposable thumbs and the brainpower to build a space program.</h2>
+            <h2 class="subheading">Optimizar si enfocas fggg vgvgvgfgf.</h2>
             
             <span class="meta">Posted by
               <a href="#">Francisco Belinchón</a>
-              on October 27, 2017 &middot; <span class="reading-time" title="Estimated read time">
+              on May 20, 2020 &middot; <span class="reading-time" title="Estimated read time">
   
-   4 mins  read </span>
+   3 mins  read </span>
 
             </span>
           </div>
@@ -100,44 +89,41 @@
 
 <div class="container">
     <div class="row">
-<<<<<<< HEAD
-      <div class="col-lg-12 col-md-14 mx-auto">
-=======
       <div class="col-lg-8 col-md-10 mx-auto">
->>>>>>> fed8e720e1fb6d614133126c2e1fa4d7803ef1cf
 
-        <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+        <p>#¿Cómo sabemos en que dirección tenemos que modificar nuestros parámetros para mejorar la predicción?</p>
 
-<p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+<p>El objetivo es minimizar nuestro error, es decir, nuestra función de coste. Tenemos que saber en que dirección modificar nuestros parámetros para que esto ocurra.</p>
 
-<p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
+<p>Imaginemos que estamos en lo alto de una montaña y queremos llegar al valle. La forma más rápida es seguir el camino que tenga una mayor pendiente. Cuanto mayor sea la pendiente, más rápido nos acercamos al valle. Nuestro problema es similar, tenemos que buscar cual es la pendiente que nos acerca al mínimo de nuestra función. Recordando algo de cálculo.</p>
 
-<p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+<blockquote>
+  <p>La derivada de una función en un punto puede interpretarse geométricamente, ya que se corresponde con la pendiente de la recta tangente a la gráfica de la función en dicho punto.</p>
+</blockquote>
 
-<p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+<p>Esto quiere decir que si obtenemos la derivada parcial (derivada de un parámetros manteniendo constante el resto) sabremos si tenemos que aumentar o disminuir el valor de ese parámetros para disminuir el valor de la función. La derivada parcial es nuestro camino de mayor pendiente al valle.</p>
 
-<h2 class="section-heading">The Final Frontier</h2>
+<p>En realidad se utiliza el gradiente en un punto, que es algo similar a la derivada parcial pero más sencillo de calcular. El método más popular es SGD (Stochastic Gradient Descent).</p>
 
-<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+<blockquote>
+  <p>SGD: método iterativo de optimización como una aproximación a Gradiente Descent mediante el cáculo del gradiente sobre un subconjunto de los datos seleccionados de forma aleatoria.</p>
+</blockquote>
 
-<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+<p>Cuando la cantidad de datos es muy elevada el cáculo del gradiente se sustituye por una aproximación utilizando un subconjunto de los datos de forma iterativa. Dicho de otro modo, en lugar de calcular el gradiente de todo el conjunto de los datos se desarrolla un proceso iterativo sobre un subconjunto pequeño de datos seleccionados de forma aleatoria.</p>
 
-<blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+<p>El proceso iterativo es el siguiente</p>
+<ol>
+  <li>Se selecciona un subconjunto pequeño de datos</li>
+  <li>Se calcula el gradiente de este conjunto</li>
+  <li>Modificamos nuestros parámetros según el gradiente calculado en el paso anterior.</li>
+  <li>Seleccionamos un conjunto diferente de datos de forma aleatoria volviendo al primer paso.</li>
+</ol>
 
-<p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+<p>Al final se utiliza todo el conjunto de datos pero calculando el gradiente de grupos pequeños hasta que utilizamos todos los datos. Lo normal es repetir todo este proceso seleccionando varias veces todo el conjunto de datos para ir optimizando nuestro modelo.</p>
 
-<h2 class="section-heading">Reaching for the Stars</h2>
+<p>Otro elemento clave es este proceso de optimización es el coeficiente de aprendizaje o <strong>learning rate</strong>. El valor de nuestra pendiente puede ser elevado y corremos el riesgo de estar dando saltos entre aumentar o disminuir el valor de un parámetro. Para controlar este proceso multiplicamos el valor de nuestro gradiente por este coeficiente.</p>
 
-<p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
-
-<p><img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image" />
-<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span></p>
-
-<p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-
-<p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-
-<p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>
+<p>La selección del valor óptimo de <strong>learning rate</strong> que nos permita obtener la mejor optimización de nuestra función de coste es clave para el aprendizaje de nuestro modelo. Valores de <strong>learning rate</strong> muy altos provocaran que nuestro modelo no consiga llegar a un mínimo porque estará dando saltos muy grandes en torno a este punto. Si el <strong>learning rate</strong> es muy pequeño tardaremos mucho tiempo en llegar al mínimo.</p>
 
 
         <hr />
@@ -145,8 +131,11 @@
         <div class="clearfix">
 
           
+          <a class="btn btn-primary float-left" href="/blogs/ai/2019/10/31/focus.html" data-toggle="tooltip" data-placement="top" title="AI 2Man must explore, and this is exploration at its greatest">&larr; Anteriores<span class="d-none d-md-inline">
+              Post</span></a>
           
-          <a class="btn btn-primary float-right" href="/blogs/wikipedia/2017/10/27/dinosaurs.html" data-toggle="tooltip" data-placement="top" title="Dinosaurs are extinct today">Posteriores<span class="d-none d-md-inline">
+          
+          <a class="btn btn-primary float-right" href="/blogs/ai/2020/05/20/Introduccion.html" data-toggle="tooltip" data-placement="top" title="Introducción a Redes Neuronales">Posteriores<span class="d-none d-md-inline">
               Post</span> &rarr;</a>
           
 

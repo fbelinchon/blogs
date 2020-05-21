@@ -15,11 +15,18 @@ linkedin_username:
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
-lang: es
 
-markdown: kramdown
 
-destination: docs
+use_math: true
+
+markdown:           kramdown
+kramdown:
+  math_engine: katex
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
+  
 
 # Pagination Settings
 pagination:
