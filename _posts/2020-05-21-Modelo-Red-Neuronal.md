@@ -3,7 +3,7 @@ layout: post
 title: "Modelos simples a Redes Neuronales"
 subtitle: "Entendiendo modelos simples de Redes Neuronales"
 date: 2020-05-20 10:45:13 -0400
-background: '/blogs/img/posts/06.jpg'
+background: '/img/posts/06.jpg'
 categories: ai
 ---
 
@@ -30,7 +30,9 @@ Este modelo lo podemos representar matemáticamente como:
 
 $$\hat{y}=W*x + b$$
 
-![perceptron](/blogs/img/perceptron.png)
+<img src="/blogs/img/perceptron.png" alt="perceptron"
+	title="perceptron" width="100%" />
+
 > Imagen perceptrón con cinco entradas tomada de Wikipedia
 
 Para ajustar la salida de un perceptrón que sería de 0 o 1 podemos indicar que el valor será un 1 si el resultado es positivo y cero en caso contrario.
