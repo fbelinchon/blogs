@@ -35,4 +35,9 @@ jobs:
           fi
       - name: 🔨 Build site
         run: bundle exec jekyll build -d docs
+      - name: deploy
+        run: |
+          git add docs/.
+          git commit -m "master"
+          git push
         
