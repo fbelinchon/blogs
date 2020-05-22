@@ -18,8 +18,6 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 
 use_math: true
-theme: jekyll-theme-clean-blog
-
 
 markdown: kramdown
 kramdown:
