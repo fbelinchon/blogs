@@ -24,8 +24,9 @@ jobs:
         uses: actions/checkout@master
         with:
           fetch-depth: 1
-      #- name: 🎩 Install Jekyll
-      #  run: |
+      - name: 🎩 Install Jekyll
+        run: |
+          sudo bundle install
       #    sudo gem install bundler jekyll
       #    sudo bundle install
       - name: 🧹 Clean site
