@@ -1,9 +1,9 @@
-title:              My Blog
-email:              fbelinchon@gmail.com
-description:        Este es mi blog
-author:             Francisco Belinchón
-baseurl:            "/blogs"
-url:                "https://fbelinchon.github.io"
+title: My Blog
+email: fbelinchon@gmail.com
+description: Este es mi blog
+author: Francisco Belinchón
+baseurl: "/blogs"
+url: "https://fbelinchon.github.io"
 
 # Social Profiles
 twitter_username:   fbelinchon
@@ -18,7 +18,7 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 
 use_math: true
-destination: docs
+theme: jekyll-theme-clean-blog
 
 
 markdown: kramdown
