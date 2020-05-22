@@ -6,10 +6,10 @@ baseurl: "/blogs"
 url: "https://fbelinchon.github.io"
 
 # Social Profiles
-twitter_username:   fbelinchon
-github_username:    fbelinchon
-facebook_username:  StartBootstrap
-linkedin_username:
+twitter_username: fbelinchonm
+github_username: fbelinchon
+facebook_username: fbelinchon@gmail.com
+linkedin_username: fbelinchon@gmail.com
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
