@@ -28,6 +28,8 @@ jobs:
         run: |
           sudo gem install bundler jekyll
           sudo bundle install
+      - name: checkout master
+        run: git checkout master
       - name: 🧹 Clean site
         run: |
           if [ -d "docs" ]; then
