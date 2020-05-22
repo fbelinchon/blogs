@@ -194,7 +194,7 @@ Imaginemos que estamos en lo alto de una montaña y queremos llegar al valle. La
 Esto quiere decir que si obtenemos la derivada parcial (derivada de un parámetros manteniendo constante el resto) sabremos si tenemos que aumentar o disminuir el valor de ese parámetros para disminuir el valor de la función. La derivada parcial es nuestro camino de mayor pendiente al valle.
 
 
-En realidad se utiliza el gradiente en un punto, que es algo similar a la derivada parcial pero más sencillo de calcular. El método más popular es SGD (Stochastic Gradient Descent).
+En realidad se utiliza el gradiente en un punto, que es algo similar a la derivada parcial pero más sencillo de calcular. El método más popular es SGD (Stochastic Gradient Descent). 
 
 >SGD: método iterativo de optimización como una aproximación a Gradiente Descent mediante el cáculo del gradiente sobre un subconjunto de los datos seleccionados de forma aleatoria.
 
