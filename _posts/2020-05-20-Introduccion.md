@@ -209,7 +209,7 @@ El proceso iterativo es el siguiente
 Al final se utiliza todo el conjunto de datos pero calculando el gradiente de grupos pequeños hasta que utilizamos todos los datos. Lo normal es repetir todo este proceso seleccionando varias veces todo el conjunto de datos para ir optimizando nuestro modelo.
 
 
-Otro elemento clave es este proceso de optimización es el coeficiente de aprendizaje o **learning rate**. El valor de nuestra pendiente puede ser elevado y corremos el riesgo de estar dando saltos entre aumentar o disminuir el valor de un parámetro. Para controlar este proceso multiplicamos el valor de nuestro gradiente por este coeficiente.
+Otro elemento clave es este proceso de optimización es el coeficiente de aprendizaje o **learning rate**. El valor de nuestra pendiente puede ser elevado y corremos el riesgo de estar dando saltos entre aumentar o disminuir el valor de un parámetro. Para controlar este proceso multiplicamos el valor de nuestro gradiente por este coeficiente. 
 
 La selección del valor óptimo de **learning rate** que nos permita obtener la mejor optimización de nuestra función de coste es clave para el aprendizaje de nuestro modelo. Valores de **learning rate** muy altos provocaran que nuestro modelo no consiga llegar a un mínimo porque estará dando saltos muy grandes en torno a este punto. Si el **learning rate** es muy pequeño tardaremos mucho tiempo en llegar al mínimo.
 
