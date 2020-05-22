@@ -28,7 +28,7 @@ jobs:
         run: |
           sudo gem install bundler jekyll
           sudo bundle install
-           git push origin HEAD:master
+          git push origin HEAD
       - name: 🧹 Clean site
         run: |
           if [ -d "docs" ]; then
