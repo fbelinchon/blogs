@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-05-22T13:45:01+00:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">My Blog</title><subtitle>Este es mi blog</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">Modelos simples a Redes Neuronales</title><link href="https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html" rel="alternate" type="text/html" title="Modelos simples a Redes Neuronales" /><published>2020-05-20T14:45:13+00:00</published><updated>2020-05-20T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html">&lt;h1 id=&quot;modelo-simple&quot;&gt;Modelo simple&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-05-23T15:32:19+00:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">My Blog</title><subtitle>Este es mi blog</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">Modelos simples a Redes Neuronales</title><link href="https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html" rel="alternate" type="text/html" title="Modelos simples a Redes Neuronales" /><published>2020-05-20T14:45:13+00:00</published><updated>2020-05-20T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html">&lt;h1 id=&quot;modelo-simple&quot;&gt;Modelo simple&lt;/h1&gt;
 
 &lt;h2 id=&quot;objetivo&quot;&gt;Objetivo.&lt;/h2&gt;
 &lt;p&gt;El objetivo del artículo es entender como se define un modelo de apredizaje. Nos centraremos 
@@ -243,7 +243,7 @@ $$&lt;/div&gt;
 
 &lt;p&gt;Por lo tanto estamos hablando de máquinas que intentan simular ciertos comportamientos humanos. En realidad la inteligencia artificial es un tema mucho menos espectacular y exótico de lo que parece. La parte positiva es que, al mismo tiempo, también es mucho más asequible y real de lo que podríamos pensar.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt; es un campo dentro de la inteligencia artificial que se centra en modelos de aprendizaje. Estos modelos aprenden de los ejemplo que se les proporciona para detectar patrones y obtener predicciones. También son capaces de extraer información simplemente analizando un conjunto de datos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt; es un campo dentro de la inteligencia artificial que se centra en modelos de aprendizaje. Estos modelos aprenden de los ejemplos que se les proporcionan para detectar patrones y obtener predicciones. También son capaces de extraer información simplemente analizando un conjunto de datos.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Machine Learning is the field of study that gives computers the ability to learn without
@@ -285,16 +285,16 @@ No es un problema tan trivial porque cada uno tiene su propia forma de escribir 
 
 &lt;p&gt;Si lo analizamos un poco, no es fácil desarrollar un algoritmo que nos permita distinguir números manuscritos pero para nosotros, una vez aprendidos, es la tarea más simple del mundo.&lt;/p&gt;
 
-&lt;p&gt;A continuación os pongo algunos ejemplos de extraidos de MNIST (base de datos de números manuscritos).&lt;/p&gt;
+&lt;p&gt;A continuación os pongo algunos ejemplos extraidos de MNIST (base de datos de números manuscritos).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/blogs/img/posts/mnist2.jpg&quot; alt=&quot;mnist&quot; title=&quot;base de datos de números manuscritos&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://yann.lecun.com/exdb/mnist/&quot;&gt;mnist:&lt;/a&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;base de datos de imágenes con 60.000 ejemplo de números manuscritos de tamaño 28x28 pixels. Se utiliza como base de entranamiento en explicaciones sencilla de tratamiento de imagenes.&lt;/code&gt;&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;base de datos de imágenes con 60.000 ejemplo de números manuscritos de tamaño 28x28 pixels. Se utiliza como base de entrenamiento en explicaciones sencilla de tratamiento de imagenes.&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;¿Como simulamos esta forma de aprender basada en ejemplos?.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Empezamos creando un modelo de aprendizaje al que vamos pasando ejemplos de lo que queremos predecir. Tomando el caso anterior le vamos mostrando imágenes de números y le decimos que número es el correcto. Para empezar, nuestro modelo no sabe absolutamente sobre números. Lo que tenemos que conseguir es que nuestro modelo se adapte (aprenda) de forma que cada vez la tasa acierto sea mayor. Esto es lo que llamamos entrenamiento de nuestro modelo.&lt;/p&gt;
+&lt;p&gt;Empezamos creando un modelo de aprendizaje al que vamos pasando ejemplos de lo que queremos predecir. Tomando el caso anterior le vamos mostrando imágenes de números y le decimos que número es el correcto. Para empezar, nuestro modelo no sabe absolutamente nada sobre números. Lo que tenemos que conseguir es que nuestro modelo se adapte (aprenda) de forma que cada vez la tasa de acierto sea mayor. Esto es lo que llamamos entrenamiento de nuestro modelo.&lt;/p&gt;
 
 &lt;p&gt;Es similar a la forma que los humanos tenemos de aprender. Primero recopilamos un buen número de ejemplo (imágenes de números) con su correspondiente valor real (a que número corresponde). Luego le mostramos esa información a nuestro modelo hasta que consigamos que aprenda a distinguirlos. Esta es la forma de trabajar con redes neuronales y con la mayoría de los modelos de machine learning. Parece sencillo, ¿verdad?. Es un proceso iterativo de aprendizaje que finalizará cuando nuestro modelo nos proporcione un índice de aciertos satisfactorio.&lt;/p&gt;
 
@@ -304,7 +304,7 @@ No es un problema tan trivial porque cada uno tiene su propia forma de escribir 
 
 &lt;p&gt;Conceptos como data science, machine learning, deep learning, inteligencia artifial, redes neuronales etc están en boca de todos pero normalmente se relacionan con grandes grandes compañías, fuertes inversiones tecnológicas o perfiles muy especializados.&lt;/p&gt;
 
-&lt;p&gt;Esto ha cambiado de forma radical en los últimos años. La capacidad de computación se ha multiplicado y han aparecido herramientas que nos permiten diseñar modelos de aprendizaje de forma sencilla con uno conocimientos básicos. Actualmente podemos entrenar modelos que nos permiten categorizar imagenes en un ordenador de casa en pocos minutos.&lt;/p&gt;
+&lt;p&gt;Esto ha cambiado de forma radical en los últimos años. La capacidad de computación se ha multiplicado y han aparecido herramientas que nos permiten diseñar modelos de aprendizaje de forma sencilla con unos conocimientos básicos. Actualmente podemos entrenar modelos que nos permiten categorizar imagenes en un ordenador de casa en pocos minutos.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;¿Que tipos de problemas podemos resolver con modelos de aprendizaje?&lt;/em&gt;&lt;/p&gt;
 
@@ -312,7 +312,7 @@ No es un problema tan trivial porque cada uno tiene su propia forma de escribir 
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Modelos Supervisados: estos modelos se entrenan con un conjumto de datos de ejemplo. Los datos de ejemplo constan de una serie de características y el resultado final esperado. Una vez entrenado y optimizado, este modelo nos permite predecir el resultado de nuevos datos con las mismas características que los datos de ejemplo. El modelo es capaz de inferir las relaciones y los patrones en los datos de entrenamiento para predecir resultados en datos nuevos.&lt;/p&gt;
+    &lt;p&gt;Modelos Supervisados: estos modelos se entrenan con un conjunto de datos de ejemplo. Los datos de ejemplo constan de una serie de características y el resultado final esperado. Una vez entrenado y optimizado, este modelo nos permite predecir el resultado de nuevos datos con las mismas características que los datos de ejemplo. El modelo es capaz de inferir las relaciones y los patrones en los datos de entrenamiento para predecir resultados en datos nuevos.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Modelos no supervisados: disponemos de un conjunto de datos pero no buscamos ningún resultado. Lo que buscamos es agrupar por comportamientos similares. El ejemplo más común es la segmentación de clientes. Si tenemos datos sufientes de los hábitos de compra de nuestros clientes, podemos segmentar en grupos de usuarios con comportamientos parecidos. Esto nos permite enfocar campañas de marketing personalizadas. Se denominan no supervisados porque no hay un resultado concreto que predecir por cada ejemplo que dirija el entrenamiento como en el caso anterior.&lt;/p&gt;
