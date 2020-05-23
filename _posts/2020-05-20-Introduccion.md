@@ -22,7 +22,7 @@ La Inteligencia Artificial se suele relacionar con robots que se comportan como 
 
 Por lo tanto estamos hablando de máquinas que intentan simular ciertos comportamientos humanos. En realidad la inteligencia artificial es un tema mucho menos espectacular y exótico de lo que parece. La parte positiva es que, al mismo tiempo, también es mucho más asequible y real de lo que podríamos pensar.
 
-**Machine Learning** es un campo dentro de la inteligencia artificial que se centra en modelos de aprendizaje. Estos modelos aprenden de los ejemplo que se les proporciona para detectar patrones y obtener predicciones. También son capaces de extraer información simplemente analizando un conjunto de datos.
+**Machine Learning** es un campo dentro de la inteligencia artificial que se centra en modelos de aprendizaje. Estos modelos aprenden de los ejemplos que se les proporcionan para detectar patrones y obtener predicciones. También son capaces de extraer información simplemente analizando un conjunto de datos.
   
 >Machine Learning is the field of study that gives computers the ability to learn without
 being explicitly programmed.
@@ -64,17 +64,17 @@ No es un problema tan trivial porque cada uno tiene su propia forma de escribir 
 
 Si lo analizamos un poco, no es fácil desarrollar un algoritmo que nos permita distinguir números manuscritos pero para nosotros, una vez aprendidos, es la tarea más simple del mundo.
 
-A continuación os pongo algunos ejemplos de extraidos de MNIST (base de datos de números manuscritos).
+A continuación os pongo algunos ejemplos extraidos de MNIST (base de datos de números manuscritos).
 
 <img src="/blogs/img/posts/mnist2.jpg" alt="mnist"
 	title="base de datos de números manuscritos" width="100%" />
 
 [mnist:](http://yann.lecun.com/exdb/mnist/)
-`base de datos de imágenes con 60.000 ejemplo de números manuscritos de tamaño 28x28 pixels. Se utiliza como base de entranamiento en explicaciones sencilla de tratamiento de imagenes.`
+`base de datos de imágenes con 60.000 ejemplo de números manuscritos de tamaño 28x28 pixels. Se utiliza como base de entrenamiento en explicaciones sencilla de tratamiento de imagenes.`
 
 *¿Como simulamos esta forma de aprender basada en ejemplos?.*
 
-Empezamos creando un modelo de aprendizaje al que vamos pasando ejemplos de lo que queremos predecir. Tomando el caso anterior le vamos mostrando imágenes de números y le decimos que número es el correcto. Para empezar, nuestro modelo no sabe absolutamente sobre números. Lo que tenemos que conseguir es que nuestro modelo se adapte (aprenda) de forma que cada vez la tasa acierto sea mayor. Esto es lo que llamamos entrenamiento de nuestro modelo.
+Empezamos creando un modelo de aprendizaje al que vamos pasando ejemplos de lo que queremos predecir. Tomando el caso anterior le vamos mostrando imágenes de números y le decimos que número es el correcto. Para empezar, nuestro modelo no sabe absolutamente nada sobre números. Lo que tenemos que conseguir es que nuestro modelo se adapte (aprenda) de forma que cada vez la tasa de acierto sea mayor. Esto es lo que llamamos entrenamiento de nuestro modelo.
 
 
 
@@ -86,13 +86,13 @@ Antes de pasar al siguiente apartado vamos a consolidar los conocimientos adquir
 
 Conceptos como data science, machine learning, deep learning, inteligencia artifial, redes neuronales etc están en boca de todos pero normalmente se relacionan con grandes grandes compañías, fuertes inversiones tecnológicas o perfiles muy especializados.
 
-Esto ha cambiado de forma radical en los últimos años. La capacidad de computación se ha multiplicado y han aparecido herramientas que nos permiten diseñar modelos de aprendizaje de forma sencilla con uno conocimientos básicos. Actualmente podemos entrenar modelos que nos permiten categorizar imagenes en un ordenador de casa en pocos minutos.
+Esto ha cambiado de forma radical en los últimos años. La capacidad de computación se ha multiplicado y han aparecido herramientas que nos permiten diseñar modelos de aprendizaje de forma sencilla con unos conocimientos básicos. Actualmente podemos entrenar modelos que nos permiten categorizar imagenes en un ordenador de casa en pocos minutos.
 
 *¿Que tipos de problemas podemos resolver con modelos de aprendizaje?*
 
 Básicamente diferenciamos dos tipos de modelos.
 
-- Modelos Supervisados: estos modelos se entrenan con un conjumto de datos de ejemplo. Los datos de ejemplo constan de una serie de características y el resultado final esperado. Una vez entrenado y optimizado, este modelo nos permite predecir el resultado de nuevos datos con las mismas características que los datos de ejemplo. El modelo es capaz de inferir las relaciones y los patrones en los datos de entrenamiento para predecir resultados en datos nuevos. 
+- Modelos Supervisados: estos modelos se entrenan con un conjunto de datos de ejemplo. Los datos de ejemplo constan de una serie de características y el resultado final esperado. Una vez entrenado y optimizado, este modelo nos permite predecir el resultado de nuevos datos con las mismas características que los datos de ejemplo. El modelo es capaz de inferir las relaciones y los patrones en los datos de entrenamiento para predecir resultados en datos nuevos. 
   
 - Modelos no supervisados: disponemos de un conjunto de datos pero no buscamos ningún resultado. Lo que buscamos es agrupar por comportamientos similares. El ejemplo más común es la segmentación de clientes. Si tenemos datos sufientes de los hábitos de compra de nuestros clientes, podemos segmentar en grupos de usuarios con comportamientos parecidos. Esto nos permite enfocar campañas de marketing personalizadas. Se denominan no supervisados porque no hay un resultado concreto que predecir por cada ejemplo que dirija el entrenamiento como en el caso anterior.
 
