@@ -21,14 +21,15 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
    
       - name: Build & Deploy to GitHub Pages
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
         with:
           fetch-depth: 1
+          ref: master 
       - name: 🎩 Install Jekyll
         run: |
           sudo gem install bundler jekyll
           sudo bundle install
-          git push origin HEAD
+          #git push origin HEAD
       - name: 🧹 Clean site
         run: |
           if [ -d "docs" ]; then
