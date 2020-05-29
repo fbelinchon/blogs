@@ -10,20 +10,18 @@ categories: ai
 # Modelo simple
 
 ## Objetivo.
-El objetivo del artículo es entender como se define un modelo de apredizaje. Nos centraremos 
-en la definición de modelos de redes neuronales sencillas para entender los mecanismos básicos.
-Las redes neuronales se denominan **deep learning** porque se basan en arquitecturas de varios niveles que se
-conectan de forma encadenada hasta producir el resultado final.
+El objetivo del artículo es entender como se define un modelo de apredizaje. Nos centraremos en la definición de modelos de redes neuronales sencillas para entender los mecanismos básicos.
+Las redes neuronales se denominan **deep learning** porque se basan en arquitecturas de varios niveles que se conectan de forma encadenada hasta producir el resultado final.
 
 ## Configuración simple: red neuronal de una sola capa
 
 ### Perceptron
 El modelo más básico de red neuronal es el perceptrón. Está definido por una neurona que acepta una entrada con varios parámetros y produce una salida. Idealmente la salida es 0 o 1. Para calcular el resultado final se multiplica cada entrada por un peso que nos indica el aporte de esa entrada al resultado final.
 
- Al sumatorio de todas esas operaciones se le compara con un valor constante para devolver un 1 si el sumatorio es mayor que ese valor o un 0  en caso contrario. Si nos damos cuenta tenemos los mismo elementos que describimos en el árticulo anterior.
+ Al sumatorio de todas esas operaciones se le compara con un valor constante para devolver un 1 si el sumatorio es mayor que ese valor o un 0 en caso contrario. Si nos damos cuenta tenemos los mismo elementos que describimos en el artículo anterior.
 - Una entrada de datos.
 - Una matriz (en este caso un vector) de pesos.
-- Un parámetro de ajuste para indicar el umbral del cero que denominamos bias y que se añade a la multiplicación de ,los valores anteriores.
+- Un parámetro de ajuste para indicar el umbral del cero que denominamos bias y que se añade a la multiplicación de, los valores anteriores.
 - El resultado de nuestro modelo. En este caso concreto sería 0 o 1.
 
 Este modelo lo podemos representar matemáticamente como:
@@ -47,7 +45,7 @@ $$
 \left[\begin{array}{ccc}x_1& x_2 & x_3\end{array}\right] \left[\begin{array}{ccc}w_1 \\ w_2 \\ w_3\end{array}\right] = x_1*w_1+x_2*w_2+x_3*w_3
 $$
 
-Si queremos añadir más neuronas a nuestro modelo necesitamos tratar con multiplicaciones de matrices. Imaginemos que se añade una nueva neurona. Tendrá el mismo número de entradas pero tendremos dos resultados de nuestro modelo, uno por cada neurona. Cada nueva columna de nuestra matriz de pesos representa una neurona con sus correspondietnes pesos que se aplican a cada entrada. Si lo expresamos como operaciones de matrices trandríamos lo siguiente.
+Si queremos añadir más neuronas a nuestro modelo necesitamos tratar con multiplicaciones de matrices. Imaginemos que se añade una nueva neurona. Tendrá el mismo número de entradas pero tendremos dos resultados de nuestro modelo, uno por cada neurona. Cada nueva columna de nuestra matriz de pesos representa una neurona con sus correspondientes pesos que se aplican a cada entrada. Si lo expresamos como operaciones de matrices tendríamos lo siguiente.
 
 
 $$
@@ -58,7 +56,7 @@ Hemos numerado los índices de los pesos de forma que el primer elemento es el o
 
 Es importante tener claro unos conceptos básicos de multiplicación de matrices.
 - Para multiplicar dos matrices necesitamos que el número de columnas de la primera matriz sea igual al número de filas de la segunda matriz. Tiene sentido porque el número de parámetros de entrada tiene que ser igual al número de pesos que tiene cada neurona.
-- La matriz resultado tendrá el mismo número de filas que la primera matriz y el mismo número de columnas de la segunda. También concuerda con lo que hemos explicado. Si tenemos como entrada un vector $$\vec{x} = \left[\begin{array}{ccc}x_1& x_2 & x_3\end{array}\right]$$ (1 fila y 3 columnas) y nuestro modelo tiene dos neuronas (3 filas y 2 columnas) el resultado tendría una fila y dos columnas, una columnas para el resultado de cada neurona. Simplificando, el resultado de nuestro modelo sería igual al número de registros de entrada (en nuestro ejemplo uno) y tantas columnas como neuronas tenemos $$X(1,3) * W(3,2) = R(1,2)$$
+- La matriz resultado tendrá el mismo número de filas que la primera matriz y el mismo número de columnas de la segunda. También concuerda con lo que hemos explicado. Si tenemos como entrada un vector $$\vec{x} = \left[\begin{array}{ccc}x_1& x_2 & x_3\end{array}\right]$$ (1 fila y 3 columnas) y nuestro modelo tiene dos neuronas (3 filas y 2 columnas) el resultado tendría una fila y dos columnas, una columna para el resultado de cada neurona. Simplificando, el resultado de nuestro modelo sería igual al número de registros de entrada (en nuestro ejemplo uno) y tantas columnas como neuronas tenemos $$X(1,3) * W(3,2) = R(1,2)$$
 - El orden de la multiplicación afecta al resultado. No es lo mismo multiplicar $$A*B$ que $B*A$$.
   
   > Nota: Si $$A*B = R$$ entonces $$B^T*A^T =R^T$$. Eso quiere decir que si cambiamos el orden de los factores de la multiplicación tenemos que utilizar las matrices traspuestas de cada uno de ellos y el resultado será la traspuesta de $A*B$. La traspuesta de una matriz se obtiene cambiando filas por columnas.
@@ -102,25 +100,25 @@ Conocer las dimensiones de la salida de nuestro modelo es esencial para poder in
 
 ### Añadimos nueva capa
 
-Las redes neuronales con una sola capa tienen limitada su capacidad de predicción. El objetivo es convertir nuestro perceptron en una red neuronal con multiples capas. Esto es lo que conocemos como Deep Learning.
+Las redes neuronales con una sola capa tienen limitada su capacidad de predicción. El objetivo es convertir nuestro perceptron en una red neuronal con múltiples capas. Esto es lo que conocemos como Deep Learning.
 
 Desde el punto de vista de arquitectura para añadir nueva capa simplemente tomamos la salida de la primera capa como entrada de la segunda. Se trata de encadenar varias capas para generar un modelo más complejo que permita más capacidad de análisis de patrones y relaciones.
 
 
-Cada capa es básicamente una matriz de pesos más el temino bias que se suma posteriormente. La dimensión de la matriz para nuestra segunda capa depende del número de neuronas de la capa anterior (ya definida) y el número de neuronas que queremos en la segunda capa. Sabemos que para multiplicar matrices las columnas de la primera capa tienen que ser iguales a las filas de la segunda. Para añadir una nueva capa tenemos que definir la matrix de pesos que tendrá como número de filas el número de neuronas de la capa anterior y el número de columnas igual al número de neuronas de la nueva capa.
+Cada capa es básicamente una matriz de pesos más el término bias que se suma posteriormente. La dimensión de la matriz para nuestra segunda capa depende del número de neuronas de la capa anterior (ya definida) y el número de neuronas que queremos en la segunda capa. Sabemos que para multiplicar matrices las columnas de la primera capa tienen que ser iguales a las filas de la segunda. Para añadir una nueva capa tenemos que definir la matriz de pesos que tendrá como número de filas el número de neuronas de la capa anterior y el número de columnas igual al número de neuronas de la nueva capa.
 
-Desde un punto de vista más matemático añadir una nueva capa representa una composición de funciones. Una composiciñon de funciones significa que la salida de una función es la entrada de la siguiente lo que encaja perfectamente con lo descripto en la parte de arquitectura de nuestro modelo.
+Desde un punto de vista más matemático añadir una nueva capa representa una composición de funciones. Una composición de funciones significa que la salida de una función es la entrada de la siguiente lo que encaja perfectamente con lo descripto en la parte de arquitectura de nuestro modelo.
 
 Supongamos que tenemos dos funciones $$f(x) = W_1*x + b_1$$ y una función $$g(x)=W_2*x + b_2$$. El resultado final de la composición de estas dos funciones sería:
 $$m(x)=g(f(x))$$. Esto quiere decir que la variable $$x$$ de la función $$g(x)$$ se sustituye por la propia función $$f(x)$$.
 
 $$m(x)=g(f(x))=g(W_1*x + b_1)= W_2*(W_1*x + b_1) + b_2$$
 
-Si $$m(x)$$ es nuestro modelo, los datos de entrada serían la $$x$$. Vemos que en la función desarrollada aparecen los pesos de nuestras dos capas y sus correspondientes terminos bias. Nuestro modelo tendrá que ajustar los pesos de las matrices $$W_1$$ y $$W_2$$ y los términos $$b_1$$ y $$b_2$$ para que el error cometido por nuestro modelo con respecto al valor real de losnuestros datos de entrenamiento sea el menor posible.
+Si $$m(x)$$ es nuestro modelo, los datos de entrada serían la $$x$$. Vemos que en la función desarrollada aparecen los pesos de nuestras dos capas y sus correspondientes términos bias. Nuestro modelo tendrá que ajustar los pesos de las matrices $$W_1$$ y $$W_2$$ y los términos $$b_1$$ y $$b_2$$ para que el error cometido por nuestro modelo con respecto al valor real de los nuestros datos de entrenamiento sea el menor posible.
 
 ### Funciones de activación.
 
-Lo primero que tenemos que decir es que el modelo descrito anteriomente no funciona. Una composición de dos funciones lineales es otra función linear. Eso significa que nuestro modelo con dos capas se comporta exactamente igual que un modelo de una sola capa. No aumentamos la capacidad de aprendizaje al añadir nuevas capas
+Lo primero que tenemos que decir es que el modelo descrito anteriormente no funciona. Una composición de dos funciones lineales es otra función linear. Eso significa que nuestro modelo con dos capas se comporta exactamente igual que un modelo de una sola capa. No aumentamos la capacidad de aprendizaje al añadir nuevas capas
 
 Sin entrar en mucho detalle desarrollamos la función anterior.
 
@@ -128,7 +126,7 @@ $$m(x)=g(f(x))=g(W_1*x + b_1)= W_2*(W_1*x + b_1) + b_2 = W_2*W_1*x + W_2*b_1 + b
 
 > Si aplicamos las reglas del cálculo de matrices podrías comprobar $$W_2*W_1$$ sería una matriz de pesos similar la capa uno y que $$W_2*b_1$$ sería un vector de las mismas dimensiones que $$b_2$$ y al sumarlo se comportaría como un nuevo termino bias (sesgo).
 
-Para evitar este problema se aplica una función no linear al final de cada capa. De esta forma se rompe la linearidad y podemos añadir más capas de forma efectiva. Cada nueva capa significa nuevos pesos y nuevos terminos bias (sesgos) que el modelo tiene que ajustar. De esta forma aumentamos la capacidad de aprendizaje del modelo al añadir nuevas capas.
+Para evitar este problema se aplica una función no linear al final de cada capa. De esta forma se rompe la y podemos añadir más capas de forma efectiva. Cada nueva capa significa nuevos pesos y nuevos términos bias (sesgos) que el modelo tiene que ajustar. De esta forma aumentamos la capacidad de aprendizaje del modelo al añadir nuevas capas.
 
 Es importante tener en cuenta que al aplicar una función de activación no modificamos ni la dimensión de la matriz resultante ni añadimos más parámetros al modelo.
 
@@ -158,10 +156,10 @@ Inicialmente la función logistic se utilizaba con mucha frecuencia como funció
 ### Ejemplo Práctico
 
 Vamos a ver un ejemplo sencillo. 
->Somos una inmoviliaría que queremos informar a nuestros clientes del precio estimado de venta de su vivienda de forma inmediata. De operaciones anteriores tenemos información de 2.000 viviendas con sus características y sus precios reales de venta. De cada vivienda tenemos 45 caracterísitcas que nos definen el inmueble (planta, metros cuadrados, número de habitaciones, localidad, barrio etc).
+>Somos una inmobiliaria que queremos informar a nuestros clientes del precio estimado de venta de su vivienda de forma inmediata. De operaciones anteriores tenemos información de 2.000 viviendas con sus características y sus precios reales de venta. De cada vivienda tenemos 45 características que nos definen el inmueble (planta, metros cuadrados, número de habitaciones, localidad, barrio etc).
 
 
-Tomamos la decisión de crear un modelo de red neuronal con cuatro capas. La primera capa representa la entrada y decidimos pasar la información de entrenamiento a nuestro modelo en paquetes de 32 viviendas. añadimos dos capas ocultas donde la primera capa tendrá 200 neuronas y la segunda 100. Como queremos predecir un valor único que será el precio estimado de venta la capa de salida tendrá una única neurona.
+Tomamos la decisión de crear un modelo de red neuronal con cuatro capas. La primera capa representa la entrada y decidimos pasar la información de entrenamiento a nuestro modelo en paquetes de 32 viviendas. Añadimos dos capas ocultas donde la primera capa tendrá 200 neuronas y la segunda 100. Como queremos predecir un valor único que será el precio estimado de venta la capa de salida tendrá una única neurona.
 
 El esquema de nuestra red neuronal sería de esta manera.
 
@@ -172,7 +170,7 @@ El esquema de nuestra red neuronal sería de esta manera.
 Vamos a analizar los parámetros y las dimensiones de las matrices en cada capa para conocer mejor el funcionamiento interno.
 
 * Capa de entrada (input layer): es la más sencilla de analizar. Si cada vivienda tiene 45 características y al modelo le pasamos 32 viviendas la entrada al modelo es una matriz input(32,45). Tenemos 32 filas y 45 columnas.
-* Primera capa oculta (hidden layer 1): Esta es una capa propiamente dicha de nuestro modelo por lo que tenemos una matriz de pesos y un vector de terminos bias. La matriz de entrada se multiplica por la matriz de pesos y se le suma el término bias. Tanto la matriz de pesos como el vector bias de suma son parámetros de esta capa. Tenemos 9200 parámetros
+* Primera capa oculta (hidden layer 1): Esta es una capa propiamente dicha de nuestro modelo por lo que tenemos una matriz de pesos y un vector de términos bias. La matriz de entrada se multiplica por la matriz de pesos y se le suma el término bias. Tanto la matriz de pesos como el vector bias de suma son parámetros de esta capa. Tenemos 9200 parámetros
   
   - Matriz de pesos: $$W_1(45,200) = 9000$$ parámetros
   - Bias: $$b_1(200) = 200$$ parámetros
@@ -182,7 +180,7 @@ Vamos a analizar los parámetros y las dimensiones de las matrices en cada capa 
   - Matriz de pesos: $$W_1(200,100) = 20000$$ parámetros
   - Bias: $$b_1(100) = 100$$ parámetros
 
-* Capa de salida (output layer): Toma como entrada la salida de la capa anterior. El número de filas corresponde al número de neuronas de la capa anterior. Las columnas corresponden al número de nueronas decidio para esta capa, en este caso una única columna. Tenemos 101 parámetros
+* Capa de salida (output layer): Toma como entrada la salida de la capa anterior. El número de filas corresponde al número de neuronas de la capa anterior. Las columnas corresponden al número de neuronas decidido para esta capa, en este caso una única columna. Tenemos 101 parámetros
   
   - Matriz de pesos: $$W_1(100,1) = 100$$ parámetros
   - Bias: $$b_1(1) = 1$$ parámetros
@@ -199,6 +197,6 @@ La función lineal es del tipo $$f(x) = W*x +b$$ y consiste en la matriz de peso
 
 La función de activación cumple la misión de evitar la linearidad al componer varias capas. No afecta ni a las dimensiones de la salida de la capa ni tampoco genera nuevos parámetros. Simplemente es una función que se aplica a la salida de la función lineal. Relu es una de las funciones de activación más utilizada. Simplemente devuelve un cero si el valor es negativo y el propio valor si es positivo.
 
-El tipo de modelo que hemos explicado es el más sencillo y se denomina fully-connected neural network. Existen otros tipos de capas con configraciones más complejas pero todas comparten un patrón de capas encadenadas.
+El tipo de modelo que hemos explicado es el más sencillo y se denomina fully-connected neural network. Existen otros tipos de capas con configuraciones más complejas pero todas comparten un patrón de capas encadenadas.
 
-En el siguiente árticulo hablaremos del proceso de entrenamiento  y como conseguir modelos que nos pemitan predecir valores o inferir características a partir de datos nuevos (distintos a los utiilizados para entranar le modelo).
+En el siguiente artículo hablaremos del proceso de entrenamiento y como conseguir modelos que nos permitan predecir valores o inferir características a partir de datos nuevos (distintos a los utilizados para entrenar el modelo).
