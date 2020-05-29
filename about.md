@@ -27,7 +27,7 @@ Este es el tipo de reflexiones que me gustaría compartir así como ideas o suge
 
 Es realmente asombroso la cantidad de recursos disponibles. Cuando empecé a interesarme por estos temas pensaba que eran cosa de grandes empresas y perfiles muy especializados. Estaba totalmente equivocado. Actualmente cualquier persona pueda generar modelos complejos con un ordenador personal o con cualquier opción gratuita de servicio cloud.
 
-Lo más increible aún es la cantidad de gente dispuesta a poner estos conocimientos en manos de todo el mundo. Una de esas personas es Jeremy Howard y el grupo de trabajo que están detrás del proyecto [fastai](http://fast.ai). Este es su eslogan, ¿verdad que es *Cool!!!!*?.
+Lo más increible aún es la cantidad de gente dispuesta a poner estos conocimientos en manos de todo el mundo. Una de esas personas es Jeremy Howard y el grupo de trabajo que están detrás del proyecto [fastai](http://fast.ai). Este es su eslogan, ¿verdad que es *Cool!!!!*?. 
 
 >Being cool is about being exclusive, and that’s the opposite of what we want. We want to make deep learning as accessible as possible– including to people using uncool languages like C#, uncool operating systems like Windows (which is used by the majority of the world), uncool datasets (way smaller than anything at Google, and in domain areas you’d consider obscure), and with uncool backgrounds (maybe you didn’t go to Stanford).
 
