@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Sobre mi.
-description: Esto es lo que hago.
+title: Reflexiones y pensamientos.
+description: Desarrollo de aplicaciones y Deep Learning.
 background: '/img/bg-about.jpg'
 ---
-# Hola
+# ¿De qué hablamos aquí?
 
 Me llamo Francisco Belinchón y quiero contaros los motivos para escribir este blog.
 Desde hace varios años he estado pensando en escribir un blog pero hasta este momento no he tenido ni el tiempo ni la motivación necesaria.
@@ -27,13 +27,13 @@ Este es el tipo de reflexiones que me gustaría compartir así como ideas o suge
 
 Es realmente asombroso la cantidad de recursos disponibles. Cuando empecé a interesarme por estos temas pensaba que eran cosa de grandes empresas y perfiles muy especializados. Estaba totalmente equivocado. Actualmente cualquier persona pueda generar modelos complejos con un ordenador personal o con cualquier opción gratuita de servicio cloud.
 
-Lo más increible aún es la cantidad de gente dispuesta a poner estos conocimientos en manos de todo el mundo. Una de esas personas es Jeremy Howard y todas las personas que están detrás del proyecto fastai. Este es su elogan *Cool*.
+Lo más increible aún es la cantidad de gente dispuesta a poner estos conocimientos en manos de todo el mundo. Una de esas personas es Jeremy Howard y el grupo de trabajo que están detrás del proyecto [fastai](http://fast.ai). Este es su eslogan, ¿verdad que es *Cool!!!!*?.
 
 >Being cool is about being exclusive, and that’s the opposite of what we want. We want to make deep learning as accessible as possible– including to people using uncool languages like C#, uncool operating systems like Windows (which is used by the majority of the world), uncool datasets (way smaller than anything at Google, and in domain areas you’d consider obscure), and with uncool backgrounds (maybe you didn’t go to Stanford).
 
-Os dejo estos dos consejos cortesía de Jeremy que intento seguir.
+Os dejo estos dos consejos cortesía de Jeremy.
 
-1. Los cursos, los libros y los artículos técnicos están muy bien pero empieza ya a escribir tus propios programas. Busca ejemplos, experimenta, cambia, modifica, rompe y vuelve a arreglarlo. Crea tus propios ejemplo con ideas cotidianas. Experimenta, comete errores y vuelve a experimentar de nuevo.
-2. Escribe un blog. No pretendas escribir para licenciados en Harvard. Escribe para personas que están hoy en el mismo punto del camino que estabas no hace mucho tiempo. Comparte tu experiencia, tus dificultades y tus logros. Pero sobre todo escribe para ti. Es muy difícil escribir sobre algo que no dominas y en el proceso te darás cuenta de tus debilidades y las superarás.
+1. Los cursos, los libros y los artículos técnicos están muy bien pero empieza ya a escribir tus propios programas. Busca ejemplos, experimenta, cambia, modifica, rompe y vuelve a arreglarlo. Crea tus propios ejemplo con ideas cotidianas. Experimenta, comete errores y vuelve a experimentar de nuevo. Si no lo has hecho tú, no lo has asimilado completamente.
+2. Escribe un blog. No pretendas escribir para licenciados en Harvard. Escribe para personas que están hoy en el mismo punto del camino que estabas tú no hace mucho tiempo. Comparte tu experiencia, tus dificultades y tus logros. Pero sobre todo escribe para ti. Es muy difícil escribir sobre algo que no dominas y en el proceso te darás cuenta de tus debilidades y las superarás.
 
 Estas son mis motivaciones y la clase de artículos y pensamientos que podéis encontrar en estas páginas. Sentiros libres de comentar, opinar o incluso criticar cualquiera de los escritos. Son simplemente opiniones y reflexiones sin más pretensiones. 
