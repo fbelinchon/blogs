@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Modelos simples a Redes Neuronales"
+title: "Modelos simples de Redes Neuronales"
 subtitle: "Entendiendo modelos simples de Redes Neuronales"
 date: 2020-05-20 10:45:13 -0400
 background: '/img/posts/06.jpg'
