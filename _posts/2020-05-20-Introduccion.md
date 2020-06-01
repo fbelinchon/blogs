@@ -96,7 +96,7 @@ Básicamente diferenciamos dos tipos de modelos.
   
 - Modelos no supervisados: disponemos de un conjunto de datos pero no buscamos ningún resultado. Lo que buscamos es agrupar por comportamientos similares. El ejemplo más común es la segmentación de clientes. Si tenemos datos suficientes de los hábitos de compra de nuestros clientes, podemos segmentar en grupos de usuarios con comportamientos parecidos. Esto nos permite enfocar campañas de marketing personalizadas. Se denominan no supervisados porque no hay un resultado concreto que predecir por cada ejemplo que dirija el entrenamiento como en el caso anterior.
 
-> Otro gran grupo de modelos son los modelos de refuerzo. En este caso los modelos van aprendiendo mediante prueba-error. Cuando las decisiones son correctas se favorece ese camino y cuando no lo es se penaliza.
+> Otro gran grupo de modelos son los modelos de refuerzo. En este caso los modelos van aprendiendo mediante prueba-error. Cuando las decisiones son correctas se favorece ese camino y cuando no lo son se penaliza.
 
 Para hablar de redes neuronales nos vamos a centrar en los llamados modelos supervisados. Se dividen en dos grandes grupos.
 
@@ -217,4 +217,8 @@ La selección del valor óptimo de **learning rate** que nos permita obtener la 
 
 Los modelos de aprendizaje nos proporcionan una nueva herramienta para abordar soluciones que antes parecían inalcanzables. 
 
-Estamos ante una nueva forma de solucionar el La Inteligencia Artificial está aquí para quedarse. Muchos de los problemas que hace unos años parecían inabordables ahora se pueden solucionar de forma sencilla y asequible. 
+Estamos ante una nueva forma de programar un ordenador. Ya no definimos un algoritmo indicando los pasos y las reglas a seguir. Simplemente le indicamos un conjunto de ejemplos y le pedimos que optimice un modelo para que la predicción realizada sea la más ajustada a la realidad. En este proceso el modelo es capaz de inferir relaciones y patrones que nosotros somos incapaces de detectar por el elevado número de variable e interacciones.
+
+El primer paso consiste en entrenar el modelo. Cuando el modelo nos proporciona los resultados satisfactorios paramos el entrenamiento y ya lo podemos utilizar para predecir nuevos datos. El proceso de aprendizaje puede ser largo y costoso pero, una vez entrenado, el modelo puede realizar predicciones de forma casi inmediata.
+
+En los siguientes artículos analizaremos como es un modelo de redes neuronales sencillo y como se entrena.
