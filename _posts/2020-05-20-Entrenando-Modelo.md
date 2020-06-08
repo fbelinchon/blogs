@@ -7,13 +7,11 @@ background: '/img/posts/06.jpg'
 categories: AI
 ---
 
-# ¿Como entrenar una red neuronal?
-
-## Objetivo
+# Objetivo
 
 El objetivo de este artículo es explicar de forma sencilla el proceso de entrenamiento de una red neuronal como la descrita en el artículo anterior. Intentaremos evitar las explicaciones matemáticas detalladas, pero si daremos una visión intuitiva del proceso que nos ayude a entenderlo.
 
-## Intuición sobre el proceso de entrenamiento.
+# Intuición sobre el proceso de entrenamiento.
 
 El concepto del entrenamiento de un modelo de redes neuronales es sencillo y lo hemos mencionado en artículos anteriores. El modelo realiza una predicción sobre los datos de ejemplo que le suministramos y compara la predicción con el valor real que debe proporcionar. El objetivo es que ese error disminuya poco a poco hasta conseguir un modelo con unas predicciones muy cercanas a los valores reales.
 
@@ -21,3 +19,38 @@ En los primeros pasos del entrenamiento las predicciones tendrán un error muy g
 
 La clave del aprendizaje está en ir ajustando los parámetros de forma progresiva para ir disminuyendo el error cometido. El modelo analiza cada parámetro y decide si aumentando o disminuyendo cada uno de los parámetros se reduce el error cometido.
 
+# Gradient Descent como método de aprendizaje (optimización).
+
+Stochastic Dradiente descent, 
+Proceso bacth
+
+## Underfiting vs Overfitting
+
+
+## Fases de proceso de aprendizaje.
+- Toma de contacto.
+  - Inicialización de parámetros.
+- Aprendizaje
+- Memorización
+  
+# Preparación de los datos
+## Conjunto de entrenamiento, validación y test.
+- Conjunto de entrenamiento vs conjunto de validación.
+- Conjunto de test
+  
+# Flujo del proceso de entrenamiento.
+- blucle por epoch
+  - Bucle por batch
+    - Training
+    - Validación
+
+Análisis de resultados entrenamiento vs validación.
+
+# Conclusiones
+
+Método de optimización. 
+Proceso iterativo.
+Prueba con diferentes hiperparámetros.
+Ajustes.
+
+Objetivo -> modelo entrenado
