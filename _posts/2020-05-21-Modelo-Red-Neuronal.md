@@ -146,7 +146,7 @@ Las funciones de activación más comunes son:
 
 Inicialmente la función logistic se utilizaba con mucha frecuencia como función de activación. Actualmente Relu es la función más utilizada principalmente con configuraciones de redes neuronales sencillas. En redes neuronales más complejas como redes convolucionales o recurrentes también se utiliza logistic y tanh.
 
- ### Modelo multicapa
+### Modelo multicapa
 
  Ahora que entendemos como podemos añadir nuevas capas a nuestro modelo vamos a definir más en detalle una arquitectura típica. Tenemos tres tipos de capas.
  - Capa de entrada (input layer): no es una capa en si, sino la entrada al modelo. Esta capa representa la información de entrenamiento. Las columnas representan cada una de las características de nuestra información y las filas el número de ejemplos que vamos a pasar al modelo.
@@ -185,7 +185,7 @@ Vamos a analizar los parámetros y las dimensiones de las matrices en cada capa 
   - Matriz de pesos: $$W_1(100,1) = 100$$ parámetros
   - Bias: $$b_1(1) = 1$$ parámetros
 
-En total el modelo tiene x parámetros que tiene que ajustar en la fase de entrenamiento. Una vez entrenado nuestro modelo podemos utilizarlo para predecir el coste estimado de venta de nuestra vivienda. Un modelo ya entrenado y listo para su uso se compone de dos partes.
+En total el modelo tiene 29.100 parámetros que tiene que ajustar en la fase de entrenamiento. Una vez entrenado nuestro modelo podemos utilizarlo para predecir el coste estimado de venta de nuestra vivienda. Un modelo ya entrenado y listo para su uso se compone de dos partes.
 - Arquitectura: descripción de las diferentes capas de nuestro modelo.
 - Parámetros: los valores que se han ajustado en la fase de entrenamiento.
 
