@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-06-01T08:51:37+00:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">Mi Blog</title><subtitle>Sobre Desarrollo de apliciones y deep learning.</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">Modelos simples de Redes Neuronales</title><link href="https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html" rel="alternate" type="text/html" title="Modelos simples de Redes Neuronales" /><published>2020-05-20T14:45:13+00:00</published><updated>2020-05-20T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html">&lt;h1 id=&quot;modelo-simple&quot;&gt;Modelo simple&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-06-09T18:15:25+00:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">Mi Blog</title><subtitle>Sobre Desarrollo de apliciones y deep learning.</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">Modelos simples de Redes Neuronales</title><link href="https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html" rel="alternate" type="text/html" title="Modelos simples de Redes Neuronales" /><published>2020-05-20T14:45:13+00:00</published><updated>2020-05-20T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/05/20/Modelo-Red-Neuronal.html">&lt;h1 id=&quot;modelo-simple&quot;&gt;Modelo simple&lt;/h1&gt;
 
 &lt;h2 id=&quot;objetivo&quot;&gt;Objetivo.&lt;/h2&gt;
 &lt;p&gt;El objetivo del artículo es entender como se define un modelo de apredizaje. Nos centraremos en la definición de modelos de redes neuronales sencillas para entender los mecanismos básicos.
@@ -156,7 +156,7 @@ $$&lt;/div&gt;
 
 &lt;p&gt;Inicialmente la función logistic se utilizaba con mucha frecuencia como función de activación. Actualmente Relu es la función más utilizada principalmente con configuraciones de redes neuronales sencillas. En redes neuronales más complejas como redes convolucionales o recurrentes también se utiliza logistic y tanh.&lt;/p&gt;
 
-&lt;p&gt;### Modelo multicapa&lt;/p&gt;
+&lt;h3 id=&quot;modelo-multicapa&quot;&gt;Modelo multicapa&lt;/h3&gt;
 
 &lt;p&gt;Ahora que entendemos como podemos añadir nuevas capas a nuestro modelo vamos a definir más en detalle una arquitectura típica. Tenemos tres tipos de capas.&lt;/p&gt;
 &lt;ul&gt;
@@ -208,7 +208,7 @@ $$&lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;En total el modelo tiene x parámetros que tiene que ajustar en la fase de entrenamiento. Una vez entrenado nuestro modelo podemos utilizarlo para predecir el coste estimado de venta de nuestra vivienda. Un modelo ya entrenado y listo para su uso se compone de dos partes.&lt;/p&gt;
+&lt;p&gt;En total el modelo tiene 29.100 parámetros que tiene que ajustar en la fase de entrenamiento. Una vez entrenado nuestro modelo podemos utilizarlo para predecir el coste estimado de venta de nuestra vivienda. Un modelo ya entrenado y listo para su uso se compone de dos partes.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Arquitectura: descripción de las diferentes capas de nuestro modelo.&lt;/li&gt;
   &lt;li&gt;Parámetros: los valores que se han ajustado en la fase de entrenamiento.&lt;/li&gt;
