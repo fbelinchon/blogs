@@ -52,7 +52,7 @@ Cuando hemos completado un ciclo entero, en este caso los 16 batches definidos, 
 
 ### Learning rate (ratio de aprendizaje)
 
-
+1
 Proceso bacth
 
 ## Underfiting vs Overfitting
