@@ -52,10 +52,19 @@ Cuando hemos completado un ciclo entero, en este caso los 16 batches definidos, 
 
 ### Learning rate (ratio de aprendizaje)
 
-1
-Proceso bacth
+El ratio de aprendizaje o learning rate nos permite controlar la forma en que modificamos los parametos del modelo. Modificamos los parametros restando el gradiente en ese valor multiplicado por el ratio de aprendizaje. La razon por la que restamos es porque si el gradiente es positivo el minimo de la funci'on est'a a la izquierda del valor actual por lo que tenemos que disminuir el parametro. La raz'on por la que multiplicamos el gradiente por el learning rate es para controlar cuanto modificamos el valor del parametro.
 
-## Underfiting vs Overfitting
+Valores tipicos de learning rate pueden variar entre 0,01 a 0,00001. Suelen ser valores menores de uno para evitar estar saltando de izquierda a derecha cuando nos acercamos al m'inimo. Tambi'en nos sirve para salvar algunas problemas que nos podemos encontrar en nuestra funci'on de coste.
+
+* M'inimos locales: son zonas de la funcion donde se produce un minimo local que no es el m'inimo general. Si el learning rate es muy pequeno el entrenamiento de la la funci'on se quedara en ese punto pensando que es el minimo de la funcion. No consigueremos un aprendizaje optimo.
+* Zonas planas: si encontramos una zona muy plana el gradiente en esos puntos sera muy pequeno y no podremos avanzar en la busqueda del minimo global. Necesitamos un learning rate alta para salir de estas zonas.
+* M'inimo con una curva muy estrecha: en este caso necesitamos tener un learning rate muy pequeno porque en caso contrario estariamos saltanto de izquierda a derecha indefinidmente sin acercarnos al minimo.
+
+Para empezar a entrenar un modelo se pueden ir probando diferentes learning rate y ver cual nos proporciona mejores resultados. A la hora de optimizar mas y buscar mejores resultados se utilizan learning rate variable con el objetivo de saltar minimos locales y zonas planas y acercarse al minimo general lo mas posible. Esto es lo que se llama learning rate annealing y existen varios metodos que dan muy buenos resultados. En general empiezan con learning rate m'as bajos que aumentan rapidamente su valor hasta llegar a un maximo. Luego descienden de formaa mas moderada hasta terminar con un descenso mucho mas ligero.
+
+El ratio de aprendizaje nos permite controlar en que proporcion modificamos los parametros del modelo seg'un su gradiente. Es otro de los valores que tenemos que configurar y probar al entrenar un modelo de redes neuronales.
+
+# Underfiting vs Overfitting
 
 
 ## Fases de proceso de aprendizaje.
