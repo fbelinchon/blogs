@@ -66,6 +66,24 @@ El ratio de aprendizaje nos permite controlar en que proporcion modificamos los 
 
 # Underfiting vs Overfitting
 
+Ya hemos hablado brevemente de estos dos problemas que nos podemos encontrar al entrenar un modelo pero es ahora cuando podemos profundizar y ver como podemos detectarlos y minimizarlo.
+
+## Undefiting
+
+Este problem aparece cuando nuestro modelo es demasiado simple o nuestro conjunto de datos es demasiado reducido para la tarea que queremos resolver. En definitiva o no tenemos suficientes datos o no tenemos un modelo suficientemente potente.
+
+?Como lo detectamos?. No es complicado. LLegado un punto veremos que el modelo no mejora sus resultados y siguen estando muy lejos de los deseados. Veremos que los resultados para el conjunto de datos de entrenamiento y para el conjunto de validaci'on son igual de pobres. Si estamos trabajando con una red neuronal tenemos dos opciones.
+
+* Anadir mas complejidad al modelo: esto lo conseguimos anadiendo mas neuronas a las capas del modelo o incorporando mas capas intermedias (hidden layers).
+* Buscamos mas datos de ejemplo: cuantos mas datos de ejemplo tengamos mas posibilidades hay de que el modelo aprenda mas caracticas o relaciones entre los datos que estamos pasando. Los modelos de redes neuronales necesitan una gran cantidad de datos para poder aprender y dar resultados optimos. Si no tenemos demasiados datos existen otras tecnicas como transfer learning que nos permiten utilizar modelos ya entrenados que podemos utilizar como base de nuestro propio modelo.
+
+## Overfiting
+
+Este problema es mas dificil de detectar. Nos encontramos con el caso contrario. Nuestro modelo es demasiado complejo y en lugar de aprender de los datos de ejemplo empieza a memorizarlos. Esto es un problema grave porque veremos que nuestro modelo proporciona unos resultados muy buenos en nuestros datos de ejemplo pero no generaliza bien. Los resultados en el conjunto de validaci'on (datos que no se utilizan para entrenar el modelo) van empeorando seg'un vamos entrenando el modelo. Imaginate que el modelo aprende de memoria que una de las imagenes es un gato pero no es capaz de deducirlo de la forma del animal, de las orejas, de las proporciones del cuerpo etc. Si le mostramos una imagen de otro gato distinto que no se ha utilizado en su entrenamiento no sera capaz de reconocerlo.
+
+?Que podemos hacer?
+* Obtener mas datos de ejemplo: Si tenemos mas datos sera mas dificil que el modelo los memorice todos y sera mas facil que detecte las caracteristicas que diferencias unas imagenes de otras.
+* Simplificar el modelo: si nuestro modelo es mas sencillo significa que tiene menos parametros. Los parametros son como celulas de memoria. Si no tenemos los suficientes no podemos memorizar todas las imagenes y, como en el caso anterior forzamos al modelo a aprender. Aunque parezca mentira en estos casos lo que tenemos que hacer es dificultar el aprendizaje de nuestro modelo para forzarlo a deducir caracteristicas y relaciones. Este proceso se denomina regularizacion y consiste exactamente en eso, en ponerle las cosas dificiles a nuestro modelo. Por ejemplo, una de las tecnicas mas usadas se denomina Dropout y consiste en poner a cero un porcentaje aleatorios de los parametros de nuestro modelo en cada iteracion de aprendizaje. De esa forma forzamos a que el modelo no preste siempre todas la atenci'on en los mismo parametros y encuentre nuevas relaciones y patrones.
 
 ## Fases de proceso de aprendizaje.
 - Toma de contacto.
