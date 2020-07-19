@@ -86,17 +86,36 @@ Este problema es mas dificil de detectar. Nos encontramos con el caso contrario.
 * Simplificar el modelo: si nuestro modelo es mas sencillo significa que tiene menos parametros. Los parametros son como celulas de memoria. Si no tenemos los suficientes no podemos memorizar todas las imagenes y, como en el caso anterior forzamos al modelo a aprender. Aunque parezca mentira en estos casos lo que tenemos que hacer es dificultar el aprendizaje de nuestro modelo para forzarlo a deducir caracteristicas y relaciones. Este proceso se denomina regularizacion y consiste exactamente en eso, en ponerle las cosas dificiles a nuestro modelo. Por ejemplo, una de las tecnicas mas usadas se denomina Dropout y consiste en poner a cero un porcentaje aleatorios de los parametros de nuestro modelo en cada iteracion de aprendizaje. De esa forma forzamos a que el modelo no preste siempre todas la atenci'on en los mismo parametros y encuentre nuevas relaciones y patrones.
 
 ## Fases de proceso de aprendizaje.
-- Toma de contacto.
-  - Inicialización de parámetros.
-- Aprendizaje
-- Memorización
+
+El proceso de aprendizaje de un modelo de redes neuronales pasa por tres fases diferentes.
+
+1. Desconocimiento del problema: cuando empezamos el proceso de entrenamiento los par'ametros se inicializan de forma aleatorio. El modelo no tiene conocimiento alguno de que es lo que tiene que predecir y en las primeras iteraciones los resultados son poco menos que tirar una moneda al aire. El valor de los par'ametros puede estar muy lejos de su valor 'optimo.
+
+2. Proceso de aprendizaje: despu'es de algunas iteraciones el modelo comienza a obtener resultados aceptables. En esta fase el modelo empieza a descubrir patrones y relaciones entre par'ametros que le ayudan predecir con mayor fiabilidad. El objetivo es llegar a esta fase en el menor tiempo posible. Si nuestro modelo sufre de underfiting solamente es posible que no lleguemos a esta fase de aprendizaje  y que los resultados no sean los deseados.
+
+3. Proceso de memorizaci'on: en esta fase final el modelo deja de aprender patrones y relaciones para empezar a memorizar los ejemplos que les vamos pasando. Por as'i decirlo se acomoda. Si es modelo es demasiado complejo o tenemos pocos datos de aprendizaje, es m'as f'acil memorizar los datos en lugar de deducir el resultado de las caracter'isticas de los mismo. Este fen'omeno es lo que hemos llamado overfiting. tenemos que evitar llegar a esta fase porque nuestromodelo ser'ia inservible para predecir nuevos datos.
   
 # Preparación de los datos
 ## Conjunto de entrenamiento, validación y test.
-- Conjunto de entrenamiento vs conjunto de validación.
-- Conjunto de test
+Ya hemos comentado que necesitamos un conjunto de datos para entrenar el modelo. Necesitamos adem'as de cantidad una buena calidad. Al hablar de calidad nos referimos a que sean una representaci'on lo mas realista posible de los datos que vamos a encontrar en la realizada. La calidad del modelo entrenado depende directamente de las calidad de los datos. Por ejemplo, si intentamos categorizar de forma autom'atica una serie de imagenes y de una categoria tenemos significativamente menos datos que del resto, ser'a muy dificil detectar correctamente esta categoria.
+## Conjunto de validaci'on
+Tambi'en hemos hablado brevemente de la necesidad de tener un conjunto de dtos para ir validando el modelo durante el entrenamiento. Este conjunto de validaci'on se excluye del proceso de aprendizaje y solamente se utiliza para verificar que el modelo se comportar'a de forma adecuada con datos nuevos, que no ha utilizado en la fase de entrenamiento.
+
+Normalmente se suele reservar entre un 10% y un 20% de los datos de entrenamiento para crear el conjunto de validaci'on. Al igual que en los datos de entrenamiento necesitamos una distribuci'on representativa para validar el modelo con todo el espectro de datos reales. En estos datos de validaci'on es incluso m'as importante. Tenemos que intentar simular de la forma m'as exacta posibles el tipo de datos que se va a encontrar el modelo una vez que ya esta entrenado. Por ejemplo, si los datos tienen una fuerte componente temporal el conjunto de validaci'on se suele tomar como las ultimas fechas de los datos que tenemos de entrenamiento. De esa forma simulamos los datos que va a tener que predecir el modelo cuando est'e que ser'an siempre posteriores a los utilizados para el entrenamiento.
+
+## Conjunto de test
+
+Todav'ia tenemos un conjunto m'as de datos del que no hemos hablado. En proyectos reales se suele separar otro conjunto de datos que se denomina de test para realizar las validaciones finales del modelo. ?En que se diferencia del conjunto de validacion?
+
+El objetivo es el mismo pero se utilizan de forma distinta. El entrenamiento de modelos de redes neuronales se basa en la experimentaci'on. Se realizan multiples pruebas con diferentes opciones y diferentes modelos. Al realizar tantas pruebas se puede dar el caso que favorezcamos aquellos modelos o aquellas opciones que nos dan mejores resultados conr especto a nuestro conjunto de validaci'on. La forma de trabajar es la siguiente:
+- Primero realizamos las pruebas con diferentes modelos y diferentes parametrizaciones. Para evaluar sus resultados utilizamops el conjuto de validacion.
+- Finalmente seleccionamos solamente aquellos modelos que pensamos que son los mejores y los testeamos con los datos de test. SI lod datos son consistentes podemos seleccionar el modelo que mejor resultado nos de. Si por el contrario, los resultados no son similares a los obtenidos con el conjunto de validacion significa que el conjuntod e validacion no esta bien disenado. Tendremos que alnalizar los resultados y volver a definir un conjunto de validaci'on que represente mejor los datos reales.
+
+La principal diferencia es que los datos de validaci'on los utilizamos constatemente para experimentar y probar diferentes modelos y par'ametros. Los datos de test solamente los utilizamos en la fase final de decisi'on como validaci'on final.
+
   
 # Flujo del proceso de entrenamiento.
+- hiper/parametros.
 - blucle por epoch
   - Bucle por batch
     - Training
