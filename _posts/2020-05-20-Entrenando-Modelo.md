@@ -115,11 +115,41 @@ La principal diferencia es que los datos de validaci'on los utilizamos constatem
 
   
 # Flujo del proceso de entrenamiento.
-- hiper/parametros.
-- blucle por epoch
-  - Bucle por batch
-    - Training
-    - Validación
+
+Antes de empezar a entrenar el modelo tenemos que definir lo que se llaman hiper-parametros que van a influir de form decisiva en el proceso. Varios de estos par'ametros ya los hemos mencionado anteriormente.
+- batchsize: el tamano de los batch en que agrupamos los datos de entrenamiento
+- Numero de epoch: numero de veces que vamos a mostrar todo el conjunto de datos a nuestro modelo para el entrenamiento.
+- Learning rate: valor por el que vamos a multiplicar el gradiente antes de restar el valor al parametro correspondiente para controlar el proceso de ajuste.
+- Arquitectura del modelo: numero de hidden layer y cantidad de neuronas en cada capa.
+
+Adem'as hay que decidir la funci'on de coste y el algoritmo de optimizaci'on. Hemos comentado que se utiliza SGD pero existen varias varientes que optimizan el proceso de ajuste.
+
+Estos hiper-parametros son los que nos permitiran experimentar hasta encontrar la combinaci'on optima para que nuestro modelo puede predecir la informaci'on con la mayor exactitud posible.
+Una vez selkeccionados estos parametros el proceso de entrenamiento es siempre el mismo. Explicado en seudoc'odigo ser'ia de la siguiente manera.
+
+`Blucle epoch in 1.. numero epochs
+   
+  Para datos de entrenamiento
+  Bucle datos in 1..numero de grupos (total de ejemplos de entrenamiento%batchsize + 1)
+    resultado= modelo(datos)
+    error_train= funci'on de coste(resultado, valor real)
+    gradiente= gradiente de la funcion de coste
+    parametros=parametros - learning rate * gradiente
+    
+  Para datos de validacion
+  Bucle datos in 1.. numero de grupos (total de ejemplos de validacion%batchsize +1)
+    resultado= modelo(datos)
+    error_validacion = funcion coste (resultado, valor real)
+  
+  print('Ciclo: ' + epoch)
+  print('error de entrenamiento: '+ media(error_train))
+  print('error de validcion: '+ media(error_validacion))`
+  
+Vamos a desarrollarlo un poco.
+
+1. Definimos el numero de epochs que es el numero de ciclos completos que vamos a realizar. Un ciclo completo significa que utilizamos todos los datos.
+1.1. Primero tomamos los datos de entrenamiento. De forma aleatoria agrupamos los datos en grupos de un tamano igual al batchsize. El 'ultimo grupo normalmente tiene un tamano menor.
+1.2. definimos un nuevo bucle para recorrer todos los grupos definidos en el paso anterior.
 
 Análisis de resultados entrenamiento vs validación.
 
