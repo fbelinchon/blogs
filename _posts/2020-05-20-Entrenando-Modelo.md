@@ -145,13 +145,44 @@ Una vez selkeccionados estos parametros el proceso de entrenamiento es siempre e
   print('error de entrenamiento: '+ media(error_train))
   print('error de validcion: '+ media(error_validacion))`
   
-Vamos a desarrollarlo un poco.
+Vamos a explicarlo con un ejemplo sencillo. Supongamos que queremos construir un modelo para diferenciar entre fotograf'ias de perros y gatos (muy tipico). Tenemos un total de 1200 imagenes perfectamente etiquetadas. La mitad de las fotograf'ias son de perros y la otra mitad de datos.
 
-1. Definimos el numero de epochs que es el numero de ciclos completos que vamos a realizar. Un ciclo completo significa que utilizamos todos los datos.
-1.1. Primero tomamos los datos de entrenamiento. De forma aleatoria agrupamos los datos en grupos de un tamano igual al batchsize. El 'ultimo grupo normalmente tiene un tamano menor.
-1.2. definimos un nuevo bucle para recorrer todos los grupos definidos en el paso anterior.
+Primero definimos el conjunto de datos de entrenamimiento y de validacion. tomaremos de forma aleatorio 1000 imagenes de entrenamiento y 200 de validaci'on. Procuraremos tener aproximadamente el 50% de perros y gatos en cada conjunto.
 
-Análisis de resultados entrenamiento vs validación.
+A continuaci'on seleccionamos los hiperparametros que vamos a utilizar en nuestra primera prueba.
+* Numero de epoch: 10
+* Batchsize: 16
+* Learning rate: 0,003
+* Modelo con tres capas ocultas cada una con 300 neuronas.
+* La fotos las redimensionamos a 300x300 para facilitar el aprendizaje y optimizar los recursos.
+* Funcion de coste: para este caso concreto probablemente utilizariamos cross entropy loss. Esta funcion de coste nos permite cuantificar el error producido en la identificaci'on de una imagen dentro de una categoria. El modelo proporciona un porcentaje de exactitud, es decir, 70% de que la imagen sea un gato. Si la imegen es realmente un gato el error cometido ser'a menor que si la imegen es de un perro.
+* Optimizador: SGD b'asico.
+
+Con los datos que tenemos entendemos que vamos a repetir un ciclo completo de aprendizaje 10 veces. Por cada epoch vamos a realizar una fase de entrenamiento que actualizar'a los par'ametros m'as una fase de validacion posterior para testear el modelo con datos no utilizados en el entrenamiento. Una vez terminado un ciclo tendremos informaci'on del error medio cometido por el modelo tanto para el conjunto de entrenamiento como para el conjunto de validaci'on.
+
+Por cada ciclo tenemos
+1. Fase de entrenamiento. Pasamos al modelo grupos de 16 imagenes. Como el numero de ejemplos es 1000 tendremos un total de 62 grupos de 16 elemento mas un grupo final de 8 imagenes. En total 63 grupos. Por lo tanto definiremos un bucle de 1 a 63 para pasar al modelo todos los datos que tenemos en cada ciclo. En cada nuevo ciclo los grupos se vuelven a generar de forma aleatorio de forma que los camponentes de cada grupo cambian.
+
+Por cada grupo obtenemos el resultado de nuestro modelo y calculamos el error cometido. La funci'on de coste es la que hemos definido al inicio como un hiperparametro.
+a continuaci'on obtenemos el gradiente de cada parametro. Estos calculos los realiza cualquier libreria de redes neuraonales que utilicemos por que no tenemos que preocuparnos por calcularlo nosotros. Con saber que es el gradiente y cual es su proposito es suficiente para empezar.
+
+Finalmente a cada par'ametro le restamos su gradiente multiplicado por el ratio de aprendizaje (learning rate). Esta actualizaci'on de los parametros representa el autentico aprendizaje del modelo.
+
+2. Fase de validacion. Realizamos los mismo pasos que en la fase anterior excepto la actualizaci'on del modelo. En esta fase utilizamos el conjunto de validaci'on por lo que el modelo no puede utilizar estos datos para optimizar los parametros. Esta fase se utiliza para validar como se comporta el modelo con datos que no ha visto en la fase de aprendizaje.
+
+En este caso tenemos 200 imagenes que utilizando el mismo batchsize ser'ain 12 grupos de 16 elementos mas uno grupo final con 8. En total 13 grupos.
+
+Por lo tanto tendremos un bucle de 13 grupos que pasaremos al modelo y obtendremos posterior su error medio.
+
+Finalmente por cada ciclo mostraremos en consola el numero de ciclo y el error tanto del conjunto de entrenamiento como del conjunto de validacion. De esta forma podemos ir comprobando como se comporta el modelo y detectar cuando se produce el fenomeno de overfitting (el error de entrenamiento sigue disminuyendo pero el error de validacion comienza a aumentar).
+
+En proyectos reales se anade tambi'en lo que llamamos una medida para facilitar el an'alisis del modelo. En este caso podr'iamos mostrar el porcentaje de acierto del modelo al predecir si la imegen es un perro o un gato. La medida se calcula en cada iteraci'on igual que el error y se muestra al final de cada ciclo igual que el error.
+
+Ahora solamente nos resta analizar los datos que nos ha devuelto el modelo y seguir experimentando con diferentes hiperparametros para encontrar la conbincion que nos de el mejor resultado.
+
+
+`NOTA: En un caso real para este problema utilizariamos una red convolucional y posible transfer learning para agilizar y mejorar los resultados. Pero el ejmplo es v'alido para explicar un proceso general de entrenamiento de una red neuronal.`
+
 
 # Conclusiones
 
