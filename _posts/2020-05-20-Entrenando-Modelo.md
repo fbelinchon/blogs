@@ -186,7 +186,19 @@ Ahora solamente nos resta analizar los datos que nos ha devuelto el modelo y seg
 
 # Conclusiones
 
-Método de optimización. 
+Entrenar un modelo consiste en encontrar los parámetros del modelo que minimizan la función de coste (error cometido por la predicción del modelo con respecto al valor real). En definitiva se trata de un problema de optimización. El objetivo es llegar al mínimo global de la función de coste definida. Utilizamos el gradiente para saber si tenemos que aumentar o disminuir los parámetro del modelo. Un gradiente positvo significa que al disminuir el valor del parámetro también disminuye el error. Si el gradiente es negativo hay que aumentarlo.
+
+El proceso de entrenamiento es iterativo. Utilizamos grupos de datos de ejemplos para ir ajustando el modelo. Repetimos el ciclo completo varias veces hasta encontrar unos parámetros adecuados que proporcionen una estimación lo más exacta posible.
+
+Uno de los principales problemas que nos encontramos es el fenómeno de overfitting. Si el modelo es muy complejo o tenemos pocos datos puede suceder que el modelo empiece a memorizar los datos de ejemplos en lugar de detectar relaciones y patrones. Esto significa que nuestro modelo proporcionará buenos resultados en el conjunto de entrenamiento pero los resultados en datos nuevos no serán lo esperado. Esta es la razón para reservar algunos datos como conjunto de validación incluso alguno más para un testeo final.
+
+La parte mzeas delicada consiste en determinar los llamados hiperparámetros que mejor resultado proporcionen al modelo. Aunque existen técnicas y procedimientos para afinar estos valores la experiencia es clave. Es necessario experimentar y probar diferentes combinaciones hasta encontrar la más adecuada. Una práctica habitual consiste en trabajar primero con un conjunto reducido de datos de ejemplos. Esto nos permite experimentr más en menos tiempo. Una vez que detectados los modelos que mejor funcionan empezamos a trabajar con el conjunto completo para obtener los mejores resultados.
+
+A pesar que los modelos pueden ser diferentes y las redes neuronales pueden ser de diferentes tipos el proceso beasico es el mismo y tiene los mismos fundamentos. Primero seleccionamos una función de coste que mejor represente el objetivo de nuestro modelo y posteriormente buscamos los parámetros que minimizar esa función.
+
+En estos tres artículos hemos visto el fundamento del funcionamiento de una red neuronal. Los siguientes pasos son crear nuestro modelo de red neuronal y entrenarlo para una tarea específica.
+
+El proceso de entrenamisento
 Proceso iterativo.
 Prueba con diferentes hiperparámetros.
 Ajustes.
