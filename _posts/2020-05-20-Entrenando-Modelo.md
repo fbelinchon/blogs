@@ -2,7 +2,7 @@
 layout: post
 title: "3. ¿Entrenamos? No te preocupes es nuestro modelo de red neuronal el que va a sudar"
 subtitle: "Vamos a enseñar a nuestro modelo a realizar una tarea. Cuando aprenda la tendrá que seguir haciendo él solito."
-date: 2020-05-19 10:45:13 -0400
+date: 2020-07-19 10:45:13 -0400
 background: '/img/posts/06.jpg'
 categories: AI
 ---
