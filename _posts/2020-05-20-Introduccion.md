@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "1. ¿Quieres saber qué es una red neuronal?"
-subtitle: "Si tienes curiosidad por sabe que es una red neuronal y no tienes nada mejor que hacer sigue leyendo. Verás que nos es tan complicado"
+subtitle: "Si tienes curiosidad por saber qué es una red neuronal y no tienes nada mejor que hacer en los próximos 10 minutos, sigue leyendo. Verás que nos es tan complicado"
 date: 2020-05-19 10:45:13 -0400
 background: '/img/posts/06.jpg'
 categories: AI
