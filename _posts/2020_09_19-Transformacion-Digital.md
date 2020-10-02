@@ -4,7 +4,7 @@ title: "Transformación Digital"
 subtitle: "¿Que es, para que sirve y por qué nos tiene que importar?."
 date: 2020-09-18 10:45:13 -0400
 background: '/img/posts/TD-01.jpg'
-categories: 
+categories: AI
 ---
 
 # Transformación digital.
