@@ -1,96 +1,97 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-10-02T14:36:01+00:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">Mi Blog</title><subtitle>Sobre Desarrollo de apliciones y deep learning.</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">3. ¿Entrenamos? No te preocupes es nuestro modelo de red neuronal el que va a sudar</title><link href="https://fbelinchon.github.io/blogs/ai/2020/07/19/Entrenando-Modelo.html" rel="alternate" type="text/html" title="3. ¿Entrenamos? No te preocupes es nuestro modelo de red neuronal el que va a sudar" /><published>2020-07-19T14:45:13+00:00</published><updated>2020-07-19T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/07/19/Entrenando-Modelo</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/07/19/Entrenando-Modelo.html">&lt;h1 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-10-02T14:52:50+00:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">Mi Blog</title><subtitle>Sobre Desarrollo de apliciones y deep learning.</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">3 Pasos hacia la Transformación Digital. No te puedes quedar atrás.</title><link href="https://fbelinchon.github.io/blogs/2020/09/18/Transformacion-Digital.html" rel="alternate" type="text/html" title="3 Pasos hacia la Transformación Digital. No te puedes quedar atrás." /><published>2020-09-18T14:45:13+00:00</published><updated>2020-09-18T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/2020/09/18/Transformacion-Digital</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2020/09/18/Transformacion-Digital.html">&lt;h1 id=&quot;transformación-digital&quot;&gt;Transformación digital.&lt;/h1&gt;
 
-&lt;p&gt;El objetivo de este artículo es explicar de forma sencilla el proceso de entrenamiento de una red neuronal como la descrita en el artículo anterior. Intentaremos evitar las explicaciones matemáticas detalladas, pero si daremos una visión intuitiva del proceso que nos ayude a entenderlo.&lt;/p&gt;
+&lt;h2 id=&quot;hablamos-de-transformación&quot;&gt;Hablamos de transformación.&lt;/h2&gt;
 
-&lt;h1 id=&quot;intuición-sobre-el-proceso-de-entrenamiento&quot;&gt;Intuición sobre el proceso de entrenamiento.&lt;/h1&gt;
+&lt;p&gt;La transformación digital es clave en el desarrollo y en el futuro de todo negocio pero no es fácil ponerle cara. Se identifica principalmente con un componente fuertemente tecnológico pero afecta a la empresa en toda su extensión.&lt;/p&gt;
 
-&lt;p&gt;El concepto del entrenamiento de un modelo de redes neuronales es sencillo y lo hemos mencionado en artículos anteriores. El modelo realiza una predicción sobre los datos de ejemplo que le suministramos y compara la predicción con el valor real que debe proporcionar. El objetivo es que ese error disminuya poco a poco hasta conseguir un modelo con unas predicciones muy cercanas a los valores reales. Para dismuir el error modificamos ligeramente los parámetros de nuestro modelo de forma iterativa.&lt;/p&gt;
+&lt;p&gt;Como indica la palabra Transformación se trata de un proceso a largo lazo porque implica cambios profundos en la manera de trabajar de muchos negocios. Es un viaje y cada empresa está en un punto del camino distinto. Las más tradicionales tendrán que recorrer una camino más largo, muchas ya están en ello. Las compañías más jóvenes ya tienen más interiorizado el proceso de digitalización y se encuentran en etapas más avanzadas.&lt;/p&gt;
 
-&lt;p&gt;En los primeros pasos del entrenamiento las predicciones tendrán un error muy grande porque los parámetros del modelo se han seleccionado de modo aleatorio. Por ejemplo, si el modelo intenta predecir si la imagen es de un perro o de un gato la predicción sería como tirar una moneda al aire. Un conjunto aleatorio de parámetros significa que en esos momentos el modelo no sabe nada sobre los datos que tiene que predecir. Según el modelo ajusta los parámetros la tasa de acierto empieza a mejorar. La parte más complicada de este proceso es decidir cuando dejamos de entrenar. Llegado un momento el modelo deja de aprender de los datos de ejemplo y empieza a memorizarlos. Si el modelo empieza a memorizar, realizará predicciones muy exactas sobre los ejemplos de entrenamiento pero las predicciones sobre datos nuevos serán muy inexactas. Posteriormente veremos como detectar ese comportamiento.&lt;/p&gt;
+&lt;h2 id=&quot;la-digitalización&quot;&gt;La digitalización&lt;/h2&gt;
 
-&lt;p&gt;La clave del aprendizaje está en ir ajustando los parámetros de forma progresiva para ir disminuyendo el error cometido. El modelo analiza cada parámetro y decide si aumentando o disminuyendo su valor para conseguir el menor error posible.&lt;/p&gt;
+&lt;p&gt;En el sentido más estricto la digitalización consiste en codificar la información para que pueda ser almacenada y procesada por ordenadores. Podemos digitalizar un sonido, una imagen, un documento, un libro.&lt;/p&gt;
 
-&lt;h1 id=&quot;gradient-descent-como-método-de-aprendizaje-optimización&quot;&gt;Gradient Descent como método de aprendizaje (optimización).&lt;/h1&gt;
+&lt;p&gt;En un sentido más amplio cuando hablamos de digitalización también nos referimos al concepto de virtualización. Es decir, representar la realidad como información digital. Por ejemplo maquinas virtuales que representan ordenadores físicos, redes virtuales que conectan ordenadores sin cableado o reuniones virtuales que nos permiten reunirnos sin estar en el mismo edificio, ciudad o país.&lt;/p&gt;
 
-&lt;p&gt;Para decidir si tenemos que aumentar o disminuir los parámetros del modelo recurrimos al concepto de deriva de una función.&lt;/p&gt;
+&lt;h2 id=&quot;ventajas-de-la-digitalización&quot;&gt;Ventajas de la digitalización&lt;/h2&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Derivada de una función en un punto: se puede interpretarse geométricamente como la pendiente de la recta tangente a la gráfica de la función en dicho punto.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Si nos tomamos el esfuerzo de digitalizar la realidad es porque tiene beneficios claros. Vamos a ver los beneficios y los comparamos con un objeto real, una foto, y su versión digitalizada. Imaginemos que tenemos una foto en nuestro albúm de fotos en un cajón. Todas estas propiedades son muy obvias si hablamos de fotografías pero son igual de efectivas aplicadas a la información que manejamos en nuestros procesos diarios.&lt;/p&gt;
 
-&lt;p&gt;En definitiva la derivada es la pendiente de una curva en un punto. Si lo que buscamos es el mínimo de una función tiene sentido apoyarnos en la pendiente de esa curva para saber si tenemos que aumentar o disminuir ese parámetro.&lt;/p&gt;
-
-&lt;p&gt;En el primer ártículo de la serie comparábamos nuestro objetivo de encontrar el mínimo con la búsqueda del camino más rápido para bajar desde el pico de la montaña al valle. En cada paso seleccionábamos la dirección de mayor pendiente para asegurar que bajábamos lo más rápidamente posible.&lt;/p&gt;
-
-&lt;p&gt;Nuestro modelo puede tener miles o millones de parámetros con lo que utilizamos lo que se llama derivada parcial de una función con respecto a un parámetro. Esta operación nos devuelve la pendiente de la función en un punto para un parámrtro concreto dejando el resto de parámetros fijos. El cálculo de las derivadas parciales de miles de pármetros es una operación muy costosa y en muchos casos inviable. En la práctica utilizamos una aproximación que se denomina &lt;em&gt;Gradient Descent&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;stochastic-gradiente-descent-sgd&quot;&gt;Stochastic Gradiente descent SGD.&lt;/h2&gt;
-&lt;p&gt;Para calcular el gradiente en un punto estudiamos como se comporta la función a su alrededor. De esta forma obtenemos valores similares a la deriva parcial de forma menos costosa. Si tenemos el valor de la función en un punto y el valor cuando nos movemos un poco podemos estimar el valor de pendiente en ese punto. No es el valor exacto pero es una buena aproximación para saber si tenemos que aumentar o disminuir el valor de nuestro parámetro para aproximarnos al mínimo de la función de coste.&lt;/p&gt;
-
-&lt;p&gt;El método más popular que se utiliza en el entrenamiento de redes neuronales se llama Stochastic Gradient Descent o simplemente SGD. Es un proceso iterativo que calcula el gradiente de un grupo de ejemplos y con esa información actualiza los parámetros el modelo. Vamos a detallar el proceso utilizando la nomneclatura propia asociada a redes neuronales.&lt;/p&gt;
-
-&lt;h3 id=&quot;fases-del-proceso-de-optimización-utilizando-sgd&quot;&gt;Fases del proceso de optimización utilizando SGD&lt;/h3&gt;
-&lt;p&gt;Nuestro conjunto de entrenamiento se divide en pequeños subconjuntos denominados batch o mini-batch. La selección de que ejemplos entran en cada batch se suele hacer de forma aleatoria. El núemro de elementos de cada batch se define inicialmente y es el mismmo para todos excepto para el último que tendrá el número de ejemplo que queden.&lt;/p&gt;
-
-&lt;p&gt;Pongamos un ejemplo. Si tenemos un conjunto de ejemplos con 1000 elementos y utilizamos un tamaño de batch igual a 64 tendríamos.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;15 batches con 64 elementos.&lt;/li&gt;
-  &lt;li&gt;1 batch final con 40 elementos que son los que quedan.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Para entrenar el modelo vamos pasando uno por uno nuestros 16 grupos o batches. Por cada batch el modelo calcula la salida, la compara con el resultado que debería producirse y actualiza los parámetros para que la función de error se más pequeña.
-Es importante entender que para un batch solamente hay una actualización de los parámetros. No se produce una modificación de los parámetros por cada uno de los 64 ejemplo sino que se realiza una estimación para el conjunto total de los 64 ejemplos. En estudios realizados se ha demostrado que el cáculo del gradiente de esta forma nos permite aproximarnos al mínimo e una forma más rápida y más consistente que el hecho de calcular el gradiente individual de cada ejemplo.&lt;/p&gt;
-
-&lt;p&gt;Cuando hemos completado un ciclo entero, en este caso los 16 batches definidos, el modelo ha recibido todos los jemplos de nuestro conjunto de entrenamiento. Esto no es suficiente y lo normal es volver a repetir el proceso completo varias veces para ir ajustando el modelo. Cada vez que utilizamos todos los ejemplos de entrenamiento en nuestro modelo se denomina &lt;em&gt;epoch&lt;/em&gt;. Si decimos que vamos a entrenar un modelo durante 20 epochs significa que vamos a realizar el proceso de dividir en batches de forma aleatorio todos los datos y mostrarlos al modelo 20 veces seguidas.&lt;/p&gt;
-
-&lt;h3 id=&quot;learning-rate-ratio-de-aprendizaje&quot;&gt;Learning rate (ratio de aprendizaje)&lt;/h3&gt;
-
-&lt;p&gt;Proceso bacth&lt;/p&gt;
-
-&lt;h2 id=&quot;underfiting-vs-overfitting&quot;&gt;Underfiting vs Overfitting&lt;/h2&gt;
-
-&lt;h2 id=&quot;fases-de-proceso-de-aprendizaje&quot;&gt;Fases de proceso de aprendizaje.&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Toma de contacto.
-    &lt;ul&gt;
-      &lt;li&gt;Inicialización de parámetros.&lt;/li&gt;
-    &lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Movilidad: la información digital puede desplazarse a cualquier punto del mundo en segundos. Si queremos mostrar nuestra foto a un amigo tenemos que invitarle a casa o enviarle la foto por correo. Con un correo electrónico la foto le llega en segundos.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Aprendizaje&lt;/li&gt;
-  &lt;li&gt;Memorización&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;preparación-de-los-datos&quot;&gt;Preparación de los datos&lt;/h1&gt;
-&lt;h2 id=&quot;conjunto-de-entrenamiento-validación-y-test&quot;&gt;Conjunto de entrenamiento, validación y test.&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Conjunto de entrenamiento vs conjunto de validación.&lt;/li&gt;
-  &lt;li&gt;Conjunto de test&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;flujo-del-proceso-de-entrenamiento&quot;&gt;Flujo del proceso de entrenamiento.&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;blucle por epoch
-    &lt;ul&gt;
-      &lt;li&gt;Bucle por batch
-        &lt;ul&gt;
-          &lt;li&gt;Training&lt;/li&gt;
-          &lt;li&gt;Validación&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Multiplicidad: La información digital puede duplicarse sin apenas coste. Para enseñarle la foto a varias personas tenemos que reunirlas a todas. No podemos enseñar la foto a varias personas a la vez. La foto digital puedes enviársela a todas las personas que quieras y cada persona tendrá su copia de la información.&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Transformación: La información digital es fácilmente transformable y se puede adaptar a varios formatos según sea necesario. A una foto digital la puedes aplicar diferentes filtros o transformaciones para verla en tonos sepia, en blanco y negro. Puedes incluso retocarla y mejorar su calidad. En una foto real no es posible.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Análisis: Si hemos conseguido digital una gran cantidad de información podremos extraer conocimiento analizando esos datos. Podemos ver tendencias o patrones que nos pueden ayudar a gestionar mejor nuestro negocio. Si esa información está en papel cualquier tipo de análisis es inviable.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;En general cuando la información está digitalizada se dice que está viva, en contraposición a la información muestra que representa la información sin digitalizar.&lt;/p&gt;
+
+&lt;h1 id=&quot;pasos-para-realizar-una-transformación-digital-con-éxito&quot;&gt;Pasos para realizar una transformación digital con éxito&lt;/h1&gt;
+&lt;h2 id=&quot;paso-1-digitalización-de-la-información&quot;&gt;PASO 1: Digitalización de la información&lt;/h2&gt;
+&lt;p&gt;El primer paso consiste en detectar todas las fuentes de información de nuestro proceso y plantear su digitalización. La calve está en como y cuando digitalizar la información. Como norma general&lt;/p&gt;
+&lt;h3 id=&quot;cuando-cuanto-antes-mejor&quot;&gt;¿Cuando? Cuanto antes mejor.&lt;/h3&gt;
+&lt;p&gt;La digitalización se debe realizar en el momento de generar la información. Cuando más tardemos en digitalizar más sobrecarga y menos beneficios.&lt;/p&gt;
+&lt;h3 id=&quot;cómo&quot;&gt;¿Cómo?&lt;/h3&gt;
+&lt;p&gt;Digitalizando información, no formatos. Por ejemplo, para digitalizar una factura no nos vale simplemente con tener una copia electrónica. Tenemos que intentar digitalizar la información de la factura (cliente, líneas, importe, descuento etc). Recordad los beneficios de Transformación y análisis que hablábamos antes. La información detallada de una factura nos permite transmitir esos datos a cual otros sistemas, analizar y generar cualquier tipo de formato que necesitemos.&lt;/p&gt;
+
+&lt;p&gt;Recomendación: Una vez digitalizada la información podéis utilizar cualquiera de las ventajas mencionadas anteriormente para mejorar el flujo de trabajo. Lo normal es encontrar oportunidades importantes de mejora y optimización.&lt;/p&gt;
+
+&lt;h2 id=&quot;paso-2-digitalización-de-infraestructura&quot;&gt;PASO 2: Digitalización de Infraestructura.&lt;/h2&gt;
+
+&lt;p&gt;El objetivo es eliminar físicamente todo aquello que define una oficina tradicional para acercarnos lo más posible al concepto de oficina virtual. La gran mayoría de las grandes empresas ya no tienen servidores físicos propios y optan por las diferentes opciones de virtualización. En realidad en este apartado se habla más de virtualización que de digitalización. Se virtualizan servidores, redes, servicios etc.&lt;/p&gt;
+
+&lt;p&gt;El objetivo es poder seguir trabajando en tu ‘oficina’ aunque los empleados no estén físicamente uno frente a otro. El nivel de virtualización depende principalmente del tipo de negocio. Estás son algunas de las opciones que podemos elegir:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;IAAS (Infraestruture As A Service): Es el paso más sencillo. En lugar de gestionar servidores físicos en tus propias instalaciones puedes crear máquinas virtuales en cualquiera de los principales proveedores (Azure, AWS, Google …). La principal ventaja es que pagas por el uso y las capacidades. No tienes que comprar un servidor físico y renovarlo cada 4 años. Evitas el mantenimiento, puedes ampliar o reducir su capacidad y cuando no lo necesites lo eliminas. Puedes incluso utilizar un servidor virtual por unas horas y luego apagarlo.&lt;/li&gt;
+  &lt;li&gt;PAAS (Platform As A Service): Un paso más. Puedes solicitar entornos completos en los que no tienes que instalar tú mismo las herramientas. Por ejemplo, puedes solicitar una Base de datos con las características que necesitas. No tienes que instalar la Base de datos, ni preocuparte de actualizaciones o parches de seguridad. Simplemente recibes una cadena de conexión y ya puedes empezar a utilizarla. Los proveedores cada vez proporcionan más servicios en PaaS (servidores de aplicaciones, Bases de datos, servicios de cache, de almacenamiento etc). Al igual que en la opción anterior es un pago por uso que es mucho más escalable para tu negocio.&lt;/li&gt;
+  &lt;li&gt;SAAS (Software As A Service): Este es el último paso. ¿Para qué necesitas instalar un programa de contabilidad en tu propia máquina?. Muchas empresas te ofrecen este servicio como una suscripción. No necesitas ordenadores propios, ni instalación del programa, ni mantenimiento. Te das de alta en la plataforma y ya tienes tu programa de contabilidad con las últimas actualizaciones. Puedes pagar por los módulos que utilices y por el tiempo de uso. Existen numerosos ejemplos en este sentido (CRM, Gestión de campañas de marketing, programas de facturación etc…).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Análisis de resultados entrenamiento vs validación.&lt;/p&gt;
+&lt;p&gt;Todas estas opciones ponen en tus manos las herramientas para evolucionar tu negocio hacia una oficina virtual, más flexible, más ágil y más optima.&lt;/p&gt;
 
-&lt;h1 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h1&gt;
+&lt;h2 id=&quot;paso-3-digitalizar-tus-relaciones&quot;&gt;PASO 3: Digitalizar tus relaciones.&lt;/h2&gt;
 
-&lt;p&gt;Método de optimización. 
-Proceso iterativo.
-Prueba con diferentes hiperparámetros.
-Ajustes.&lt;/p&gt;
+&lt;p&gt;Todos sabemos que Internet, y sobre todo las redes sociales, han cambiado completamente la forma de trabajar. Existen muy pocos negocios que puedan dar la espalda a este fenómeno. Ya has digitalizado tus procesos y tu infraestructura. Ahora toca digitalizar tus relaciones.&lt;/p&gt;
+&lt;h3 id=&quot;digitalización-b2b-tus-proveedores&quot;&gt;Digitalización B2B: Tus proveedores&lt;/h3&gt;
+&lt;p&gt;Compartimos mucha información con proveedores o empresas con las que tenemos alianzas. Esta información también se puede digitalizar. Es un proceso que muchas veces se descuida porque hay que coordinarse con otras empresas. No es fácil pero los beneficios mutuos son enormes.&lt;/p&gt;
 
-&lt;p&gt;Objetivo -&amp;gt; modelo entrenado&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><category term="AI" /><summary type="html">Objetivo</summary></entry><entry><title type="html">2. Vamos a construir un modelo simple de Red Neuronal. ¿Te apuntas?</title><link href="https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal.html" rel="alternate" type="text/html" title="2. Vamos a construir un modelo simple de Red Neuronal. ¿Te apuntas?" /><published>2020-06-20T14:45:13+00:00</published><updated>2020-06-20T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal.html">&lt;h1 id=&quot;modelo-simple&quot;&gt;Modelo simple&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Caso de Uso:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Imaginemos que en nuestro PASO 1 hemos conseguido digitalizar la información de nuestro almacén. Todos los productos que entran o salen llevan un código de barras de modo que podemos saber en todo momento el estado de nuestro suministro.&lt;/p&gt;
+
+&lt;p&gt;Hemos llegado a un acuerdo con nuestro proveedor para digitalizar y automatizar nuestra relación. Cuando el stock de un producto está por debajo de un umbral definido automáticamente se lanza un petición (digital) a nuestro proveedor. El proveedor puede identificar también de forma automática quien somos, que queremos, cuando nos lo pueden servir y el precio del pedido. Nos envía, de forma automática, una oferta formal para su aceptación.&lt;/p&gt;
+
+&lt;p&gt;Nuestro departamento de compras recibirá la oferta de suministros con el importe, el detalle del pedido y la fecha estimada de entrega. Al aceptar la oferta el proveedor se pone en marcha para preparar el pedido.&lt;/p&gt;
+
+&lt;p&gt;El ahorro mutuo está claro. Además genera una relación de confianza más estrecha con nuestro proveedor. Este proceso se puede ampliar a la gestión de facturas y cualquier tipo de información que pueda ser compartida.&lt;/p&gt;
+
+&lt;h3 id=&quot;digitalización-b2c-tus-clientes&quot;&gt;Digitalización B2C: Tus clientes&lt;/h3&gt;
+
+&lt;p&gt;¿Como gestionamos a nuestros clientes? ¿Les entendemos? ¿Les llega claro nuestro mensaje? ¿Cómo podemos llegar a ellos de forma rápida y sencilla?&lt;/p&gt;
+
+&lt;p&gt;A todas estas preguntas responde el marketing digital. Con un contexto cada vez más competitivo y cambiante el conocer bien a nuestros clientes es una gran ventaja competitiva.&lt;/p&gt;
+
+&lt;p&gt;Las redes sociales nos permiten realizar una segmentación más detallada y sobre todo un targeting más fino para presentar ofertas adaptadas a cada perfil.&lt;/p&gt;
+
+&lt;p&gt;No podemos obviar las estrategias de marketing digital (SEO, SEM, etc) para conseguir que nuestro mensaje llegue claro con el menor esfuerzo posible.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusión&quot;&gt;CONCLUSIÓN&lt;/h2&gt;
+
+&lt;p&gt;La transformación digital es un camino largo y necesita una estrategia clara. Cada negocio tiene que definir donde quiere llegar con su transformación digital.&lt;/p&gt;
+
+&lt;p&gt;Todas las empresas de nueva creación ya nacen con la digitalización de serie y muchas de ellas han encontrado nichos de negocio donde empresas tradicionales no han llegado o no han podido defender.&lt;/p&gt;
+
+&lt;p&gt;Espero que estas notas os aclaren un poco este concepto de transformación digital y que os pueda servir de ayuda para implementarlo.&lt;/p&gt;
+
+&lt;p&gt;Cualquier comentario, apunte o sugerencia sobre el artículo será siempre agradecido.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Transformación digital.</summary></entry><entry><title type="html">2. Vamos a construir un modelo simple de Red Neuronal. ¿Te apuntas?</title><link href="https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal.html" rel="alternate" type="text/html" title="2. Vamos a construir un modelo simple de Red Neuronal. ¿Te apuntas?" /><published>2020-06-20T14:45:13+00:00</published><updated>2020-06-20T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal.html">&lt;h1 id=&quot;modelo-simple&quot;&gt;Modelo simple&lt;/h1&gt;
 
 &lt;h2 id=&quot;objetivo&quot;&gt;Objetivo.&lt;/h2&gt;
 &lt;p&gt;El objetivo del artículo es entender como se define un modelo de apredizaje. Nos centraremos en la definición de modelos de redes neuronales sencillas para entender los mecanismos básicos.
