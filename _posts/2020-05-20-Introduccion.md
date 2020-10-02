@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Introducción a Redes Neuronales"
-subtitle: "Entrenamiento y validación de modelos de Deep Learning"
+title: "1. ¿Quieres saber qué es una red neuronal?"
+subtitle: "Si tienes curiosidad por sabe que es una red neuronal y no tienes nada mejor que hacer sigue leyendo. Verás que nos es tan complicado"
 date: 2020-05-19 10:45:13 -0400
 background: '/img/posts/06.jpg'
 categories: AI
