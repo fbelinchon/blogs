@@ -1,10 +1,10 @@
 ---
 layout: post
-title: " 3 Pasos hacia la Transformación Digital. No te puedes quedar atrás."
+title: "3 Pasos hacia la Transformación Digital. No te puedes quedar atrás."
 subtitle: "¿Tienes claro que es la transformación digital? ¿Sabes en que fase de digitalización estás?¿Quieres saber que más puedes hacer?."
 date: 2020-09-18 10:45:13 -0400
 background: '/img/posts/TD-01.jpg'
-categories: AI
+categories:
 ---
 
 # Transformación digital.
