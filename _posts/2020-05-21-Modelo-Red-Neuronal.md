@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Modelos simples de Redes Neuronales"
-subtitle: "Entendiendo modelos simples de Redes Neuronales"
+title: "2. Vamos a construir un modelo simple de Red Neuronal. ¿Te apuntas?"
+subtitle: "Con recordar algunas nociones básicas de matemáticas podrás explicar un modelo de red neuronal a cualquier persona."
 date: 2020-05-20 10:45:13 -0400
 background: '/img/posts/06.jpg'
 categories: ai
