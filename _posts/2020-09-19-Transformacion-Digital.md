@@ -37,6 +37,7 @@ Si nos tomamos el esfuerzo de digitalizar la realidad es porque tiene beneficios
 En general cuando la información está digitalizada se dice que está viva, en contraposición a la información muestra que representa la información sin digitalizar. 
 
 # Pasos para realizar una transformación digital con éxito
+![Digitalización](/blogs/img/posts/transformacion_digital.jpg)
 ## PASO 1: Digitalización de la información
 El primer paso consiste en detectar todas las fuentes de información de nuestro proceso y plantear su digitalización. La calve está en como y cuando digitalizar la información. Como norma general
 ### ¿Cuando? Cuanto antes mejor.
