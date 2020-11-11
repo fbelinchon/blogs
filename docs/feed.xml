@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-11-11T09:55:22+00:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">Mi Blog</title><subtitle>Sobre Desarrollo de apliciones y deep learning.</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">¿Quieres conocer tres claves para mejorar tus procesos?</title><link href="https://fbelinchon.github.io/blogs/2020/11/09/foco.html" rel="alternate" type="text/html" title="¿Quieres conocer tres claves para mejorar tus procesos?" /><published>2020-11-09T14:45:13+00:00</published><updated>2020-11-09T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/2020/11/09/foco</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2020/11/09/foco.html">&lt;h1 id=&quot;las-grandes-ventajas-de-la-focalización-explicadas-con-un-excel&quot;&gt;Las grandes ventajas de la focalización explicadas con un excel.&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-11-11T10:26:56+00:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">Mi Blog</title><subtitle>Sobre Desarrollo de apliciones y deep learning.</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">¿Quieres saber como mejorar tus procesos, focaliza tu esfuerzo?</title><link href="https://fbelinchon.github.io/blogs/2020/11/09/foco.html" rel="alternate" type="text/html" title="¿Quieres saber como mejorar tus procesos, focaliza tu esfuerzo?" /><published>2020-11-09T14:45:13+00:00</published><updated>2020-11-09T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/2020/11/09/foco</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2020/11/09/foco.html">&lt;h1 id=&quot;las-grandes-ventajas-de-la-focalización-explicadas-con-un-excel&quot;&gt;Las grandes ventajas de la focalización explicadas con un excel.&lt;/h1&gt;
 &lt;p&gt;Uno de los principales motores de la mejora en los procesos es la focalización. Cuando hablamos de focalización nos referimos a centrar nuestros esfuerzos en unas pocas tareas en lugar de intentar abarcar todas a la vez. En el siguiente ejemplo vamos a tomar como caso de estudio una empresa de desarrollo de software, pero las conclusiones son extrapolables fácilmente a cualquier tipo de proceso (manufactura, consultoría, servicios etc)&lt;/p&gt;
 &lt;h2 id=&quot;caso-de-ejemplo&quot;&gt;Caso de ejemplo&lt;/h2&gt;
 &lt;p&gt;Somos una empresa de desarrollo de software y nos llegan cuatro peticiones de cuatro clientes. Para simplificar los cálculos vamos a estimar que los cuatro proyectos requieres un esfuerzo de 4 meses/hombre.&lt;/p&gt;
@@ -19,10 +19,12 @@
 
 &lt;p&gt;&lt;img src=&quot;/blogs/img/posts/caso1.jpg&quot; alt=&quot;digitalización&quot; title=&quot;digitalización&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;4 proyectos x 4 meses / 4 proyectos = 4 meses/proyecto.&lt;/p&gt;
+&lt;div class=&quot;kdmath&quot;&gt;$$
+\frac{4\space proyectos\space *\space 4\space meses}{4\space proyectos} = 4\space meses/proyecto
+$$&lt;/div&gt;
 
 &lt;h3 id=&quot;caso2-una-solución-más-arriesgada&quot;&gt;Caso2: Una solución más arriesgada.&lt;/h3&gt;
-&lt;p&gt;En este caso vamos a dedicar dos programadores (P1 y P2) al primer proyecto y los programadores (P3 y P4) al segundo. Esto da un poco de vértigo porque no tenemos gente para empezar los proyectos 3 y 4. Estos proyectos están parados, nadie trabaja en ellos. Tendremos que esperar a que se liberen de los proyectos anteriores para que puedan continuar con los proyectos 3 y 4. ¿Es una buena ideas?&lt;/p&gt;
+&lt;p&gt;En este caso vamos a dedicar dos programadores (P1 y P2) al primer proyecto y los programadores (P3 y P4) al segundo. Esto da un poco de vértigo porque no tenemos gente para empezar los proyectos 3 y 4. Estos proyectos están parados, nadie trabaja en ellos. Tendremos que esperar a que se liberen de los proyectos anteriores para que puedan continuar con los proyectos 3 y 4. ¿Es una buena idea?&lt;/p&gt;
 
 &lt;p&gt;Vemos que el esfuerzo diario es el mismo y el esfuerzo total dedicado a cada proyecto también. No contratamos más programadores y los programadores no trabajan más rápido. ¿Que hemos conseguido?&lt;/p&gt;
 
@@ -32,7 +34,9 @@
 
 &lt;p&gt;&lt;img src=&quot;/blogs/img/posts/caso2.jpg&quot; alt=&quot;digitalización&quot; title=&quot;digitalización&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;2 proyectos x 2 meses + 2 proyectos x 4 meses / 4 proyectos = 3 meses.&lt;/p&gt;
+&lt;div class=&quot;kdmath&quot;&gt;$$
+\frac{2\space proyectos\space *\space 2\space meses\space +\space 2\space proyectos\space *\space 4\space meses}{4\space proyectos} = 3\space meses/proyecto
+$$&lt;/div&gt;
 
 &lt;p&gt;Simplemente cambiando la manera de asignar los proyectos hemos ganado 1 mes en el tiempo de entrega medio. Y esto sin invertir un céntimo más.&lt;/p&gt;
 
@@ -47,7 +51,9 @@ El segundo se entrega en 2 meses (igual que en el caso anterior). El tercer proy
 
 &lt;p&gt;&lt;img src=&quot;/blogs/img/posts/caso3.jpg&quot; alt=&quot;digitalización&quot; title=&quot;digitalización&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;1 proyectos x 1 meses + 1 proyectos x 2 meses + 1 proyecto x 3 meses + 1 proyecto x 4 meses / 4 proyectos = 2,5 meses/proyecto.&lt;/p&gt;
+&lt;div class=&quot;kdmath&quot;&gt;$$
+\frac{1\space proy\space *\space 1\space m\space +\space 1\space proy\space *\space 2\space m\space +\space 1\space proy\space *\space 3\space m\space +\space 1\space proy\space * 4\space m}{4\space proyectos} = 2,5\space meses/proyecto
+$$&lt;/div&gt;
 
 &lt;p&gt;NO es magia, es simplemente una cuestión de enfoque.&lt;/p&gt;
 
