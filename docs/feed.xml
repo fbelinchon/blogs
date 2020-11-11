@@ -1,4 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-11-10T16:50:02+00:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">Mi Blog</title><subtitle>Sobre Desarrollo de apliciones y deep learning.</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">3 Pasos hacia la Transformación Digital. No te puedes quedar atrás.</title><link href="https://fbelinchon.github.io/blogs/2020/09/18/Transformacion-Digital.html" rel="alternate" type="text/html" title="3 Pasos hacia la Transformación Digital. No te puedes quedar atrás." /><published>2020-09-18T14:45:13+00:00</published><updated>2020-09-18T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/2020/09/18/Transformacion-Digital</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2020/09/18/Transformacion-Digital.html">&lt;h1 id=&quot;transformación-digital&quot;&gt;Transformación digital.&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://fbelinchon.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fbelinchon.github.io/blogs/" rel="alternate" type="text/html" /><updated>2020-11-11T09:55:22+00:00</updated><id>https://fbelinchon.github.io/blogs/feed.xml</id><title type="html">Mi Blog</title><subtitle>Sobre Desarrollo de apliciones y deep learning.</subtitle><author><name>Francisco Belinchón</name></author><entry><title type="html">¿Quieres conocer tres claves para mejorar tus procesos?</title><link href="https://fbelinchon.github.io/blogs/2020/11/09/foco.html" rel="alternate" type="text/html" title="¿Quieres conocer tres claves para mejorar tus procesos?" /><published>2020-11-09T14:45:13+00:00</published><updated>2020-11-09T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/2020/11/09/foco</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2020/11/09/foco.html">&lt;h1 id=&quot;las-grandes-ventajas-de-la-focalización-explicadas-con-un-excel&quot;&gt;Las grandes ventajas de la focalización explicadas con un excel.&lt;/h1&gt;
+&lt;p&gt;Uno de los principales motores de la mejora en los procesos es la focalización. Cuando hablamos de focalización nos referimos a centrar nuestros esfuerzos en unas pocas tareas en lugar de intentar abarcar todas a la vez. En el siguiente ejemplo vamos a tomar como caso de estudio una empresa de desarrollo de software, pero las conclusiones son extrapolables fácilmente a cualquier tipo de proceso (manufactura, consultoría, servicios etc)&lt;/p&gt;
+&lt;h2 id=&quot;caso-de-ejemplo&quot;&gt;Caso de ejemplo&lt;/h2&gt;
+&lt;p&gt;Somos una empresa de desarrollo de software y nos llegan cuatro peticiones de cuatro clientes. Para simplificar los cálculos vamos a estimar que los cuatro proyectos requieres un esfuerzo de 4 meses/hombre.&lt;/p&gt;
+
+&lt;p&gt;Simplificando aún más, digamos que tenemos 4 programadores disponibles para llevar a cabo este trabajo.&lt;/p&gt;
+
+&lt;p&gt;Vamos a ver tres formas diferentes de organizar el trabajo. Para resumir:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Tenemos que desarrollar 4 APLICACIONES donde cada aplicación se estima en 4 MESES/hombre y disponemos de 4 Programadores&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;caso-1-el-más-simple-y-el-más-común&quot;&gt;Caso 1: El más simple y el más común.&lt;/h3&gt;
+
+&lt;p&gt;Los números nos cuadran perfectamente. Cada programador se asigna a un proyecto. Esta parece la opción ideal. Han entrado 4 proyectos y nos hemos puesto inmediatamente a trabajar en cada uno de ellos. Asumiendo que se cumplen las estimaciones el resultado es que terminamos todos los proyectos en 4 meses. ¡Buen trabajo!&lt;/p&gt;
+
+&lt;p&gt;El esfuerzo se divide entre los cuatro proyectos. Los cuatro proyectos terminan a la vez con lo que podemos calcular cual sería nuestro tiempo medio de entrega de proyecto (tiempo medio desde que llega la petición hasta que se entrega al cliente).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blogs/img/posts/caso1.jpg&quot; alt=&quot;digitalización&quot; title=&quot;digitalización&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4 proyectos x 4 meses / 4 proyectos = 4 meses/proyecto.&lt;/p&gt;
+
+&lt;h3 id=&quot;caso2-una-solución-más-arriesgada&quot;&gt;Caso2: Una solución más arriesgada.&lt;/h3&gt;
+&lt;p&gt;En este caso vamos a dedicar dos programadores (P1 y P2) al primer proyecto y los programadores (P3 y P4) al segundo. Esto da un poco de vértigo porque no tenemos gente para empezar los proyectos 3 y 4. Estos proyectos están parados, nadie trabaja en ellos. Tendremos que esperar a que se liberen de los proyectos anteriores para que puedan continuar con los proyectos 3 y 4. ¿Es una buena ideas?&lt;/p&gt;
+
+&lt;p&gt;Vemos que el esfuerzo diario es el mismo y el esfuerzo total dedicado a cada proyecto también. No contratamos más programadores y los programadores no trabajan más rápido. ¿Que hemos conseguido?&lt;/p&gt;
+
+&lt;p&gt;Los dos primeros proyectos se terminan en dos meses desde su petición (la mitad que en el caso anterior). Los dos últimos se entregan a los cuatro meses (exactamente igual que el caso anterior).&lt;/p&gt;
+
+&lt;p&gt;Si hacemos el cálculo del tiempo medio de entrega de proyecto sería.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blogs/img/posts/caso2.jpg&quot; alt=&quot;digitalización&quot; title=&quot;digitalización&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2 proyectos x 2 meses + 2 proyectos x 4 meses / 4 proyectos = 3 meses.&lt;/p&gt;
+
+&lt;p&gt;Simplemente cambiando la manera de asignar los proyectos hemos ganado 1 mes en el tiempo de entrega medio. Y esto sin invertir un céntimo más.&lt;/p&gt;
+
+&lt;h3 id=&quot;caso-3-caso-extremo&quot;&gt;Caso 3: Caso extremo&lt;/h3&gt;
+
+&lt;p&gt;No nos andamos por las ramas. Ponemos los cuatro desarrolladores en el Proyecto 1. Según se va terminando un proyecto comenzamos con el siguiente que está en espera. Tendremos el buen juicio de priorizar los proyectos para terminar primero los más importantes (los que generan más valor). Es decir 4 programadores trabajan en un proyecto hasta que lo terminan y pasan al siguiente. ¿Que sucede en este caso?&lt;/p&gt;
+
+&lt;p&gt;En este caso somos capaces de entregar el primer proyecto en ¡¡1 MES!!.
+El segundo se entrega en 2 meses (igual que en el caso anterior). El tercer proyecto finaliza en 3 meses (un mes menos) y el cuarto está listo en 4 meses.&lt;/p&gt;
+
+&lt;p&gt;El tiempo medio de entrega de proyecto es aún mejor.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blogs/img/posts/caso3.jpg&quot; alt=&quot;digitalización&quot; title=&quot;digitalización&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;1 proyectos x 1 meses + 1 proyectos x 2 meses + 1 proyecto x 3 meses + 1 proyecto x 4 meses / 4 proyectos = 2,5 meses/proyecto.&lt;/p&gt;
+
+&lt;p&gt;NO es magia, es simplemente una cuestión de enfoque.&lt;/p&gt;
+
+&lt;h2 id=&quot;enfoque-wip-y-small-batches-vs-large-batches&quot;&gt;Enfoque, WIP y small batches vs large batches.&lt;/h2&gt;
+&lt;p&gt;Cuando priorizamos el enfoque se producen efectos colaterales muy beneficios para nuestro proceso.&lt;/p&gt;
+
+&lt;h3 id=&quot;wip&quot;&gt;WIP.&lt;/h3&gt;
+&lt;p&gt;Es el acrónimo de Work In Progress. Es decir, todo aquel trabajo que ya hemos realizado pero que todavía no está facturado. El WIP se identifica muchas veces en procesos de manufactura con el inventario. Son productos o piezas ya fabricadas pero que no se han utilizado o no se ha vendido todavía.&lt;/p&gt;
+
+&lt;p&gt;El WIP genera una gran cantidad de problemas logísticos, financieros, perdida de eficacia etc. El objetivo es tener el WIP más reducido posible. Nadie quiere tener su almacén lleno de productos que ya ha fabricado pero que no ha vendido todavía.&lt;/p&gt;
+
+&lt;p&gt;Si vemos el desarrollo del WIP para los tres casos no es sorprendente que el caso 3 tenga un WIP mucho más reducido a lo largo del tiempo (un máximo de 4 hombres/meses producido). Cada mes finaliza un proyecto y suponemos que se entrega y se factura. Cada nuevo mes empezamos con un WIP de cero.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blogs/img/posts/wip.jpg&quot; alt=&quot;digitalización&quot; title=&quot;digitalización&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El caso 1 tenemos WIP de todos los proyectos hasta el final del 4 mes que se finalizan todos.&lt;/p&gt;
+
+&lt;h3 id=&quot;small-batches-vs-large-batches&quot;&gt;small batches vs large batches.&lt;/h3&gt;
+
+&lt;p&gt;Un batch es una unidad indivisible de trabajo. No puedes parar y dejar un batch a medias (salvo catástrofe). Por ejemplo, si tienes una máquina que es capaz de pintar 50 puertas de un color ese sería tu batch. No puedes parar este proceso para pintar puertas de otro color porque significaría parar la máquina, limpiarla, rellenar con el nuevo color y calibrarla. Si necesitas puertas de otro color esperas a terminar tu batch de 50 puertas y comienzas otro con el nuevo color.&lt;/p&gt;
+
+&lt;p&gt;Puedes pensar que tener un batch mayor te permitiría pintar más puertas a la vez y el coste se reduciría pero estarías generando un mayor WIP. Tendrías puertas pintadas de rojo que no vas a necesitar en este momento. Tienes que transportarlas, gestionar su almacenamiento, controlar su inventario etc. El precio real de esa puerta cuando finalmente llegue al cliente será bastante más alto de lo que esperabas.&lt;/p&gt;
+
+&lt;p&gt;Lo ideal es tener batches pequeños que te permitan dar una buena respuesta a tus clientes y al mismo tiempo no te genere WIP. Es decir, es la demanda de tus clientes la que tiene que marcar cual es el tamaño ideal de tu batch. Un batch pequeño te permite ser más flexible y adaptarte mejor a cualquier cambio en la demanda.&lt;/p&gt;
+
+&lt;p&gt;Si vemos las primeras imágenes de cada caso podemos comprobar que en el caso primero los batches son de cuatro meses. Cualquier cambio en la organización o en la asignación de los proyectos provocaría un claro retraso.
+En el caso 3 los batches son de un mes. Al final de mes podemos cambiar la prioridad de los proyectos o incluso incluir un proyecto urgente nuevo si podemos retrasar algún otro. La flexibilidad del caso 3 es mucho mayor que el caso 1.&lt;/p&gt;
+
+&lt;h2 id=&quot;análisis-más-realista&quot;&gt;Análisis más realista&lt;/h2&gt;
+&lt;p&gt;Hasta el momento hemos considerado situaciones ideales pero la realidad no siempre es tan predecible. Según lo que hemos visto hasta el momento el caso 3 es claramente ganador. Somos capaces de proporcionar mucho más valor a nuestros clientes con el mismo esfuerzo. Vamos a analizar otros aspectos que pueden influir como es el trabajo en equipo.&lt;/p&gt;
+
+&lt;h3 id=&quot;críticas-al-modelo-2-y-3-individuo-contra-grupo&quot;&gt;Críticas al modelo 2 y 3, individuo contra grupo&lt;/h3&gt;
+&lt;p&gt;Podemos decir que en el caso 2 y caso 3 se produce una carga de gestión mayor que en el caso 1. Al trabajar varias personas en un mismo proyecto se requiere un esfuerzo de sincronización y de gestión adicional. Esto puede producir cierta demora en el desarrollo del proyecto.&lt;/p&gt;
+
+&lt;p&gt;En el siguiente punto vamos a ver como la dinámica de grupo compensa con creces este aspecto.&lt;/p&gt;
+
+&lt;h3 id=&quot;ventajas-de-los-modelos-2-y-3-dinámica-de-grupo&quot;&gt;Ventajas de los modelos 2 y 3, dinámica de grupo&lt;/h3&gt;
+&lt;p&gt;Las principales ventajas de los modelos 2 y 3, además del enfoque, radican en la dinámica de grupo.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Conocimiento de grupo:&lt;/strong&gt; un grupo de personas tiene mayor capacidad de resolución de problemas. Cuanto más diverso es el grupo, mayor capacidad de reacción y de resolución. El conocimiento del grupo es la suma de los conocimeintos de todos sus miembros.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Aprendizaje de grupo:&lt;/strong&gt; cuando se trabaja en grupo es más fácil el aprendizaje, principalmente para los miembros más junior del equipo. Es más fácil pedir ayuda a alguien que está trabajando contigo en el mismo proyecto que a una persona externa que no lo conoce.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Autogestión:&lt;/strong&gt; no podemos caer en la tentación de gestionar las tareas del grupo de forma externa. Los grupos autogestionados pueden tomar decisiones más rápidas y eficaces que una gestión externa. La información fluye libremente y todo el grupo conoce el estado. Establece métricas de avance sencillas y visuales que permitan a todo el mundo tener una idea clara del avance del proyecto en todo momento.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Equipos de alto rendimiento:&lt;/strong&gt; cuando un equipo lleva tiempo trabajando junto genera unas sinergias que permiten acelerar el rendimiento de los proyectos de forma exponencial. Cada uno sabe cual es su papel y cual es la mejor forma de ayudar al equipo.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;conclusión&quot;&gt;Conclusión.&lt;/h1&gt;
+
+&lt;p&gt;Como hemos visto con este ejemplo sencillo en los tres casos el esfuerzo para realizar los proyectos es el mismo independientemente de la organización del trabajo. Lo que también hemos comprobado es que la experiencia de cliente es totalmente diferente.&lt;/p&gt;
+
+&lt;p&gt;En el primer caso todos los clientes esperan 4 meses para recibir sus aplicaciones (podrían ser también productos o servicios). En el tercer caso somos capaces de finalizar uno de los proyectos en &lt;em&gt;1 MES&lt;/em&gt;. También somos capaces de acortar los plazos de entrega de los dos siguientes proyectos dejando el último en los cuatro meses del primer caso.&lt;/p&gt;
+
+&lt;p&gt;Muchas veces dedicamos grandes esfuerzos a intentar mejorar los procesos de construcción o desarrollo de nuestros productos cuando simplemente reorganizando las tareas y focalizando el trabajo podemos obtener grandes beneficios con el mismo esfuerzo.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Las grandes ventajas de la focalización explicadas con un excel. Uno de los principales motores de la mejora en los procesos es la focalización. Cuando hablamos de focalización nos referimos a centrar nuestros esfuerzos en unas pocas tareas en lugar de intentar abarcar todas a la vez. En el siguiente ejemplo vamos a tomar como caso de estudio una empresa de desarrollo de software, pero las conclusiones son extrapolables fácilmente a cualquier tipo de proceso (manufactura, consultoría, servicios etc) Caso de ejemplo Somos una empresa de desarrollo de software y nos llegan cuatro peticiones de cuatro clientes. Para simplificar los cálculos vamos a estimar que los cuatro proyectos requieres un esfuerzo de 4 meses/hombre.</summary></entry><entry><title type="html">3 Pasos hacia la Transformación Digital. No te puedes quedar atrás.</title><link href="https://fbelinchon.github.io/blogs/2020/09/18/Transformacion-Digital.html" rel="alternate" type="text/html" title="3 Pasos hacia la Transformación Digital. No te puedes quedar atrás." /><published>2020-09-18T14:45:13+00:00</published><updated>2020-09-18T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/2020/09/18/Transformacion-Digital</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2020/09/18/Transformacion-Digital.html">&lt;h1 id=&quot;transformación-digital&quot;&gt;Transformación digital.&lt;/h1&gt;
 
 &lt;h2 id=&quot;hablamos-de-transformación&quot;&gt;Hablamos de transformación.&lt;/h2&gt;
 
@@ -94,91 +198,7 @@
 
 &lt;p&gt;Espero que estas notas os aclaren un poco este concepto de transformación digital y que os pueda servir de ayuda para implementarlo.&lt;/p&gt;
 
-&lt;p&gt;Cualquier comentario, apunte o sugerencia sobre el artículo será siempre agradecido.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Transformación digital.</summary></entry><entry><title type="html">¿Quieres conocer tres claves para mejorar tus procesos?</title><link href="https://fbelinchon.github.io/blogs/2020/09/18/foco.html" rel="alternate" type="text/html" title="¿Quieres conocer tres claves para mejorar tus procesos?" /><published>2020-09-18T14:45:13+00:00</published><updated>2020-09-18T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/2020/09/18/foco</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/2020/09/18/foco.html">&lt;h1 id=&quot;las-grandes-ventajas-de-la-focalización-explicadas-con-un-excel&quot;&gt;Las grandes ventajas de la focalización explicadas con un excel.&lt;/h1&gt;
-&lt;p&gt;Uno de los principales motores de la mejora en los procesos es la focalización. La mayoría de los nuevos principios de mejora de procesos se basan en optimizar el flujo de valor a nuestro cliente. En el siguiente ejemplo vamos a tomar como caso de estudio una empresa de desarrollo de software pero las conclusiones son extrapolables fácilmente a cualquier tipo de proceso (manufactura, consultoría, servicios etc)&lt;/p&gt;
-&lt;h2 id=&quot;caso-de-ejemplo&quot;&gt;Caso de ejemplo&lt;/h2&gt;
-&lt;p&gt;Somos una empresa de desarrollo de software y nos llegan cuatro peticiones de cuatro clientes. Para simplificar los cálculos vamos a estimar que los cuatro proyectos requieres un esfuerzo de 4 meses/hombre.&lt;/p&gt;
-
-&lt;p&gt;Simplificando aún más, digamos que tenemos 4 programadores disponibles para llevar a cabo este trabajo.&lt;/p&gt;
-
-&lt;p&gt;Vamos a ver tres formas diferentes de organizar el trabajo. Para resumir, tenemos que desarrollar 4 APLICACIONES para 4 CLIENTES donde cada aplicación se estima en 4 MESES/hombre y disponemos de 4 Programadores&lt;/p&gt;
-
-&lt;h3 id=&quot;caso-1-el-más-simple-y-el-más-común&quot;&gt;Caso 1: El más simple y el más común.&lt;/h3&gt;
-
-&lt;p&gt;Los números nos cuadran perfectamente. Cada programador se asigna a un proyecto. Esta parece la opción ideal. Han entrado 4 proyectos y nos hemos puesto inmediatamente a trabajar en cada uno de ellos. Asumiendo que se cumplen las estimaciones el resultado es que terminamos todos los proyectos en 4 meses. ¡Buen trabajo!&lt;/p&gt;
-
-&lt;p&gt;El esfuerzo se divide entre los cuatro proyectos. Los cuatro proyectos terminan a la vez con lo que podemos calcular cual sería nuestro tiempo medio de entrega de proyecto (tiempo medio desde que llega la petición hasta que se entrega al cliente).&lt;/p&gt;
-
-&lt;p&gt;4 proyectos x 4 meses / 4 proyectos = 4 meses/proyecto.&lt;/p&gt;
-
-&lt;h3 id=&quot;caso2-una-solución-más-arriesgada&quot;&gt;Caso2: Una solución más arriesgada.&lt;/h3&gt;
-&lt;p&gt;En este caso vamos a dedicar dos programadores (P1 y P2) al primer proyecto y los programadores (P3 y P4) al segundo. Esto da un poco de vértigo porque no tenemos gente para empezar los proyectos 3 y 4. Estos proyectos están parados, nadie trabaja en ellos. Tendremos que esperar a que se liberen de los proyectos anteriores para que puedan continuar con los proyectos 3 y 4. ¿Es una buena ideas?&lt;/p&gt;
-
-&lt;p&gt;Vemos que el esfuerzo diario es el mismo y el esfuerzo total dedicado a cada proyecto también. No contratamos más programadores y los programadores no trabajan más rápido. ¿Que hemos conseguido?&lt;/p&gt;
-
-&lt;p&gt;Los dos primeros proyectos se terminan en dos meses desde su petición (la mitad que en el caso anterior). Los dos últimos se entregan a los cuatro meses (exactamente igual que el caso anterior).&lt;/p&gt;
-
-&lt;p&gt;Si hacemos el cálculo del tiempo medio de entrega de proyecto sería.&lt;/p&gt;
-
-&lt;p&gt;2 proyectos x 2 meses + 2 proyectos x 4 meses / 4 proyectos = 3 meses.&lt;/p&gt;
-
-&lt;p&gt;Simplemente cambiando la manera de asignar los proyectos hemos ganado 1 mes en el tiempo de entrega medio. Y esto sin invertir un céntimo más.&lt;/p&gt;
-
-&lt;h3 id=&quot;caso-3-caso-extremo&quot;&gt;Caso 3: Caso extremo&lt;/h3&gt;
-
-&lt;p&gt;No nos andamos por las ramas. Ponemos los cuatro desarrolladores en el Proyecto 1. Según se va terminando un proyecto comenzamos con el siguiente que está en espera. Tendremos el buen juicio de priorizar los proyectos para terminar primero los más importantes (los que generan más valor). Es decir 4 programadores trabajan en un proyecto hasta que lo terminan y pasan al siguiente. ¿Que sucede en este caso?&lt;/p&gt;
-
-&lt;p&gt;En este caso somos capaces de entregar el primer proyecto en ¡¡1 MES!!.
-El segundo se entrega en 2 meses (igual que en el caso anterior). El tercer proyecto finaliza en 3 meses (un mes menos) y el cuarto está listo en 4 meses.&lt;/p&gt;
-
-&lt;p&gt;El tiempo medio de entrega de proyecto es aún mejor.&lt;/p&gt;
-
-&lt;p&gt;1 proyectos x 1 meses + 1 proyectos x 2 meses + 1 proyecto x 3 meses + 1 proyecto x 4 meses / 4 proyectos = 2,5 meses/proyecto.&lt;/p&gt;
-
-&lt;p&gt;NO es magia, es simplemente una cuestión de enfoque.&lt;/p&gt;
-
-&lt;h2 id=&quot;enfoque-wip-y-small-batches-vs-large-batches&quot;&gt;Enfoque, WIP y small batches vs large batches.&lt;/h2&gt;
-&lt;p&gt;Cuando priorizamos el enfoque se producen efectos colaterales muy beneficios para nuestro proceso.&lt;/p&gt;
-
-&lt;h3 id=&quot;wip&quot;&gt;WIP.&lt;/h3&gt;
-&lt;p&gt;Es el acrónimo de Work In Progress. Es decir, todo aquel trabajo que ya hemos realizado pero que todavía no está facturado. El WIP se identifica muchas veces en procesos de manufactura con el inventario. Son productos o piezas ya fabricadas pero que no se han utilizado o no se ha vendido todavía.&lt;/p&gt;
-
-&lt;p&gt;El WIP genera una gran cantidad de problemas logísticos, financieros, perdida de eficacia etc. El objetivo es tener el WIP más reducido posible. Nadie quiere tener su almacén lleno de productos que ya ha fabricado pero que no ha vendido todavía.&lt;/p&gt;
-
-&lt;p&gt;Si vemos el desarrollo del WIP para los tres casos no es sorprendente que el caso 3 tenga un WIP mucho más reducido a lo largo del tiempo (un máximo de 4 hombres/meses producido). Cada mes finaliza un proyecto y suponemos que se entrega y se factura. Cada nuevo mes empezamos con un WIP de cero.&lt;/p&gt;
-
-&lt;p&gt;El caso 1 tenemos WIP de todos los proyectos hasta el final del 4 mes que se finalizan todos.&lt;/p&gt;
-
-&lt;h3 id=&quot;small-batches-vs-large-batches&quot;&gt;small batches vs large batches.&lt;/h3&gt;
-
-&lt;p&gt;Un batch es una unidad indivisible de trabajo. No puedes parar y dejar un batch a medias (salvo catástrofe). Por ejemplo, si tienes una máquina que es capaz de pintar 50 puertas de un color ese sería tu batch. No puedes parar este proceso para pintar puertas de otro color porque significaría parar la máquina, limpiarla, rellenar el nuevo color y calibrarla. Si necesitas puertas de otro color esperas a terminar tu batch de 50 puertas y comienzas otro con el nuevo color.&lt;/p&gt;
-
-&lt;p&gt;Puedes pensar que tener un batch mayor te permitiría pintar más puertas a la vez y el coste se reduciría pero estarías generando un mayor WIP. Tendrías puertas pintadas de rojo que no vas a necesitar en este momento. Tienes que transportarlas, gestionar su almacenamiento, controlar su inventario etc. El precio real de esa puerta cuando finalmente llegue al cliente será bastante más alto de lo que esperabas.&lt;/p&gt;
-
-&lt;p&gt;Lo ideal es tener batches pequeños que te permitan dar una buena respuesta a tus clientes y al mismo tiempo no te genere WIP. Es decir, es la demanda de tus clientes la que tiene que marcar cual es el tamaño ideal de tu batch. Un batch pequeño te permite ser más flexible y adaptarte mejor a cualquier cambio en la demanda.&lt;/p&gt;
-
-&lt;p&gt;Si vemos las primeras imágenes de cada caso podemos comprobar que en el caso primero los batches son de cuatro meses. Cualquier cambio en la organización o en la asignación de los proyectos provocaría un claro retraso.
-En el caso 3 los batches son de un mes. Al final de mes podemos cambiar la prioridad de los proyectos o incluso incluir un proyecto urgente nuevo si podemos retrasar algún otro. La flexibilidad del caso 3 es mucho mayor que el caso 1.&lt;/p&gt;
-
-&lt;h2 id=&quot;análisis-más-realista&quot;&gt;Análisis más realista&lt;/h2&gt;
-&lt;p&gt;Hasta el momento hemos considerado situaciones ideales pero la realidad no siempre es tan predecible. Según lo que hemos visto hasta el momento el caso 3 es claramente ganador. Somos capaces de proporcionar mucho más valor a nuestros clientes con el mismo esfuerzo. Vamos a analizar otros aspectos que pueden influir como es el trabajo en equipo.&lt;/p&gt;
-
-&lt;h3 id=&quot;críticas-al-modelo-2-y-3-individuo-contra-grupo&quot;&gt;Críticas al modelo 2 y 3, individuo contra grupo&lt;/h3&gt;
-&lt;p&gt;Podemos decir que en el caso 2 y caso 3 se produce una carga de gestión mayor que en el caso 1. Al trabajar varias personas en un mismo proyecto se requiere un esfuerzo de sincronización y de gestión adicional. Esto puede producir cierta demora en el desarrollo del proyecto.&lt;/p&gt;
-
-&lt;p&gt;En el siguiente punto vamos a ver como la dinámica de grupo compensa con creces este aspecto.&lt;/p&gt;
-
-&lt;h3 id=&quot;ventajas-de-los-modelos-2-y-3-dinámica-de-grupo&quot;&gt;Ventajas de los modelos 2 y 3, dinámica de grupo&lt;/h3&gt;
-&lt;p&gt;Las principales ventajas de los modelos 2 y 3, además del enfoque, radican en la dinámica de grupo.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Conocimiento de grupo:&lt;/strong&gt; un grupo de personas tiene mayor capacidad de resolución de problemas. Cuanto más diverso es el grupo, mayor capacidad de reacción y de resolución.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Aprendizaje de grupo:&lt;/strong&gt; cuando se trabaja en grupo es más fácil el aprendizaje, principalmente para los miembros más junior del equipo. Es más fácil pedir ayuda a alguien que está trabajando contigo en el mismo proyecto que a una persona externa que no lo conoce.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Autogestión:&lt;/strong&gt; no podemos caer en la tentación de gestionar las tareas del grupo de forma externa. Los grupos autogestionados pueden tomar decisiones más rápidas y eficaces que una gestión externa. La información fluye libremente y todo el grupo conoce el estado. Establece métricas de avance sencillas y visuales que permitan a todo el mundo tener una idea clara del avance del proyecto en todo momento.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Equipos de alto rendimiento:&lt;/strong&gt; cuando un equipo lleva tiempo trabajando junto genera unas sinergias que permiten acelerar el rendimiento de los proyectos de forma exponencial. Cada uno sabe cual es su papel y cual es la mejor forma de ayudar al equipo.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;conclusión&quot;&gt;Conclusión.&lt;/h1&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Las grandes ventajas de la focalización explicadas con un excel. Uno de los principales motores de la mejora en los procesos es la focalización. La mayoría de los nuevos principios de mejora de procesos se basan en optimizar el flujo de valor a nuestro cliente. En el siguiente ejemplo vamos a tomar como caso de estudio una empresa de desarrollo de software pero las conclusiones son extrapolables fácilmente a cualquier tipo de proceso (manufactura, consultoría, servicios etc) Caso de ejemplo Somos una empresa de desarrollo de software y nos llegan cuatro peticiones de cuatro clientes. Para simplificar los cálculos vamos a estimar que los cuatro proyectos requieres un esfuerzo de 4 meses/hombre.</summary></entry><entry><title type="html">2. Vamos a construir un modelo simple de Red Neuronal. ¿Te apuntas?</title><link href="https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal.html" rel="alternate" type="text/html" title="2. Vamos a construir un modelo simple de Red Neuronal. ¿Te apuntas?" /><published>2020-06-20T14:45:13+00:00</published><updated>2020-06-20T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal.html">&lt;h1 id=&quot;modelo-simple&quot;&gt;Modelo simple&lt;/h1&gt;
+&lt;p&gt;Cualquier comentario, apunte o sugerencia sobre el artículo será siempre agradecido.&lt;/p&gt;</content><author><name>Francisco Belinchón</name></author><summary type="html">Transformación digital.</summary></entry><entry><title type="html">2. Vamos a construir un modelo simple de Red Neuronal. ¿Te apuntas?</title><link href="https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal.html" rel="alternate" type="text/html" title="2. Vamos a construir un modelo simple de Red Neuronal. ¿Te apuntas?" /><published>2020-06-20T14:45:13+00:00</published><updated>2020-06-20T14:45:13+00:00</updated><id>https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal</id><content type="html" xml:base="https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal.html">&lt;h1 id=&quot;modelo-simple&quot;&gt;Modelo simple&lt;/h1&gt;
 
 &lt;h2 id=&quot;objetivo&quot;&gt;Objetivo.&lt;/h2&gt;
 &lt;p&gt;El objetivo del artículo es entender como se define un modelo de apredizaje. Nos centraremos en la definición de modelos de redes neuronales sencillas para entender los mecanismos básicos.
