@@ -27,6 +27,9 @@ kramdown:
   hard_wrap: false
   syntax_highlighter: rouge
   
+# Google Analytics
+google_analytics: G-02CSYKBRMF
+  
 
 # Pagination Settings
 pagination:
