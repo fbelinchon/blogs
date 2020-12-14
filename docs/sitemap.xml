@@ -1,29 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-<loc>https://fbelinchon.github.io/blogs/ai/2020/05/19/Introduccion.html</loc>
-<lastmod>2020-05-19T14:45:13+00:00</lastmod>
+  <loc>https://fbelinchon.github.io/blogs/</loc>
+  <lastmod>2020-12-14T12:39:54+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-<loc>https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal.html</loc>
-<lastmod>2020-06-20T14:45:13+00:00</lastmod>
+  <loc>https://fbelinchon.github.io/blogs/about</loc>
+  <lastmod>2020-12-14T12:39:54+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://fbelinchon.github.io/blogs/2020/09/18/Transformacion-Digital.html</loc>
-<lastmod>2020-09-18T14:45:13+00:00</lastmod>
+  <loc>https://fbelinchon.github.io/blogs/posts/</loc>
+  <lastmod>2020-12-14T12:39:54+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://fbelinchon.github.io/blogs/2020/11/09/foco.html</loc>
-<lastmod>2020-11-09T14:45:13+00:00</lastmod>
+  <loc>https://fbelinchon.github.io/blogs/AI/</loc>
+  <lastmod>2020-12-14T12:39:54+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://fbelinchon.github.io/blogs/ai/2020/11/19/Entrenando-Modelo.html</loc>
-<lastmod>2020-11-19T14:45:13+00:00</lastmod>
+  <loc>https://fbelinchon.github.io/blogs/ai/2020/11/19/Entrenando-Modelo.html</loc>
+  <lastmod>2020-12-14T12:39:54+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://fbelinchon.github.io/blogs/about.html</loc>
+  <loc>https://fbelinchon.github.io/blogs/2020/11/09/foco.html</loc>
+  <lastmod>2020-12-14T12:39:54+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://fbelinchon.github.io/blogs/contact.html</loc>
+  <loc>https://fbelinchon.github.io/blogs/2020/09/18/Transformacion-Digital.html</loc>
+  <lastmod>2020-12-14T12:39:54+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://fbelinchon.github.io/blogs/ai/2020/06/20/Modelo-Red-Neuronal.html</loc>
+  <lastmod>2020-12-14T12:39:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fbelinchon.github.io/blogs/ai/2020/05/19/Introduccion.html</loc>
+  <lastmod>2020-12-14T12:39:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fbelinchon.github.io/blogs/posts/page/2/</loc>
+  <lastmod>2020-12-14T12:39:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
